@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Tours:Tour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Tours="http://www.uniandes.edu.co/Tours">
-  <elementos xsi:type="Tours:Panorama" nombre="Pico" hotspots="//@elementos.4"/>
-  <elementos xsi:type="Tours:Panorama" nombre="Mirador" hotspots="//@elementos.5"/>
-  <elementos xsi:type="Tours:Coordenada" nombre="1"/>
-  <elementos xsi:type="Tours:Coordenada" nombre="2"/>
-  <elementos xsi:type="Tours:Hotspot" nombre="A Mirador" rotación="//@elementos.3" posición="//@elementos.2" destino="//@elementos.0"/>
-  <elementos xsi:type="Tours:Hotspot" nombre="A Pico" rotación="//@elementos.2" posición="//@elementos.3" destino="//@elementos.0"/>
-  <pareja A="//@elementos.1" B="//@elementos.0" hotspotBN="//@elementos.5" hotspotA="//@elementos.4"/>
+<Tours:Tour
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Tours="http://www.uniandes.edu.co/Tours">
+  <elementos
+      xsi:type="Tours:Coordenada"
+      nombre="1"
+      x="1.0"
+      y="1.0"
+      z="1.0"/>
+  <elementos
+      xsi:type="Tours:Coordenada"
+      nombre="2"
+      x="2.0"
+      y="2.0"
+      z="2.0"/>
+  <panoramas
+      nombre="Nido"
+      hotspots="//@hotspots.0"/>
+  <panoramas
+      nombre="Pico"
+      hotspots="//@hotspots.1"/>
+  <hotspots
+      nombre="A Pico"
+      rotación="//@elementos.1"
+      posición="//@elementos.0"
+      destino="//@panoramas.1"
+      origen="//@panoramas.0"/>
+  <hotspots
+      nombre="A Nido"
+      rotación="//@elementos.0"
+      posición="//@elementos.1"
+      destino="//@panoramas.0"
+      origen="//@panoramas.1"/>
 </Tours:Tour>

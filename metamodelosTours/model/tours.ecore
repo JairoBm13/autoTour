@@ -2,10 +2,10 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Tours" nsURI="http://www.uniandes.edu.co/Tours" nsPrefix="Tours">
   <eClassifiers xsi:type="ecore:EClass" name="Tour">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" lowerBound="1"
-        upperBound="-1" eType="#//Elemento" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pareja" lowerBound="1"
-        upperBound="-1" eType="#//Pareja" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="panoramas" lowerBound="2"
+        upperBound="-1" eType="#//Panorama" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="2"
+        upperBound="-1" eType="#//Hotspot" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Panorama" eSuperTypes="#//Elemento">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="1"
@@ -18,6 +18,8 @@
         eType="#//Coordenada"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destino" lowerBound="1"
         eType="#//Panorama"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origen" lowerBound="1"
+        eType="#//Panorama"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -26,13 +28,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Pareja">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="A" lowerBound="1" eType="#//Panorama"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="B" lowerBound="1" eType="#//Panorama"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspotBN" lowerBound="1"
-        eType="#//Hotspot"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspotA" lowerBound="1"
-        eType="#//Hotspot"/>
   </eClassifiers>
 </ecore:EPackage>
