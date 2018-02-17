@@ -6,25 +6,28 @@
         upperBound="-1" eType="#//Panorama" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="2"
         upperBound="-1" eType="#//Hotspot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coordenada" lowerBound="1"
+        upperBound="-1" eType="#//Coordenada" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Panorama" eSuperTypes="#//Elemento">
+  <eClassifiers xsi:type="ecore:EClass" name="Panorama">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="1"
         upperBound="-1" eType="#//Hotspot"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;&quot;"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hotspot" eSuperTypes="#//Elemento">
+  <eClassifiers xsi:type="ecore:EClass" name="Hotspot">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rotación" lowerBound="1"
         eType="#//Coordenada"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="posición" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posicion" lowerBound="1"
         eType="#//Coordenada"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destino" lowerBound="1"
         eType="#//Panorama"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="origen" lowerBound="1"
         eType="#//Panorama"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;&quot;"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Coordenada" eSuperTypes="#//Elemento">
+  <eClassifiers xsi:type="ecore:EClass" name="Coordenada">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
