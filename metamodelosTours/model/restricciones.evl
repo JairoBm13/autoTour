@@ -1,0 +1,77 @@
+context kdm!Panorama {
+
+	critique TwoPanoramasWithSameName {
+		
+		guard : true
+		
+		check : Panorama.allInstances().select(self.name) > 1
+		
+		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.name
+	}
+	
+	critique CaminoATodoPanorama {
+		
+		guard : true
+		
+		check : self.revisarCaminoAPanoramas()
+		
+		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.name
+	}
+}
+
+operation Panorama revisarCaminoAPanoramas(): Boolean {
+
+	var panoramas = Panorama.allInstances().excluding(self);
+	
+	for (panorama in panoramas) { 
+		if(self.llegaAPanorama(panorama)) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+operation Panorama llegaAPanorama(name:String): Boolean {
+	for (hotspot in self.hotspots) {
+		if(hotspot.destino.name == name) {
+			return true;
+		}
+		if(hotspot.destino.llegaAPanorama(name)) {
+			return true;
+		}
+	}
+}
+
+context kdm!Hotspot {
+
+	critique HotspotABandBA {
+		
+		guard : self.destino.isDefined() and self.origen.IsDefined()
+		
+		check : Hotspot.allInstances().any((origen = self.destino) and (destino = self.origen))
+		
+		message : "Debe existir un hotspot que vaya del panorama " + self.destino + " al panorama " + self.origen
+	}
+	
+	critique ZZeroNO {
+		
+		guard : self.posicion.isDefined()
+		
+		check : not (self.posicion.z == 0)
+		
+		message : "La posición del hotspot "+self.name+" no puede tener valor 0 en la cordanada z"
+	}
+}
+
+context kdm!Tour {
+
+	critique MinimunTwoPanoramas {
+		
+		guard : true
+		
+		check : self.panoramas.size > 1
+		
+		message : "Deben existir por lo menos 2 panoramas en el tour"
+	}
+}
