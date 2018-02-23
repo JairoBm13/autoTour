@@ -61,6 +61,42 @@ context kdm!Hotspot {
 		check : not (self.posicion.z == 0)
 		
 		message : "La posición del hotspot "+self.name+" no puede tener valor 0 en la cordanada z"
+		
+		fix {
+		
+			title : "Fijar la coordenada z de la posición en 1"
+		
+			do {
+				self.posicion.z = 1;
+			}
+		}
+	}
+	
+	critique rotationBoundsBetween0And360 {
+	
+		guard : self.rotacion.isDefined()
+		
+		check : (self.rotation.x >= 0 and self.rotation.x <= 360) and (self.rotation.y >= 0 and self.rotation.y <= 360) and (self.rotation.z >= 0 and self.rotation.z <= 360)
+	
+		message : "La rotación del hotspot "+self.name+" debe tener las coordenadas entre el valor 0 y el 360"
+		
+		fix {
+		
+			title : "Cambiar los valores para las coordenadas que incumplan a valores dentro del rango"
+		
+			do {
+			
+				if(self.rotation.x < 0) self.rotation.x = 0;
+				else if(self.rotation.x > 360) self.rotation.x = 360;
+				
+				if(self.rotation.y < 0) self.rotation.y = 0;
+				else if(self.rotation.y > 360) self.rotation.y = 360;
+				
+				if(self.rotation.z < 0) self.rotation.z = 0;
+				else if(self.rotation.z > 360) self.rotation.z = 360;
+				
+			}
+		}
 	}
 }
 

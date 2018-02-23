@@ -1,5 +1,5 @@
 "El Panorama con más Hotspots es: ".print();
-panoramaMasHotspots().printl();
+panoramaMasHotspots().println();
 
 operation Panorama panoramaMasHotspots(): String {
 	
@@ -20,3 +20,4 @@ operation Panorama panoramaMasHotspots(): String {
 operation Panorama numeroHotspots(): Integer {
 	return self.hotspots.size();
 }
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tours:Tour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Tours="http://www.uniandes.edu.co/Tours">
+  <panoramas hotspots="//@hotspots.0" nombre="Pico"/>
+  <panoramas hotspots="//@hotspots.1" nombre="Mirador"/>
+  <hotspots nombre="PicoAMirador"/>
+  <hotspots rotación="//@coordenada.0" posicion="//@coordenada.1" destino="//@panoramas.0" origen="//@panoramas.1" nombre="MiradorAPico"/>
+  <coordenada x="100.0" y="50.0" z="270.0"/>
+  <coordenada x="-5.0" y="10.0" z="1.0"/>
+</Tours:Tour>
