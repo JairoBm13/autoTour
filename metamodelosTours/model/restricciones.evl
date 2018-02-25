@@ -4,9 +4,9 @@ context kdm!Panorama {
 		
 		guard : true
 		
-		check : Panorama.allInstances().select(self.name) > 1
+		check : Panorama.allInstances().select(p : Panorama | p.nombre==self.nombre).size() == 1
 		
-		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.name
+		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.nombre
 	}
 	
 	critique CaminoATodoPanorama {
@@ -15,7 +15,7 @@ context kdm!Panorama {
 		
 		check : self.revisarCaminoAPanoramas()
 		
-		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.name
+		message : "No pueden haber 2 panoramas con el mismo nombre:  " + self.nombre
 	}
 }
 
@@ -24,7 +24,7 @@ operation Panorama revisarCaminoAPanoramas(): Boolean {
 	var panoramas = Panorama.allInstances().excluding(self);
 	
 	for (panorama in panoramas) { 
-		if(self.llegaAPanorama(panorama)) {
+		if(self.llegaAPanorama(panorama.nombre)) {
 			return true;
 		}
 	}
@@ -34,7 +34,7 @@ operation Panorama revisarCaminoAPanoramas(): Boolean {
 
 operation Panorama llegaAPanorama(name:String): Boolean {
 	for (hotspot in self.hotspots) {
-		if(hotspot.destino.name == name) {
+		if(hotspot.destino.nombre == name) {
 			return true;
 		}
 		if(hotspot.destino.llegaAPanorama(name)) {
@@ -47,11 +47,11 @@ context kdm!Hotspot {
 
 	critique HotspotABandBA {
 		
-		guard : self.destino.isDefined() and self.origen.IsDefined()
+		guard : self.destino.isDefined() and self.origen.isDefined()
 		
-		check : Hotspot.allInstances().any((origen = self.destino) and (destino = self.origen))
+		check : self.destino.hotspots.exists(h : Hotspot | h.nombre.endsWith(self.origen.nombre))
 		
-		message : "Debe existir un hotspot que vaya del panorama " + self.destino + " al panorama " + self.origen
+		message : "Debe existir un hotspot que vaya del panorama " + self.destino.nombre + " al panorama " + self.origen.nombre
 	}
 	
 	critique ZZeroNO {
@@ -60,7 +60,7 @@ context kdm!Hotspot {
 		
 		check : not (self.posicion.z == 0)
 		
-		message : "La posición del hotspot "+self.name+" no puede tener valor 0 en la cordanada z"
+		message : "La posición del hotspot "+self.nombre+" no puede tener valor 0 en la cordanada z"
 		
 		fix {
 		
@@ -72,13 +72,13 @@ context kdm!Hotspot {
 		}
 	}
 	
-	critique rotationBoundsBetween0And360 {
+	critique rotacionBoundsBetween0And360 {
 	
 		guard : self.rotacion.isDefined()
 		
-		check : (self.rotation.x >= 0 and self.rotation.x <= 360) and (self.rotation.y >= 0 and self.rotation.y <= 360) and (self.rotation.z >= 0 and self.rotation.z <= 360)
+		check : (self.rotacion.x >= 0 and self.rotacion.x <= 360) and (self.rotacion.y >= 0 and self.rotacion.y <= 360) and (self.rotacion.z >= 0 and self.rotacion.z <= 360)
 	
-		message : "La rotación del hotspot "+self.name+" debe tener las coordenadas entre el valor 0 y el 360"
+		message : "La rotación del hotspot "+self.nombre+" debe tener las coordenadas entre el valor 0 y el 360"
 		
 		fix {
 		
@@ -86,14 +86,14 @@ context kdm!Hotspot {
 		
 			do {
 			
-				if(self.rotation.x < 0) self.rotation.x = 0;
-				else if(self.rotation.x > 360) self.rotation.x = 360;
+				if(self.rotacion.x < 0) self.rotacion.x = 0;
+				else if(self.rotacion.x > 360) self.rotacion.x = 360;
 				
-				if(self.rotation.y < 0) self.rotation.y = 0;
-				else if(self.rotation.y > 360) self.rotation.y = 360;
+				if(self.rotacion.y < 0) self.rotacion.y = 0;
+				else if(self.rotacion.y > 360) self.rotacion.y = 360;
 				
-				if(self.rotation.z < 0) self.rotation.z = 0;
-				else if(self.rotation.z > 360) self.rotation.z = 360;
+				if(self.rotacion.z < 0) self.rotacion.z = 0;
+				else if(self.rotacion.z > 360) self.rotacion.z = 360;
 				
 			}
 		}
@@ -106,7 +106,7 @@ context kdm!Tour {
 		
 		guard : true
 		
-		check : self.panoramas.size > 1
+		check : self.panoramas.size() > 1
 		
 		message : "Deben existir por lo menos 2 panoramas en el tour"
 	}

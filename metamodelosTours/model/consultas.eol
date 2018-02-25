@@ -1,12 +1,11 @@
 "El Panorama con más Hotspots es: ".print();
 panoramaMasHotspots().println();
 
-operation Panorama panoramaMasHotspots(): String {
+operation panoramaMasHotspots(): String {
 	
-	var panoramaMas = 	Panorama.allInstances().first();
+	var panoramaMas = Panorama.allInstances().first();
 	var cantidad = panoramaMas.numeroHotspots();
 	var panoramas = Panorama.allInstances().excluding(panoramaMas);
-	
 	for (panorama in panoramas) { 
 		if(panorama.numeroHotspots() > cantidad) {
 			panoramaMas = panorama;
@@ -14,10 +13,9 @@ operation Panorama panoramaMasHotspots(): String {
 		}
 	}
 	
-	return panoramaMas.name;
+	return panoramaMas.nombre;
 }
 
 operation Panorama numeroHotspots(): Integer {
 	return self.hotspots.size();
 }
-

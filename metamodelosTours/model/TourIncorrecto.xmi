@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Tours:Tour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Tours="http://www.uniandes.edu.co/Tours">
-  <panoramas hotspots="//@hotspots.0" nombre="Unico"/>
-  <hotspots rotación="//@coordenada.1" posicion="//@coordenada.0" origen="//@panoramas.0" nombre="SinDestino"/>
-  <hotspots rotación="//@coordenada.1" posicion="//@coordenada.0" destino="//@panoramas.0" nombre="SinOrigen"/>
-  <coordenada z="1.0"/>
-  <coordenada x="3541653.0" y="-1.0" z="500.0"/>
+<Tours:Tour
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:Tours="http://www.uniandes.edu.co/Tours"
+    nombre="Malo">
+  <panoramas
+      hotspots="//@hotspots.0"
+      nombre="Unico"/>
+  <hotspots
+      rotacion="//@coordenada.1"
+      posicion="//@coordenada.0"
+      origen="//@panoramas.0"
+      nombre="SinDestino"/>
+  <hotspots
+      rotacion="//@coordenada.1"
+      posicion="//@coordenada.0"
+      destino="//@panoramas.0"
+      nombre="SinOrigen"/>
+  <coordenada/>
+  <coordenada
+      x="3541653.0"
+      y="-1.0"
+      z="500.0"/>
 </Tours:Tour>

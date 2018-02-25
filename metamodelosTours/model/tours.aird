@@ -329,9 +329,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_vaCsgAoIEeigieEtJ7-nXQ" name="[1..1] rotación" sourceNode="_7jhZEAoDEeiJB8RuywVH8A" targetNode="_7jeVwAoDEeiJB8RuywVH8A">
-      <target xmi:type="ecore:EReference" href="tours.ecore#//Hotspot/rotación"/>
-      <semanticElements xmi:type="ecore:EReference" href="tours.ecore#//Hotspot/rotación"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_vaCsgAoIEeigieEtJ7-nXQ" name="[1..1] rotacion" sourceNode="_7jhZEAoDEeiJB8RuywVH8A" targetNode="_7jeVwAoDEeiJB8RuywVH8A">
+      <target xmi:type="ecore:EReference" href="tours.ecore#//Hotspot/rotacion"/>
+      <semanticElements xmi:type="ecore:EReference" href="tours.ecore#//Hotspot/rotacion"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_vaDTkAoIEeigieEtJ7-nXQ" description="_7j7owAoDEeiJB8RuywVH8A" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_vaDTkQoIEeigieEtJ7-nXQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
