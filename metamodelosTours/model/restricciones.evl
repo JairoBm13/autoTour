@@ -49,7 +49,7 @@ context kdm!Hotspot {
 		
 		guard : self.destino.isDefined() and self.origen.isDefined()
 		
-		check : self.destino.hotspots.exists(h : Hotspot | h.nombre.endsWith(self.origen.nombre))
+		check : self.destino.hotspots.exists(h : Hotspot | h.destino == self.origen)
 		
 		message : "Debe existir un hotspot que vaya del panorama " + self.destino.nombre + " al panorama " + self.origen.nombre
 	}
