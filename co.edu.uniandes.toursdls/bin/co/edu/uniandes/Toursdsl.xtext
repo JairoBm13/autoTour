@@ -1,0 +1,33 @@
+grammar co.edu.uniandes.Toursdsl with org.eclipse.xtext.common.Terminals
+
+generate toursdsl "http://www.edu.co/uniandes/Toursdsl"
+
+Tour:
+	'{' 
+		'name:' '"' name = ID '",'
+		'places:' '[' places+=Panorama* ']'
+	'}'
+;
+
+Panorama:
+	'{' 
+		'name:' '"' name = ID '",'
+		'description:' '"' description = STRING '",'
+		'paths' '[' places+=Hotspot* ']'
+	'}'
+;
+
+Hotspot:
+	'{' 
+		'name:' '"' name = ID '",'
+		'to:' '"' destino = [Panorama] '",'
+		'from:' '"' origen = [Panorama] '",'
+		'position:' posicion = Coordenada ','
+		'position:' rotacion = Coordenada ','
+	'}'
+;
+
+Coordenada:
+	'{' 'x:' x = INT'.'INT ',' 'y:' y = INT'.'INT ',' 'z:' z = INT'.'INT'}'
+;
+	
