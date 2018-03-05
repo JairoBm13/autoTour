@@ -4,7 +4,7 @@ generate toursdsl "http://www.edu.co/uniandes/Toursdsl"
 
 Tour:
 	OPENING_CURLY_BRACKET 
-		NAME COLON QUOTE name = ID QUOTE COMMA
+		NAME COLON name = ID COMMA
 		PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama(COMMAplaces+=Panorama)* CLOSING_SQUARE_BRACKET
 	CLOSING_CURLY_BRACKET
 ;

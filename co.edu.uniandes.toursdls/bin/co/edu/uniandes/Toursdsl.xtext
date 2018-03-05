@@ -3,31 +3,105 @@ grammar co.edu.uniandes.Toursdsl with org.eclipse.xtext.common.Terminals
 generate toursdsl "http://www.edu.co/uniandes/Toursdsl"
 
 Tour:
-	'{' 
-		'name:' '"' name = ID '",'
-		'places:' '[' places+=Panorama* ']'
-	'}'
+	OPENING_CURLY_BRACKET 
+		NAME COLON name = ID COMMA
+		PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama(COMMAplaces+=Panorama)* CLOSING_SQUARE_BRACKET
+	CLOSING_CURLY_BRACKET
 ;
 
 Panorama:
-	'{' 
-		'name:' '"' name = ID '",'
-		'description:' '"' description = STRING '",'
-		'paths' '[' places+=Hotspot* ']'
-	'}'
+	OPENING_CURLY_BRACKET 
+		NAME COLON QUOTE name = ID QUOTE COMMA
+		DESCRIPTION COLON QUOTE description = STRING QUOTE COMMA
+		PATHS COLON OPENING_SQUARE_BRACKET places+=Hotspot(COMMA places+=Hotspot)* CLOSING_SQUARE_BRACKET
+	CLOSING_CURLY_BRACKET
 ;
 
 Hotspot:
-	'{' 
-		'name:' '"' name = ID '",'
-		'to:' '"' destino = [Panorama] '",'
-		'from:' '"' origen = [Panorama] '",'
-		'position:' posicion = Coordenada ','
-		'position:' rotacion = Coordenada ','
-	'}'
+	OPENING_CURLY_BRACKET 
+		NAME COLON QUOTE name = ID QUOTE COMMA
+		TO COLON QUOTE destino = [Panorama] QUOTE COMMA
+		FROM COLON QUOTE origen = [Panorama] QUOTE COMMA
+		POSITION COLON posicion = Coordenada COMMA
+		POSITION COLON rotacion = Coordenada COMMA
+	CLOSING_CURLY_BRACKET
 ;
 
 Coordenada:
-	'{' 'x:' x = INT'.'INT ',' 'y:' y = INT'.'INT ',' 'z:' z = INT'.'INT'}'
+	OPENING_CURLY_BRACKET 
+		COORDINATE_X COLON x = INT DOT INT COMMA
+		COORDINATE_Y COLON y = INT DOT INT COMMA
+		COORDINATE_Z COLON z = INT DOT INT
+	CLOSING_CURLY_BRACKET
 ;
 	
+terminal OPENING_CURLY_BRACKET:
+
+'{';
+
+terminal CLOSING_CURLY_BRACKET:
+
+'}';
+
+terminal OPENING_SQUARE_BRACKET:
+	
+'[';
+
+terminal CLOSING_SQUARE_BRACKET:
+
+']';
+
+terminal COLON:
+
+':';
+
+terminal QUOTE:
+	
+'"';
+
+terminal COMMA:
+	
+',';
+
+terminal DOT:
+	
+'.';
+
+terminal NAME:
+	
+'name';
+
+terminal FROM:
+
+'from';
+
+terminal TO:
+
+'to';
+
+terminal POSITION:
+
+'position';
+
+terminal PLACES:
+
+'places';
+
+terminal DESCRIPTION:
+
+'description';
+
+terminal PATHS:
+'paths';
+
+terminal COORDINATE_X:
+
+'x';
+
+terminal COORDINATE_Y:
+
+'y';
+
+terminal COORDINATE_Z:
+
+'z';
