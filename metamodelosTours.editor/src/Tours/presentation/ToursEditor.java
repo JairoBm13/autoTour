@@ -404,8 +404,6 @@ public class ToursEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
-			protected boolean dispatching;
-
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -421,26 +419,21 @@ public class ToursEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-							dispatchUpdateProblemIndication();
+
+							if (updateProblemIndication) {
+								getSite().getShell().getDisplay().asyncExec
+									(new Runnable() {
+										 public void run() {
+											 updateProblemIndication();
+										 }
+									 });
+							}
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
-				}
-			}
-
-			protected void dispatchUpdateProblemIndication() {
-				if (updateProblemIndication && !dispatching) {
-					dispatching = true;
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 public void run() {
-								 dispatching = false;
-								 updateProblemIndication();
-							 }
-						 });
 				}
 			}
 
@@ -453,7 +446,14 @@ public class ToursEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				dispatchUpdateProblemIndication();
+				if (updateProblemIndication) {
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 updateProblemIndication();
+							 }
+						 });
+				}
 			}
 		};
 
@@ -530,7 +530,7 @@ public class ToursEditor
 					}
 				}
 				catch (CoreException exception) {
-					ToursEditorPlugin.INSTANCE.log(exception);
+					ModeloEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -646,16 +646,19 @@ public class ToursEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					ToursEditorPlugin.INSTANCE.log(exception);
+					ModeloEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				try {
-					markerHelper.updateMarkers(diagnostic);
-				}
-				catch (CoreException exception) {
-					ToursEditorPlugin.INSTANCE.log(exception);
+				markerHelper.deleteMarkers(editingDomain.getResourceSet());
+				if (diagnostic.getSeverity() != Diagnostic.OK) {
+					try {
+						markerHelper.createMarkers(diagnostic);
+					}
+					catch (CoreException exception) {
+						ModeloEditorPlugin.INSTANCE.log(exception);
+					}
 				}
 			}
 		}
@@ -946,7 +949,7 @@ public class ToursEditor
 	 * @generated
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput());
 		Exception exception = null;
 		Resource resource = null;
 		try {
@@ -974,11 +977,10 @@ public class ToursEditor
 	 * @generated
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
-		boolean hasErrors = !resource.getErrors().isEmpty();
-		if (hasErrors || !resource.getWarnings().isEmpty()) {
+		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
-					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
+					(Diagnostic.ERROR,
 					 "metamodelosTours.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
@@ -1036,7 +1038,6 @@ public class ToursEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1342,7 +1343,6 @@ public class ToursEditor
 
 					// Set up the tree viewer.
 					//
-					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1490,9 +1490,7 @@ public class ToursEditor
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					List<Resource> resources = editingDomain.getResourceSet().getResources();
-					for (int i = 0; i < resources.size(); ++i) {
-						Resource resource = resources.get(i);
+					for (Resource resource : editingDomain.getResourceSet().getResources()) {
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();
@@ -1524,7 +1522,7 @@ public class ToursEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			ToursEditorPlugin.INSTANCE.log(exception);
+			ModeloEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1728,7 +1726,7 @@ public class ToursEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return ToursEditorPlugin.INSTANCE.getString(key);
+		return ModeloEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1738,7 +1736,7 @@ public class ToursEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return ToursEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return ModeloEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

@@ -7,19 +7,19 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Tours edit plugin.
+ * This is the central singleton for the Modelo edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class ToursEditPlugin extends EMFPlugin {
+public final class ModeloEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final ToursEditPlugin INSTANCE = new ToursEditPlugin();
+	public static final ModeloEditPlugin INSTANCE = new ModeloEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -35,7 +35,7 @@ public final class ToursEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToursEditPlugin() {
+	public ModeloEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

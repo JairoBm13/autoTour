@@ -30,13 +30,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link Tours.impl.TourImpl#getPanoramas <em>Panoramas</em>}</li>
  *   <li>{@link Tours.impl.TourImpl#getHotspots <em>Hotspots</em>}</li>
  *   <li>{@link Tours.impl.TourImpl#getCoordenada <em>Coordenada</em>}</li>
  *   <li>{@link Tours.impl.TourImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

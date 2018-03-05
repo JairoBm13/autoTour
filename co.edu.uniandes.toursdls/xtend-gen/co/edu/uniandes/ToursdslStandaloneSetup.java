@@ -11,6 +11,7 @@ import co.edu.uniandes.ToursdslStandaloneSetupGenerated;
 @SuppressWarnings("all")
 public class ToursdslStandaloneSetup extends ToursdslStandaloneSetupGenerated {
   public static void doSetup() {
-    new ToursdslStandaloneSetup().createInjectorAndDoEMFRegistration();
+    ToursdslStandaloneSetup _toursdslStandaloneSetup = new ToursdslStandaloneSetup();
+    _toursdslStandaloneSetup.createInjectorAndDoEMFRegistration();
   }
 }

@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link Tours.Tour#getPanoramas <em>Panoramas</em>}</li>
  *   <li>{@link Tours.Tour#getHotspots <em>Hotspots</em>}</li>
  *   <li>{@link Tours.Tour#getCoordenada <em>Coordenada</em>}</li>
  *   <li>{@link Tours.Tour#getNombre <em>Nombre</em>}</li>
  * </ul>
+ * </p>
  *
  * @see Tours.ToursPackage#getTour()
  * @model

@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link Tours.Coordenada#getX <em>X</em>}</li>
  *   <li>{@link Tours.Coordenada#getY <em>Y</em>}</li>
  *   <li>{@link Tours.Coordenada#getZ <em>Z</em>}</li>
  * </ul>
+ * </p>
  *
  * @see Tours.ToursPackage#getCoordenada()
  * @model

@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link Tours.impl.CoordenadaImpl#getX <em>X</em>}</li>
  *   <li>{@link Tours.impl.CoordenadaImpl#getY <em>Y</em>}</li>
  *   <li>{@link Tours.impl.CoordenadaImpl#getZ <em>Z</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link Tours.impl.PanoramaImpl#getHotspots <em>Hotspots</em>}</li>
  *   <li>{@link Tours.impl.PanoramaImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

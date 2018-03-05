@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link Tours.Hotspot#getRotacion <em>Rotacion</em>}</li>
  *   <li>{@link Tours.Hotspot#getPosicion <em>Posicion</em>}</li>
@@ -19,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Tours.Hotspot#getOrigen <em>Origen</em>}</li>
  *   <li>{@link Tours.Hotspot#getNombre <em>Nombre</em>}</li>
  * </ul>
+ * </p>
  *
  * @see Tours.ToursPackage#getHotspot()
  * @model

@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: metamodelosTours.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: Tours.presentation.ToursEditorPlugin$Implementation
+Bundle-Activator: Tours.presentation.ModeloEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

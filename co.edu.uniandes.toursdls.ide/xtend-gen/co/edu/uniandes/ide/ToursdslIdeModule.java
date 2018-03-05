@@ -3,11 +3,9 @@
  */
 package co.edu.uniandes.ide;
 
-import co.edu.uniandes.ide.AbstractToursdslIdeModule;
-
 /**
  * Use this class to register ide components.
  */
 @SuppressWarnings("all")
-public class ToursdslIdeModule extends AbstractToursdslIdeModule {
+public class ToursdslIdeModule /* implements AbstractToursdslIdeModule  */{
 }

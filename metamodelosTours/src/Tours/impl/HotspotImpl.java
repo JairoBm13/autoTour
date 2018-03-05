@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link Tours.impl.HotspotImpl#getRotacion <em>Rotacion</em>}</li>
  *   <li>{@link Tours.impl.HotspotImpl#getPosicion <em>Posicion</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Tours.impl.HotspotImpl#getOrigen <em>Origen</em>}</li>
  *   <li>{@link Tours.impl.HotspotImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

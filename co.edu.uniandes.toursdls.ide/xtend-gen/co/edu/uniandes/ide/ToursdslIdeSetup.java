@@ -3,12 +3,8 @@
  */
 package co.edu.uniandes.ide;
 
-import co.edu.uniandes.ToursdslRuntimeModule;
 import co.edu.uniandes.ToursdslStandaloneSetup;
-import co.edu.uniandes.ide.ToursdslIdeModule;
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import org.eclipse.xtext.util.Modules2;
 
 /**
  * Initialization support for running Xtext languages as language servers.
@@ -17,8 +13,7 @@ import org.eclipse.xtext.util.Modules2;
 public class ToursdslIdeSetup extends ToursdslStandaloneSetup {
   @Override
   public Injector createInjector() {
-    ToursdslRuntimeModule _toursdslRuntimeModule = new ToursdslRuntimeModule();
-    ToursdslIdeModule _toursdslIdeModule = new ToursdslIdeModule();
-    return Guice.createInjector(Modules2.mixin(_toursdslRuntimeModule, _toursdslIdeModule));
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from ToursdslIdeModule to Module");
   }
 }

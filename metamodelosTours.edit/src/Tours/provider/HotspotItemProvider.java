@@ -244,7 +244,7 @@ public class HotspotItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ToursEditPlugin.INSTANCE;
+		return ModeloEditPlugin.INSTANCE;
 	}
 
 }

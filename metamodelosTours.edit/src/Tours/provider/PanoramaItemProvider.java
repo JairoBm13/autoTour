@@ -175,7 +175,7 @@ public class PanoramaItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ToursEditPlugin.INSTANCE;
+		return ModeloEditPlugin.INSTANCE;
 	}
 
 }

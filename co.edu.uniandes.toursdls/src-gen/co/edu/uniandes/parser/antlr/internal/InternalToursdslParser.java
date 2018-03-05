@@ -21,33 +21,34 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalToursdslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_OPENING_CURLY_BRACKET", "RULE_NAME", "RULE_COLON", "RULE_ID", "RULE_COMMA", "RULE_PLACES", "RULE_OPENING_SQUARE_BRACKET", "RULE_CLOSING_SQUARE_BRACKET", "RULE_CLOSING_CURLY_BRACKET", "RULE_QUOTE", "RULE_DESCRIPTION", "RULE_STRING", "RULE_PATHS", "RULE_TO", "RULE_FROM", "RULE_POSITION", "RULE_COORDINATE_X", "RULE_INT", "RULE_DOT", "RULE_COORDINATE_Y", "RULE_COORDINATE_Z", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_OPENING_CURLY_BRACKET", "RULE_NAME", "RULE_COLON", "RULE_STRING", "RULE_COMMA", "RULE_PLACES", "RULE_OPENING_SQUARE_BRACKET", "RULE_CLOSING_SQUARE_BRACKET", "RULE_CLOSING_CURLY_BRACKET", "RULE_DESCRIPTION", "RULE_PATHS", "RULE_TO", "RULE_ID", "RULE_FROM", "RULE_POSITION", "RULE_ROTATION", "RULE_COORDINATE_X", "RULE_INT", "RULE_DOT", "RULE_COORDINATE_Y", "RULE_COORDINATE_Z", "RULE_QUOTE", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'-'"
     };
-    public static final int RULE_PATHS=16;
-    public static final int RULE_TO=17;
+    public static final int RULE_PATHS=14;
+    public static final int RULE_TO=15;
     public static final int RULE_NAME=5;
     public static final int RULE_PLACES=9;
-    public static final int RULE_STRING=15;
+    public static final int RULE_STRING=7;
     public static final int RULE_CLOSING_CURLY_BRACKET=12;
-    public static final int RULE_POSITION=19;
-    public static final int RULE_SL_COMMENT=26;
+    public static final int RULE_POSITION=18;
+    public static final int RULE_SL_COMMENT=27;
     public static final int RULE_OPENING_CURLY_BRACKET=4;
     public static final int RULE_DOT=22;
     public static final int EOF=-1;
+    public static final int T__30=30;
     public static final int RULE_COORDINATE_Y=23;
     public static final int RULE_COORDINATE_X=20;
     public static final int RULE_COORDINATE_Z=24;
-    public static final int RULE_ID=7;
+    public static final int RULE_ID=16;
     public static final int RULE_COMMA=8;
-    public static final int RULE_WS=27;
-    public static final int RULE_DESCRIPTION=14;
+    public static final int RULE_WS=28;
+    public static final int RULE_DESCRIPTION=13;
+    public static final int RULE_ROTATION=19;
     public static final int RULE_COLON=6;
-    public static final int RULE_ANY_OTHER=28;
-    public static final int RULE_FROM=18;
+    public static final int RULE_ANY_OTHER=29;
+    public static final int RULE_FROM=17;
     public static final int RULE_INT=21;
-    public static final int T__29=29;
-    public static final int RULE_ML_COMMENT=25;
-    public static final int RULE_QUOTE=13;
+    public static final int RULE_ML_COMMENT=26;
+    public static final int RULE_QUOTE=25;
     public static final int RULE_OPENING_SQUARE_BRACKET=10;
     public static final int RULE_CLOSING_SQUARE_BRACKET=11;
 
@@ -127,7 +128,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTour"
-    // InternalToursdsl.g:71:1: ruleTour returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_ID ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) ( (lv_COMMAplaces_9_0= rulePanorama ) )* this_CLOSING_SQUARE_BRACKET_10= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_11= RULE_CLOSING_CURLY_BRACKET ) ;
+    // InternalToursdsl.g:71:1: ruleTour returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )* this_CLOSING_SQUARE_BRACKET_11= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_12= RULE_CLOSING_CURLY_BRACKET ) ;
     public final EObject ruleTour() throws RecognitionException {
         EObject current = null;
 
@@ -139,22 +140,23 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
         Token this_PLACES_5=null;
         Token this_COLON_6=null;
         Token this_OPENING_SQUARE_BRACKET_7=null;
-        Token this_CLOSING_SQUARE_BRACKET_10=null;
-        Token this_CLOSING_CURLY_BRACKET_11=null;
+        Token this_COMMA_9=null;
+        Token this_CLOSING_SQUARE_BRACKET_11=null;
+        Token this_CLOSING_CURLY_BRACKET_12=null;
         EObject lv_places_8_0 = null;
 
-        EObject lv_COMMAplaces_9_0 = null;
+        EObject lv_places_10_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalToursdsl.g:77:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_ID ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) ( (lv_COMMAplaces_9_0= rulePanorama ) )* this_CLOSING_SQUARE_BRACKET_10= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_11= RULE_CLOSING_CURLY_BRACKET ) )
-            // InternalToursdsl.g:78:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_ID ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) ( (lv_COMMAplaces_9_0= rulePanorama ) )* this_CLOSING_SQUARE_BRACKET_10= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_11= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:77:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )* this_CLOSING_SQUARE_BRACKET_11= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_12= RULE_CLOSING_CURLY_BRACKET ) )
+            // InternalToursdsl.g:78:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )* this_CLOSING_SQUARE_BRACKET_11= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_12= RULE_CLOSING_CURLY_BRACKET )
             {
-            // InternalToursdsl.g:78:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_ID ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) ( (lv_COMMAplaces_9_0= rulePanorama ) )* this_CLOSING_SQUARE_BRACKET_10= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_11= RULE_CLOSING_CURLY_BRACKET )
-            // InternalToursdsl.g:79:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_ID ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) ( (lv_COMMAplaces_9_0= rulePanorama ) )* this_CLOSING_SQUARE_BRACKET_10= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_11= RULE_CLOSING_CURLY_BRACKET
+            // InternalToursdsl.g:78:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )* this_CLOSING_SQUARE_BRACKET_11= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_12= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:79:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_PLACES_5= RULE_PLACES this_COLON_6= RULE_COLON this_OPENING_SQUARE_BRACKET_7= RULE_OPENING_SQUARE_BRACKET ( (lv_places_8_0= rulePanorama ) ) (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )* this_CLOSING_SQUARE_BRACKET_11= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_12= RULE_CLOSING_CURLY_BRACKET
             {
             this_OPENING_CURLY_BRACKET_0=(Token)match(input,RULE_OPENING_CURLY_BRACKET,FOLLOW_3); 
 
@@ -168,15 +170,15 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_2, grammarAccess.getTourAccess().getCOLONTerminalRuleCall_2());
             		
-            // InternalToursdsl.g:91:3: ( (lv_name_3_0= RULE_ID ) )
-            // InternalToursdsl.g:92:4: (lv_name_3_0= RULE_ID )
+            // InternalToursdsl.g:91:3: ( (lv_name_3_0= RULE_STRING ) )
+            // InternalToursdsl.g:92:4: (lv_name_3_0= RULE_STRING )
             {
-            // InternalToursdsl.g:92:4: (lv_name_3_0= RULE_ID )
-            // InternalToursdsl.g:93:5: lv_name_3_0= RULE_ID
+            // InternalToursdsl.g:92:4: (lv_name_3_0= RULE_STRING )
+            // InternalToursdsl.g:93:5: lv_name_3_0= RULE_STRING
             {
-            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_6); 
+            lv_name_3_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-            					newLeafNode(lv_name_3_0, grammarAccess.getTourAccess().getNameIDTerminalRuleCall_3_0());
+            					newLeafNode(lv_name_3_0, grammarAccess.getTourAccess().getNameSTRINGTerminalRuleCall_3_0());
             				
 
             					if (current==null) {
@@ -186,7 +188,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_3_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
             }
@@ -241,43 +243,53 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalToursdsl.g:144:3: ( (lv_COMMAplaces_9_0= rulePanorama ) )*
+            // InternalToursdsl.g:144:3: (this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) ) )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_OPENING_CURLY_BRACKET) ) {
+                if ( (LA1_0==RULE_COMMA) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalToursdsl.g:145:4: (lv_COMMAplaces_9_0= rulePanorama )
+            	    // InternalToursdsl.g:145:4: this_COMMA_9= RULE_COMMA ( (lv_places_10_0= rulePanorama ) )
             	    {
-            	    // InternalToursdsl.g:145:4: (lv_COMMAplaces_9_0= rulePanorama )
-            	    // InternalToursdsl.g:146:5: lv_COMMAplaces_9_0= rulePanorama
+            	    this_COMMA_9=(Token)match(input,RULE_COMMA,FOLLOW_9); 
+
+            	    				newLeafNode(this_COMMA_9, grammarAccess.getTourAccess().getCOMMATerminalRuleCall_9_0());
+            	    			
+            	    // InternalToursdsl.g:149:4: ( (lv_places_10_0= rulePanorama ) )
+            	    // InternalToursdsl.g:150:5: (lv_places_10_0= rulePanorama )
+            	    {
+            	    // InternalToursdsl.g:150:5: (lv_places_10_0= rulePanorama )
+            	    // InternalToursdsl.g:151:6: lv_places_10_0= rulePanorama
             	    {
 
-            	    					newCompositeNode(grammarAccess.getTourAccess().getCOMMAplacesPanoramaParserRuleCall_9_0());
-            	    				
+            	    						newCompositeNode(grammarAccess.getTourAccess().getPlacesPanoramaParserRuleCall_9_1_0());
+            	    					
             	    pushFollow(FOLLOW_10);
-            	    lv_COMMAplaces_9_0=rulePanorama();
+            	    lv_places_10_0=rulePanorama();
 
             	    state._fsp--;
 
 
-            	    					if (current==null) {
-            	    						current = createModelElementForParent(grammarAccess.getTourRule());
-            	    					}
-            	    					add(
-            	    						current,
-            	    						"COMMAplaces",
-            	    						lv_COMMAplaces_9_0,
-            	    						"co.edu.uniandes.Toursdsl.Panorama");
-            	    					afterParserOrEnumRuleCall();
-            	    				
+            	    						if (current==null) {
+            	    							current = createModelElementForParent(grammarAccess.getTourRule());
+            	    						}
+            	    						add(
+            	    							current,
+            	    							"places",
+            	    							lv_places_10_0,
+            	    							"co.edu.uniandes.Toursdsl.Panorama");
+            	    						afterParserOrEnumRuleCall();
+            	    					
+
+            	    }
+
 
             	    }
 
@@ -290,13 +302,13 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            this_CLOSING_SQUARE_BRACKET_10=(Token)match(input,RULE_CLOSING_SQUARE_BRACKET,FOLLOW_11); 
+            this_CLOSING_SQUARE_BRACKET_11=(Token)match(input,RULE_CLOSING_SQUARE_BRACKET,FOLLOW_11); 
 
-            			newLeafNode(this_CLOSING_SQUARE_BRACKET_10, grammarAccess.getTourAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_10());
+            			newLeafNode(this_CLOSING_SQUARE_BRACKET_11, grammarAccess.getTourAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_10());
             		
-            this_CLOSING_CURLY_BRACKET_11=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
+            this_CLOSING_CURLY_BRACKET_12=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
 
-            			newLeafNode(this_CLOSING_CURLY_BRACKET_11, grammarAccess.getTourAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_11());
+            			newLeafNode(this_CLOSING_CURLY_BRACKET_12, grammarAccess.getTourAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_11());
             		
 
             }
@@ -321,7 +333,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePanorama"
-    // InternalToursdsl.g:175:1: entryRulePanorama returns [EObject current=null] : iv_rulePanorama= rulePanorama EOF ;
+    // InternalToursdsl.g:181:1: entryRulePanorama returns [EObject current=null] : iv_rulePanorama= rulePanorama EOF ;
     public final EObject entryRulePanorama() throws RecognitionException {
         EObject current = null;
 
@@ -329,8 +341,8 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalToursdsl.g:175:49: (iv_rulePanorama= rulePanorama EOF )
-            // InternalToursdsl.g:176:2: iv_rulePanorama= rulePanorama EOF
+            // InternalToursdsl.g:181:49: (iv_rulePanorama= rulePanorama EOF )
+            // InternalToursdsl.g:182:2: iv_rulePanorama= rulePanorama EOF
             {
              newCompositeNode(grammarAccess.getPanoramaRule()); 
             pushFollow(FOLLOW_1);
@@ -357,43 +369,39 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePanorama"
-    // InternalToursdsl.g:182:1: rulePanorama returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_DESCRIPTION_7= RULE_DESCRIPTION this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (lv_description_10_0= RULE_STRING ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_PATHS_13= RULE_PATHS this_COLON_14= RULE_COLON this_OPENING_SQUARE_BRACKET_15= RULE_OPENING_SQUARE_BRACKET ( (lv_places_16_0= ruleHotspot ) ) (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_19= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET ) ;
+    // InternalToursdsl.g:188:1: rulePanorama returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_DESCRIPTION_5= RULE_DESCRIPTION this_COLON_6= RULE_COLON ( (lv_description_7_0= RULE_STRING ) ) this_COMMA_8= RULE_COMMA this_PATHS_9= RULE_PATHS this_COLON_10= RULE_COLON this_OPENING_SQUARE_BRACKET_11= RULE_OPENING_SQUARE_BRACKET ( (lv_places_12_0= ruleHotspot ) ) (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_15= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_16= RULE_CLOSING_CURLY_BRACKET ) ;
     public final EObject rulePanorama() throws RecognitionException {
         EObject current = null;
 
         Token this_OPENING_CURLY_BRACKET_0=null;
         Token this_NAME_1=null;
         Token this_COLON_2=null;
-        Token this_QUOTE_3=null;
-        Token lv_name_4_0=null;
-        Token this_QUOTE_5=null;
-        Token this_COMMA_6=null;
-        Token this_DESCRIPTION_7=null;
-        Token this_COLON_8=null;
-        Token this_QUOTE_9=null;
-        Token lv_description_10_0=null;
-        Token this_QUOTE_11=null;
-        Token this_COMMA_12=null;
-        Token this_PATHS_13=null;
-        Token this_COLON_14=null;
-        Token this_OPENING_SQUARE_BRACKET_15=null;
-        Token this_COMMA_17=null;
-        Token this_CLOSING_SQUARE_BRACKET_19=null;
-        Token this_CLOSING_CURLY_BRACKET_20=null;
-        EObject lv_places_16_0 = null;
+        Token lv_name_3_0=null;
+        Token this_COMMA_4=null;
+        Token this_DESCRIPTION_5=null;
+        Token this_COLON_6=null;
+        Token lv_description_7_0=null;
+        Token this_COMMA_8=null;
+        Token this_PATHS_9=null;
+        Token this_COLON_10=null;
+        Token this_OPENING_SQUARE_BRACKET_11=null;
+        Token this_COMMA_13=null;
+        Token this_CLOSING_SQUARE_BRACKET_15=null;
+        Token this_CLOSING_CURLY_BRACKET_16=null;
+        EObject lv_places_12_0 = null;
 
-        EObject lv_places_18_0 = null;
+        EObject lv_places_14_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalToursdsl.g:188:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_DESCRIPTION_7= RULE_DESCRIPTION this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (lv_description_10_0= RULE_STRING ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_PATHS_13= RULE_PATHS this_COLON_14= RULE_COLON this_OPENING_SQUARE_BRACKET_15= RULE_OPENING_SQUARE_BRACKET ( (lv_places_16_0= ruleHotspot ) ) (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_19= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET ) )
-            // InternalToursdsl.g:189:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_DESCRIPTION_7= RULE_DESCRIPTION this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (lv_description_10_0= RULE_STRING ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_PATHS_13= RULE_PATHS this_COLON_14= RULE_COLON this_OPENING_SQUARE_BRACKET_15= RULE_OPENING_SQUARE_BRACKET ( (lv_places_16_0= ruleHotspot ) ) (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_19= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:194:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_DESCRIPTION_5= RULE_DESCRIPTION this_COLON_6= RULE_COLON ( (lv_description_7_0= RULE_STRING ) ) this_COMMA_8= RULE_COMMA this_PATHS_9= RULE_PATHS this_COLON_10= RULE_COLON this_OPENING_SQUARE_BRACKET_11= RULE_OPENING_SQUARE_BRACKET ( (lv_places_12_0= ruleHotspot ) ) (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_15= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_16= RULE_CLOSING_CURLY_BRACKET ) )
+            // InternalToursdsl.g:195:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_DESCRIPTION_5= RULE_DESCRIPTION this_COLON_6= RULE_COLON ( (lv_description_7_0= RULE_STRING ) ) this_COMMA_8= RULE_COMMA this_PATHS_9= RULE_PATHS this_COLON_10= RULE_COLON this_OPENING_SQUARE_BRACKET_11= RULE_OPENING_SQUARE_BRACKET ( (lv_places_12_0= ruleHotspot ) ) (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_15= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_16= RULE_CLOSING_CURLY_BRACKET )
             {
-            // InternalToursdsl.g:189:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_DESCRIPTION_7= RULE_DESCRIPTION this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (lv_description_10_0= RULE_STRING ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_PATHS_13= RULE_PATHS this_COLON_14= RULE_COLON this_OPENING_SQUARE_BRACKET_15= RULE_OPENING_SQUARE_BRACKET ( (lv_places_16_0= ruleHotspot ) ) (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_19= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET )
-            // InternalToursdsl.g:190:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_DESCRIPTION_7= RULE_DESCRIPTION this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (lv_description_10_0= RULE_STRING ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_PATHS_13= RULE_PATHS this_COLON_14= RULE_COLON this_OPENING_SQUARE_BRACKET_15= RULE_OPENING_SQUARE_BRACKET ( (lv_places_16_0= ruleHotspot ) ) (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_19= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET
+            // InternalToursdsl.g:195:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_DESCRIPTION_5= RULE_DESCRIPTION this_COLON_6= RULE_COLON ( (lv_description_7_0= RULE_STRING ) ) this_COMMA_8= RULE_COMMA this_PATHS_9= RULE_PATHS this_COLON_10= RULE_COLON this_OPENING_SQUARE_BRACKET_11= RULE_OPENING_SQUARE_BRACKET ( (lv_places_12_0= ruleHotspot ) ) (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_15= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_16= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:196:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_DESCRIPTION_5= RULE_DESCRIPTION this_COLON_6= RULE_COLON ( (lv_description_7_0= RULE_STRING ) ) this_COMMA_8= RULE_COMMA this_PATHS_9= RULE_PATHS this_COLON_10= RULE_COLON this_OPENING_SQUARE_BRACKET_11= RULE_OPENING_SQUARE_BRACKET ( (lv_places_12_0= ruleHotspot ) ) (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )* this_CLOSING_SQUARE_BRACKET_15= RULE_CLOSING_SQUARE_BRACKET this_CLOSING_CURLY_BRACKET_16= RULE_CLOSING_CURLY_BRACKET
             {
             this_OPENING_CURLY_BRACKET_0=(Token)match(input,RULE_OPENING_CURLY_BRACKET,FOLLOW_3); 
 
@@ -403,23 +411,19 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_NAME_1, grammarAccess.getPanoramaAccess().getNAMETerminalRuleCall_1());
             		
-            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_12); 
+            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_5); 
 
             			newLeafNode(this_COLON_2, grammarAccess.getPanoramaAccess().getCOLONTerminalRuleCall_2());
             		
-            this_QUOTE_3=(Token)match(input,RULE_QUOTE,FOLLOW_5); 
-
-            			newLeafNode(this_QUOTE_3, grammarAccess.getPanoramaAccess().getQUOTETerminalRuleCall_3());
-            		
-            // InternalToursdsl.g:206:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalToursdsl.g:207:4: (lv_name_4_0= RULE_ID )
+            // InternalToursdsl.g:208:3: ( (lv_name_3_0= RULE_STRING ) )
+            // InternalToursdsl.g:209:4: (lv_name_3_0= RULE_STRING )
             {
-            // InternalToursdsl.g:207:4: (lv_name_4_0= RULE_ID )
-            // InternalToursdsl.g:208:5: lv_name_4_0= RULE_ID
+            // InternalToursdsl.g:209:4: (lv_name_3_0= RULE_STRING )
+            // InternalToursdsl.g:210:5: lv_name_3_0= RULE_STRING
             {
-            lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_12); 
+            lv_name_3_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-            					newLeafNode(lv_name_4_0, grammarAccess.getPanoramaAccess().getNameIDTerminalRuleCall_4_0());
+            					newLeafNode(lv_name_3_0, grammarAccess.getPanoramaAccess().getNameSTRINGTerminalRuleCall_3_0());
             				
 
             					if (current==null) {
@@ -428,53 +432,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"name",
-            						lv_name_4_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
-            				
-
-            }
-
-
-            }
-
-            this_QUOTE_5=(Token)match(input,RULE_QUOTE,FOLLOW_6); 
-
-            			newLeafNode(this_QUOTE_5, grammarAccess.getPanoramaAccess().getQUOTETerminalRuleCall_5());
-            		
-            this_COMMA_6=(Token)match(input,RULE_COMMA,FOLLOW_13); 
-
-            			newLeafNode(this_COMMA_6, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_6());
-            		
-            this_DESCRIPTION_7=(Token)match(input,RULE_DESCRIPTION,FOLLOW_4); 
-
-            			newLeafNode(this_DESCRIPTION_7, grammarAccess.getPanoramaAccess().getDESCRIPTIONTerminalRuleCall_7());
-            		
-            this_COLON_8=(Token)match(input,RULE_COLON,FOLLOW_12); 
-
-            			newLeafNode(this_COLON_8, grammarAccess.getPanoramaAccess().getCOLONTerminalRuleCall_8());
-            		
-            this_QUOTE_9=(Token)match(input,RULE_QUOTE,FOLLOW_14); 
-
-            			newLeafNode(this_QUOTE_9, grammarAccess.getPanoramaAccess().getQUOTETerminalRuleCall_9());
-            		
-            // InternalToursdsl.g:244:3: ( (lv_description_10_0= RULE_STRING ) )
-            // InternalToursdsl.g:245:4: (lv_description_10_0= RULE_STRING )
-            {
-            // InternalToursdsl.g:245:4: (lv_description_10_0= RULE_STRING )
-            // InternalToursdsl.g:246:5: lv_description_10_0= RULE_STRING
-            {
-            lv_description_10_0=(Token)match(input,RULE_STRING,FOLLOW_12); 
-
-            					newLeafNode(lv_description_10_0, grammarAccess.getPanoramaAccess().getDescriptionSTRINGTerminalRuleCall_10_0());
-            				
-
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getPanoramaRule());
-            					}
-            					setWithLastConsumed(
-            						current,
-            						"description",
-            						lv_description_10_0,
+            						lv_name_3_0,
             						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
@@ -483,37 +441,71 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_QUOTE_11=(Token)match(input,RULE_QUOTE,FOLLOW_6); 
+            this_COMMA_4=(Token)match(input,RULE_COMMA,FOLLOW_12); 
 
-            			newLeafNode(this_QUOTE_11, grammarAccess.getPanoramaAccess().getQUOTETerminalRuleCall_11());
+            			newLeafNode(this_COMMA_4, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_4());
             		
-            this_COMMA_12=(Token)match(input,RULE_COMMA,FOLLOW_15); 
+            this_DESCRIPTION_5=(Token)match(input,RULE_DESCRIPTION,FOLLOW_4); 
 
-            			newLeafNode(this_COMMA_12, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_12());
+            			newLeafNode(this_DESCRIPTION_5, grammarAccess.getPanoramaAccess().getDESCRIPTIONTerminalRuleCall_5());
             		
-            this_PATHS_13=(Token)match(input,RULE_PATHS,FOLLOW_4); 
+            this_COLON_6=(Token)match(input,RULE_COLON,FOLLOW_5); 
 
-            			newLeafNode(this_PATHS_13, grammarAccess.getPanoramaAccess().getPATHSTerminalRuleCall_13());
+            			newLeafNode(this_COLON_6, grammarAccess.getPanoramaAccess().getCOLONTerminalRuleCall_6());
             		
-            this_COLON_14=(Token)match(input,RULE_COLON,FOLLOW_8); 
-
-            			newLeafNode(this_COLON_14, grammarAccess.getPanoramaAccess().getCOLONTerminalRuleCall_14());
-            		
-            this_OPENING_SQUARE_BRACKET_15=(Token)match(input,RULE_OPENING_SQUARE_BRACKET,FOLLOW_9); 
-
-            			newLeafNode(this_OPENING_SQUARE_BRACKET_15, grammarAccess.getPanoramaAccess().getOPENING_SQUARE_BRACKETTerminalRuleCall_15());
-            		
-            // InternalToursdsl.g:282:3: ( (lv_places_16_0= ruleHotspot ) )
-            // InternalToursdsl.g:283:4: (lv_places_16_0= ruleHotspot )
+            // InternalToursdsl.g:238:3: ( (lv_description_7_0= RULE_STRING ) )
+            // InternalToursdsl.g:239:4: (lv_description_7_0= RULE_STRING )
             {
-            // InternalToursdsl.g:283:4: (lv_places_16_0= ruleHotspot )
-            // InternalToursdsl.g:284:5: lv_places_16_0= ruleHotspot
+            // InternalToursdsl.g:239:4: (lv_description_7_0= RULE_STRING )
+            // InternalToursdsl.g:240:5: lv_description_7_0= RULE_STRING
             {
+            lv_description_7_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-            					newCompositeNode(grammarAccess.getPanoramaAccess().getPlacesHotspotParserRuleCall_16_0());
+            					newLeafNode(lv_description_7_0, grammarAccess.getPanoramaAccess().getDescriptionSTRINGTerminalRuleCall_7_0());
             				
-            pushFollow(FOLLOW_16);
-            lv_places_16_0=ruleHotspot();
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getPanoramaRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"description",
+            						lv_description_7_0,
+            						"org.eclipse.xtext.common.Terminals.STRING");
+            				
+
+            }
+
+
+            }
+
+            this_COMMA_8=(Token)match(input,RULE_COMMA,FOLLOW_13); 
+
+            			newLeafNode(this_COMMA_8, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_8());
+            		
+            this_PATHS_9=(Token)match(input,RULE_PATHS,FOLLOW_4); 
+
+            			newLeafNode(this_PATHS_9, grammarAccess.getPanoramaAccess().getPATHSTerminalRuleCall_9());
+            		
+            this_COLON_10=(Token)match(input,RULE_COLON,FOLLOW_8); 
+
+            			newLeafNode(this_COLON_10, grammarAccess.getPanoramaAccess().getCOLONTerminalRuleCall_10());
+            		
+            this_OPENING_SQUARE_BRACKET_11=(Token)match(input,RULE_OPENING_SQUARE_BRACKET,FOLLOW_9); 
+
+            			newLeafNode(this_OPENING_SQUARE_BRACKET_11, grammarAccess.getPanoramaAccess().getOPENING_SQUARE_BRACKETTerminalRuleCall_11());
+            		
+            // InternalToursdsl.g:272:3: ( (lv_places_12_0= ruleHotspot ) )
+            // InternalToursdsl.g:273:4: (lv_places_12_0= ruleHotspot )
+            {
+            // InternalToursdsl.g:273:4: (lv_places_12_0= ruleHotspot )
+            // InternalToursdsl.g:274:5: lv_places_12_0= ruleHotspot
+            {
+
+            					newCompositeNode(grammarAccess.getPanoramaAccess().getPlacesHotspotParserRuleCall_12_0());
+            				
+            pushFollow(FOLLOW_10);
+            lv_places_12_0=ruleHotspot();
 
             state._fsp--;
 
@@ -524,7 +516,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             					add(
             						current,
             						"places",
-            						lv_places_16_0,
+            						lv_places_12_0,
             						"co.edu.uniandes.Toursdsl.Hotspot");
             					afterParserOrEnumRuleCall();
             				
@@ -534,7 +526,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalToursdsl.g:301:3: (this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) ) )*
+            // InternalToursdsl.g:291:3: (this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) ) )*
             loop2:
             do {
                 int alt2=2;
@@ -547,23 +539,23 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalToursdsl.g:302:4: this_COMMA_17= RULE_COMMA ( (lv_places_18_0= ruleHotspot ) )
+            	    // InternalToursdsl.g:292:4: this_COMMA_13= RULE_COMMA ( (lv_places_14_0= ruleHotspot ) )
             	    {
-            	    this_COMMA_17=(Token)match(input,RULE_COMMA,FOLLOW_9); 
+            	    this_COMMA_13=(Token)match(input,RULE_COMMA,FOLLOW_9); 
 
-            	    				newLeafNode(this_COMMA_17, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_17_0());
+            	    				newLeafNode(this_COMMA_13, grammarAccess.getPanoramaAccess().getCOMMATerminalRuleCall_13_0());
             	    			
-            	    // InternalToursdsl.g:306:4: ( (lv_places_18_0= ruleHotspot ) )
-            	    // InternalToursdsl.g:307:5: (lv_places_18_0= ruleHotspot )
+            	    // InternalToursdsl.g:296:4: ( (lv_places_14_0= ruleHotspot ) )
+            	    // InternalToursdsl.g:297:5: (lv_places_14_0= ruleHotspot )
             	    {
-            	    // InternalToursdsl.g:307:5: (lv_places_18_0= ruleHotspot )
-            	    // InternalToursdsl.g:308:6: lv_places_18_0= ruleHotspot
+            	    // InternalToursdsl.g:297:5: (lv_places_14_0= ruleHotspot )
+            	    // InternalToursdsl.g:298:6: lv_places_14_0= ruleHotspot
             	    {
 
-            	    						newCompositeNode(grammarAccess.getPanoramaAccess().getPlacesHotspotParserRuleCall_17_1_0());
+            	    						newCompositeNode(grammarAccess.getPanoramaAccess().getPlacesHotspotParserRuleCall_13_1_0());
             	    					
-            	    pushFollow(FOLLOW_16);
-            	    lv_places_18_0=ruleHotspot();
+            	    pushFollow(FOLLOW_10);
+            	    lv_places_14_0=ruleHotspot();
 
             	    state._fsp--;
 
@@ -574,7 +566,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             	    						add(
             	    							current,
             	    							"places",
-            	    							lv_places_18_0,
+            	    							lv_places_14_0,
             	    							"co.edu.uniandes.Toursdsl.Hotspot");
             	    						afterParserOrEnumRuleCall();
             	    					
@@ -593,13 +585,13 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            this_CLOSING_SQUARE_BRACKET_19=(Token)match(input,RULE_CLOSING_SQUARE_BRACKET,FOLLOW_11); 
+            this_CLOSING_SQUARE_BRACKET_15=(Token)match(input,RULE_CLOSING_SQUARE_BRACKET,FOLLOW_11); 
 
-            			newLeafNode(this_CLOSING_SQUARE_BRACKET_19, grammarAccess.getPanoramaAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_18());
+            			newLeafNode(this_CLOSING_SQUARE_BRACKET_15, grammarAccess.getPanoramaAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_14());
             		
-            this_CLOSING_CURLY_BRACKET_20=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
+            this_CLOSING_CURLY_BRACKET_16=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
 
-            			newLeafNode(this_CLOSING_CURLY_BRACKET_20, grammarAccess.getPanoramaAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_19());
+            			newLeafNode(this_CLOSING_CURLY_BRACKET_16, grammarAccess.getPanoramaAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_15());
             		
 
             }
@@ -624,7 +616,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHotspot"
-    // InternalToursdsl.g:338:1: entryRuleHotspot returns [EObject current=null] : iv_ruleHotspot= ruleHotspot EOF ;
+    // InternalToursdsl.g:328:1: entryRuleHotspot returns [EObject current=null] : iv_ruleHotspot= ruleHotspot EOF ;
     public final EObject entryRuleHotspot() throws RecognitionException {
         EObject current = null;
 
@@ -632,8 +624,8 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalToursdsl.g:338:48: (iv_ruleHotspot= ruleHotspot EOF )
-            // InternalToursdsl.g:339:2: iv_ruleHotspot= ruleHotspot EOF
+            // InternalToursdsl.g:328:48: (iv_ruleHotspot= ruleHotspot EOF )
+            // InternalToursdsl.g:329:2: iv_ruleHotspot= ruleHotspot EOF
             {
              newCompositeNode(grammarAccess.getHotspotRule()); 
             pushFollow(FOLLOW_1);
@@ -660,50 +652,43 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHotspot"
-    // InternalToursdsl.g:345:1: ruleHotspot returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_TO_7= RULE_TO this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (otherlv_10= RULE_ID ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_FROM_13= RULE_FROM this_COLON_14= RULE_COLON this_QUOTE_15= RULE_QUOTE ( (otherlv_16= RULE_ID ) ) this_QUOTE_17= RULE_QUOTE this_COMMA_18= RULE_COMMA this_POSITION_19= RULE_POSITION this_COLON_20= RULE_COLON ( (lv_posicion_21_0= ruleCoordenada ) ) this_COMMA_22= RULE_COMMA this_POSITION_23= RULE_POSITION this_COLON_24= RULE_COLON ( (lv_rotacion_25_0= ruleCoordenada ) ) this_COMMA_26= RULE_COMMA this_CLOSING_CURLY_BRACKET_27= RULE_CLOSING_CURLY_BRACKET ) ;
+    // InternalToursdsl.g:335:1: ruleHotspot returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_TO_5= RULE_TO this_COLON_6= RULE_COLON ( (otherlv_7= RULE_ID ) ) this_COMMA_8= RULE_COMMA this_FROM_9= RULE_FROM this_COLON_10= RULE_COLON ( (otherlv_11= RULE_ID ) ) this_COMMA_12= RULE_COMMA this_POSITION_13= RULE_POSITION this_COLON_14= RULE_COLON ( (lv_posicion_15_0= ruleCoordenada ) ) this_COMMA_16= RULE_COMMA this_ROTATION_17= RULE_ROTATION this_COLON_18= RULE_COLON ( (lv_rotacion_19_0= ruleCoordenada ) ) this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET ) ;
     public final EObject ruleHotspot() throws RecognitionException {
         EObject current = null;
 
         Token this_OPENING_CURLY_BRACKET_0=null;
         Token this_NAME_1=null;
         Token this_COLON_2=null;
-        Token this_QUOTE_3=null;
-        Token lv_name_4_0=null;
-        Token this_QUOTE_5=null;
-        Token this_COMMA_6=null;
-        Token this_TO_7=null;
-        Token this_COLON_8=null;
-        Token this_QUOTE_9=null;
-        Token otherlv_10=null;
-        Token this_QUOTE_11=null;
+        Token lv_name_3_0=null;
+        Token this_COMMA_4=null;
+        Token this_TO_5=null;
+        Token this_COLON_6=null;
+        Token otherlv_7=null;
+        Token this_COMMA_8=null;
+        Token this_FROM_9=null;
+        Token this_COLON_10=null;
+        Token otherlv_11=null;
         Token this_COMMA_12=null;
-        Token this_FROM_13=null;
+        Token this_POSITION_13=null;
         Token this_COLON_14=null;
-        Token this_QUOTE_15=null;
-        Token otherlv_16=null;
-        Token this_QUOTE_17=null;
-        Token this_COMMA_18=null;
-        Token this_POSITION_19=null;
-        Token this_COLON_20=null;
-        Token this_COMMA_22=null;
-        Token this_POSITION_23=null;
-        Token this_COLON_24=null;
-        Token this_COMMA_26=null;
-        Token this_CLOSING_CURLY_BRACKET_27=null;
-        EObject lv_posicion_21_0 = null;
+        Token this_COMMA_16=null;
+        Token this_ROTATION_17=null;
+        Token this_COLON_18=null;
+        Token this_CLOSING_CURLY_BRACKET_20=null;
+        EObject lv_posicion_15_0 = null;
 
-        EObject lv_rotacion_25_0 = null;
+        EObject lv_rotacion_19_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalToursdsl.g:351:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_TO_7= RULE_TO this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (otherlv_10= RULE_ID ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_FROM_13= RULE_FROM this_COLON_14= RULE_COLON this_QUOTE_15= RULE_QUOTE ( (otherlv_16= RULE_ID ) ) this_QUOTE_17= RULE_QUOTE this_COMMA_18= RULE_COMMA this_POSITION_19= RULE_POSITION this_COLON_20= RULE_COLON ( (lv_posicion_21_0= ruleCoordenada ) ) this_COMMA_22= RULE_COMMA this_POSITION_23= RULE_POSITION this_COLON_24= RULE_COLON ( (lv_rotacion_25_0= ruleCoordenada ) ) this_COMMA_26= RULE_COMMA this_CLOSING_CURLY_BRACKET_27= RULE_CLOSING_CURLY_BRACKET ) )
-            // InternalToursdsl.g:352:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_TO_7= RULE_TO this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (otherlv_10= RULE_ID ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_FROM_13= RULE_FROM this_COLON_14= RULE_COLON this_QUOTE_15= RULE_QUOTE ( (otherlv_16= RULE_ID ) ) this_QUOTE_17= RULE_QUOTE this_COMMA_18= RULE_COMMA this_POSITION_19= RULE_POSITION this_COLON_20= RULE_COLON ( (lv_posicion_21_0= ruleCoordenada ) ) this_COMMA_22= RULE_COMMA this_POSITION_23= RULE_POSITION this_COLON_24= RULE_COLON ( (lv_rotacion_25_0= ruleCoordenada ) ) this_COMMA_26= RULE_COMMA this_CLOSING_CURLY_BRACKET_27= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:341:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_TO_5= RULE_TO this_COLON_6= RULE_COLON ( (otherlv_7= RULE_ID ) ) this_COMMA_8= RULE_COMMA this_FROM_9= RULE_FROM this_COLON_10= RULE_COLON ( (otherlv_11= RULE_ID ) ) this_COMMA_12= RULE_COMMA this_POSITION_13= RULE_POSITION this_COLON_14= RULE_COLON ( (lv_posicion_15_0= ruleCoordenada ) ) this_COMMA_16= RULE_COMMA this_ROTATION_17= RULE_ROTATION this_COLON_18= RULE_COLON ( (lv_rotacion_19_0= ruleCoordenada ) ) this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET ) )
+            // InternalToursdsl.g:342:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_TO_5= RULE_TO this_COLON_6= RULE_COLON ( (otherlv_7= RULE_ID ) ) this_COMMA_8= RULE_COMMA this_FROM_9= RULE_FROM this_COLON_10= RULE_COLON ( (otherlv_11= RULE_ID ) ) this_COMMA_12= RULE_COMMA this_POSITION_13= RULE_POSITION this_COLON_14= RULE_COLON ( (lv_posicion_15_0= ruleCoordenada ) ) this_COMMA_16= RULE_COMMA this_ROTATION_17= RULE_ROTATION this_COLON_18= RULE_COLON ( (lv_rotacion_19_0= ruleCoordenada ) ) this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET )
             {
-            // InternalToursdsl.g:352:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_TO_7= RULE_TO this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (otherlv_10= RULE_ID ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_FROM_13= RULE_FROM this_COLON_14= RULE_COLON this_QUOTE_15= RULE_QUOTE ( (otherlv_16= RULE_ID ) ) this_QUOTE_17= RULE_QUOTE this_COMMA_18= RULE_COMMA this_POSITION_19= RULE_POSITION this_COLON_20= RULE_COLON ( (lv_posicion_21_0= ruleCoordenada ) ) this_COMMA_22= RULE_COMMA this_POSITION_23= RULE_POSITION this_COLON_24= RULE_COLON ( (lv_rotacion_25_0= ruleCoordenada ) ) this_COMMA_26= RULE_COMMA this_CLOSING_CURLY_BRACKET_27= RULE_CLOSING_CURLY_BRACKET )
-            // InternalToursdsl.g:353:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON this_QUOTE_3= RULE_QUOTE ( (lv_name_4_0= RULE_ID ) ) this_QUOTE_5= RULE_QUOTE this_COMMA_6= RULE_COMMA this_TO_7= RULE_TO this_COLON_8= RULE_COLON this_QUOTE_9= RULE_QUOTE ( (otherlv_10= RULE_ID ) ) this_QUOTE_11= RULE_QUOTE this_COMMA_12= RULE_COMMA this_FROM_13= RULE_FROM this_COLON_14= RULE_COLON this_QUOTE_15= RULE_QUOTE ( (otherlv_16= RULE_ID ) ) this_QUOTE_17= RULE_QUOTE this_COMMA_18= RULE_COMMA this_POSITION_19= RULE_POSITION this_COLON_20= RULE_COLON ( (lv_posicion_21_0= ruleCoordenada ) ) this_COMMA_22= RULE_COMMA this_POSITION_23= RULE_POSITION this_COLON_24= RULE_COLON ( (lv_rotacion_25_0= ruleCoordenada ) ) this_COMMA_26= RULE_COMMA this_CLOSING_CURLY_BRACKET_27= RULE_CLOSING_CURLY_BRACKET
+            // InternalToursdsl.g:342:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_TO_5= RULE_TO this_COLON_6= RULE_COLON ( (otherlv_7= RULE_ID ) ) this_COMMA_8= RULE_COMMA this_FROM_9= RULE_FROM this_COLON_10= RULE_COLON ( (otherlv_11= RULE_ID ) ) this_COMMA_12= RULE_COMMA this_POSITION_13= RULE_POSITION this_COLON_14= RULE_COLON ( (lv_posicion_15_0= ruleCoordenada ) ) this_COMMA_16= RULE_COMMA this_ROTATION_17= RULE_ROTATION this_COLON_18= RULE_COLON ( (lv_rotacion_19_0= ruleCoordenada ) ) this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:343:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_NAME_1= RULE_NAME this_COLON_2= RULE_COLON ( (lv_name_3_0= RULE_STRING ) ) this_COMMA_4= RULE_COMMA this_TO_5= RULE_TO this_COLON_6= RULE_COLON ( (otherlv_7= RULE_ID ) ) this_COMMA_8= RULE_COMMA this_FROM_9= RULE_FROM this_COLON_10= RULE_COLON ( (otherlv_11= RULE_ID ) ) this_COMMA_12= RULE_COMMA this_POSITION_13= RULE_POSITION this_COLON_14= RULE_COLON ( (lv_posicion_15_0= ruleCoordenada ) ) this_COMMA_16= RULE_COMMA this_ROTATION_17= RULE_ROTATION this_COLON_18= RULE_COLON ( (lv_rotacion_19_0= ruleCoordenada ) ) this_CLOSING_CURLY_BRACKET_20= RULE_CLOSING_CURLY_BRACKET
             {
             this_OPENING_CURLY_BRACKET_0=(Token)match(input,RULE_OPENING_CURLY_BRACKET,FOLLOW_3); 
 
@@ -713,23 +698,19 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_NAME_1, grammarAccess.getHotspotAccess().getNAMETerminalRuleCall_1());
             		
-            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_12); 
+            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_5); 
 
             			newLeafNode(this_COLON_2, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_2());
             		
-            this_QUOTE_3=(Token)match(input,RULE_QUOTE,FOLLOW_5); 
-
-            			newLeafNode(this_QUOTE_3, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_3());
-            		
-            // InternalToursdsl.g:369:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalToursdsl.g:370:4: (lv_name_4_0= RULE_ID )
+            // InternalToursdsl.g:355:3: ( (lv_name_3_0= RULE_STRING ) )
+            // InternalToursdsl.g:356:4: (lv_name_3_0= RULE_STRING )
             {
-            // InternalToursdsl.g:370:4: (lv_name_4_0= RULE_ID )
-            // InternalToursdsl.g:371:5: lv_name_4_0= RULE_ID
+            // InternalToursdsl.g:356:4: (lv_name_3_0= RULE_STRING )
+            // InternalToursdsl.g:357:5: lv_name_3_0= RULE_STRING
             {
-            lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_12); 
+            lv_name_3_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
-            					newLeafNode(lv_name_4_0, grammarAccess.getHotspotAccess().getNameIDTerminalRuleCall_4_0());
+            					newLeafNode(lv_name_3_0, grammarAccess.getHotspotAccess().getNameSTRINGTerminalRuleCall_3_0());
             				
 
             					if (current==null) {
@@ -738,8 +719,8 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"name",
-            						lv_name_4_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						lv_name_3_0,
+            						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
             }
@@ -747,40 +728,32 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_QUOTE_5=(Token)match(input,RULE_QUOTE,FOLLOW_6); 
+            this_COMMA_4=(Token)match(input,RULE_COMMA,FOLLOW_14); 
 
-            			newLeafNode(this_QUOTE_5, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_5());
+            			newLeafNode(this_COMMA_4, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_4());
             		
-            this_COMMA_6=(Token)match(input,RULE_COMMA,FOLLOW_17); 
+            this_TO_5=(Token)match(input,RULE_TO,FOLLOW_4); 
 
-            			newLeafNode(this_COMMA_6, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_6());
+            			newLeafNode(this_TO_5, grammarAccess.getHotspotAccess().getTOTerminalRuleCall_5());
             		
-            this_TO_7=(Token)match(input,RULE_TO,FOLLOW_4); 
+            this_COLON_6=(Token)match(input,RULE_COLON,FOLLOW_15); 
 
-            			newLeafNode(this_TO_7, grammarAccess.getHotspotAccess().getTOTerminalRuleCall_7());
+            			newLeafNode(this_COLON_6, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_6());
             		
-            this_COLON_8=(Token)match(input,RULE_COLON,FOLLOW_12); 
-
-            			newLeafNode(this_COLON_8, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_8());
-            		
-            this_QUOTE_9=(Token)match(input,RULE_QUOTE,FOLLOW_5); 
-
-            			newLeafNode(this_QUOTE_9, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_9());
-            		
-            // InternalToursdsl.g:407:3: ( (otherlv_10= RULE_ID ) )
-            // InternalToursdsl.g:408:4: (otherlv_10= RULE_ID )
+            // InternalToursdsl.g:385:3: ( (otherlv_7= RULE_ID ) )
+            // InternalToursdsl.g:386:4: (otherlv_7= RULE_ID )
             {
-            // InternalToursdsl.g:408:4: (otherlv_10= RULE_ID )
-            // InternalToursdsl.g:409:5: otherlv_10= RULE_ID
+            // InternalToursdsl.g:386:4: (otherlv_7= RULE_ID )
+            // InternalToursdsl.g:387:5: otherlv_7= RULE_ID
             {
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getHotspotRule());
             					}
             				
-            otherlv_10=(Token)match(input,RULE_ID,FOLLOW_12); 
+            otherlv_7=(Token)match(input,RULE_ID,FOLLOW_6); 
 
-            					newLeafNode(otherlv_10, grammarAccess.getHotspotAccess().getDestinoPanoramaCrossReference_10_0());
+            					newLeafNode(otherlv_7, grammarAccess.getHotspotAccess().getDestinoPanoramaCrossReference_7_0());
             				
 
             }
@@ -788,74 +761,62 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_QUOTE_11=(Token)match(input,RULE_QUOTE,FOLLOW_6); 
+            this_COMMA_8=(Token)match(input,RULE_COMMA,FOLLOW_16); 
 
-            			newLeafNode(this_QUOTE_11, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_11());
+            			newLeafNode(this_COMMA_8, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_8());
             		
-            this_COMMA_12=(Token)match(input,RULE_COMMA,FOLLOW_18); 
+            this_FROM_9=(Token)match(input,RULE_FROM,FOLLOW_4); 
+
+            			newLeafNode(this_FROM_9, grammarAccess.getHotspotAccess().getFROMTerminalRuleCall_9());
+            		
+            this_COLON_10=(Token)match(input,RULE_COLON,FOLLOW_15); 
+
+            			newLeafNode(this_COLON_10, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_10());
+            		
+            // InternalToursdsl.g:410:3: ( (otherlv_11= RULE_ID ) )
+            // InternalToursdsl.g:411:4: (otherlv_11= RULE_ID )
+            {
+            // InternalToursdsl.g:411:4: (otherlv_11= RULE_ID )
+            // InternalToursdsl.g:412:5: otherlv_11= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getHotspotRule());
+            					}
+            				
+            otherlv_11=(Token)match(input,RULE_ID,FOLLOW_6); 
+
+            					newLeafNode(otherlv_11, grammarAccess.getHotspotAccess().getOrigenPanoramaCrossReference_11_0());
+            				
+
+            }
+
+
+            }
+
+            this_COMMA_12=(Token)match(input,RULE_COMMA,FOLLOW_17); 
 
             			newLeafNode(this_COMMA_12, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_12());
             		
-            this_FROM_13=(Token)match(input,RULE_FROM,FOLLOW_4); 
+            this_POSITION_13=(Token)match(input,RULE_POSITION,FOLLOW_4); 
 
-            			newLeafNode(this_FROM_13, grammarAccess.getHotspotAccess().getFROMTerminalRuleCall_13());
+            			newLeafNode(this_POSITION_13, grammarAccess.getHotspotAccess().getPOSITIONTerminalRuleCall_13());
             		
-            this_COLON_14=(Token)match(input,RULE_COLON,FOLLOW_12); 
+            this_COLON_14=(Token)match(input,RULE_COLON,FOLLOW_9); 
 
             			newLeafNode(this_COLON_14, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_14());
             		
-            this_QUOTE_15=(Token)match(input,RULE_QUOTE,FOLLOW_5); 
-
-            			newLeafNode(this_QUOTE_15, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_15());
-            		
-            // InternalToursdsl.g:440:3: ( (otherlv_16= RULE_ID ) )
-            // InternalToursdsl.g:441:4: (otherlv_16= RULE_ID )
+            // InternalToursdsl.g:435:3: ( (lv_posicion_15_0= ruleCoordenada ) )
+            // InternalToursdsl.g:436:4: (lv_posicion_15_0= ruleCoordenada )
             {
-            // InternalToursdsl.g:441:4: (otherlv_16= RULE_ID )
-            // InternalToursdsl.g:442:5: otherlv_16= RULE_ID
+            // InternalToursdsl.g:436:4: (lv_posicion_15_0= ruleCoordenada )
+            // InternalToursdsl.g:437:5: lv_posicion_15_0= ruleCoordenada
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getHotspotRule());
-            					}
-            				
-            otherlv_16=(Token)match(input,RULE_ID,FOLLOW_12); 
-
-            					newLeafNode(otherlv_16, grammarAccess.getHotspotAccess().getOrigenPanoramaCrossReference_16_0());
-            				
-
-            }
-
-
-            }
-
-            this_QUOTE_17=(Token)match(input,RULE_QUOTE,FOLLOW_6); 
-
-            			newLeafNode(this_QUOTE_17, grammarAccess.getHotspotAccess().getQUOTETerminalRuleCall_17());
-            		
-            this_COMMA_18=(Token)match(input,RULE_COMMA,FOLLOW_19); 
-
-            			newLeafNode(this_COMMA_18, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_18());
-            		
-            this_POSITION_19=(Token)match(input,RULE_POSITION,FOLLOW_4); 
-
-            			newLeafNode(this_POSITION_19, grammarAccess.getHotspotAccess().getPOSITIONTerminalRuleCall_19());
-            		
-            this_COLON_20=(Token)match(input,RULE_COLON,FOLLOW_9); 
-
-            			newLeafNode(this_COLON_20, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_20());
-            		
-            // InternalToursdsl.g:469:3: ( (lv_posicion_21_0= ruleCoordenada ) )
-            // InternalToursdsl.g:470:4: (lv_posicion_21_0= ruleCoordenada )
-            {
-            // InternalToursdsl.g:470:4: (lv_posicion_21_0= ruleCoordenada )
-            // InternalToursdsl.g:471:5: lv_posicion_21_0= ruleCoordenada
-            {
-
-            					newCompositeNode(grammarAccess.getHotspotAccess().getPosicionCoordenadaParserRuleCall_21_0());
+            					newCompositeNode(grammarAccess.getHotspotAccess().getPosicionCoordenadaParserRuleCall_15_0());
             				
             pushFollow(FOLLOW_6);
-            lv_posicion_21_0=ruleCoordenada();
+            lv_posicion_15_0=ruleCoordenada();
 
             state._fsp--;
 
@@ -866,7 +827,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"posicion",
-            						lv_posicion_21_0,
+            						lv_posicion_15_0,
             						"co.edu.uniandes.Toursdsl.Coordenada");
             					afterParserOrEnumRuleCall();
             				
@@ -876,29 +837,29 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_COMMA_22=(Token)match(input,RULE_COMMA,FOLLOW_19); 
+            this_COMMA_16=(Token)match(input,RULE_COMMA,FOLLOW_18); 
 
-            			newLeafNode(this_COMMA_22, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_22());
+            			newLeafNode(this_COMMA_16, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_16());
             		
-            this_POSITION_23=(Token)match(input,RULE_POSITION,FOLLOW_4); 
+            this_ROTATION_17=(Token)match(input,RULE_ROTATION,FOLLOW_4); 
 
-            			newLeafNode(this_POSITION_23, grammarAccess.getHotspotAccess().getPOSITIONTerminalRuleCall_23());
+            			newLeafNode(this_ROTATION_17, grammarAccess.getHotspotAccess().getROTATIONTerminalRuleCall_17());
             		
-            this_COLON_24=(Token)match(input,RULE_COLON,FOLLOW_9); 
+            this_COLON_18=(Token)match(input,RULE_COLON,FOLLOW_9); 
 
-            			newLeafNode(this_COLON_24, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_24());
+            			newLeafNode(this_COLON_18, grammarAccess.getHotspotAccess().getCOLONTerminalRuleCall_18());
             		
-            // InternalToursdsl.g:500:3: ( (lv_rotacion_25_0= ruleCoordenada ) )
-            // InternalToursdsl.g:501:4: (lv_rotacion_25_0= ruleCoordenada )
+            // InternalToursdsl.g:466:3: ( (lv_rotacion_19_0= ruleCoordenada ) )
+            // InternalToursdsl.g:467:4: (lv_rotacion_19_0= ruleCoordenada )
             {
-            // InternalToursdsl.g:501:4: (lv_rotacion_25_0= ruleCoordenada )
-            // InternalToursdsl.g:502:5: lv_rotacion_25_0= ruleCoordenada
+            // InternalToursdsl.g:467:4: (lv_rotacion_19_0= ruleCoordenada )
+            // InternalToursdsl.g:468:5: lv_rotacion_19_0= ruleCoordenada
             {
 
-            					newCompositeNode(grammarAccess.getHotspotAccess().getRotacionCoordenadaParserRuleCall_25_0());
+            					newCompositeNode(grammarAccess.getHotspotAccess().getRotacionCoordenadaParserRuleCall_19_0());
             				
-            pushFollow(FOLLOW_6);
-            lv_rotacion_25_0=ruleCoordenada();
+            pushFollow(FOLLOW_11);
+            lv_rotacion_19_0=ruleCoordenada();
 
             state._fsp--;
 
@@ -909,7 +870,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"rotacion",
-            						lv_rotacion_25_0,
+            						lv_rotacion_19_0,
             						"co.edu.uniandes.Toursdsl.Coordenada");
             					afterParserOrEnumRuleCall();
             				
@@ -919,13 +880,9 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_COMMA_26=(Token)match(input,RULE_COMMA,FOLLOW_11); 
+            this_CLOSING_CURLY_BRACKET_20=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
 
-            			newLeafNode(this_COMMA_26, grammarAccess.getHotspotAccess().getCOMMATerminalRuleCall_26());
-            		
-            this_CLOSING_CURLY_BRACKET_27=(Token)match(input,RULE_CLOSING_CURLY_BRACKET,FOLLOW_2); 
-
-            			newLeafNode(this_CLOSING_CURLY_BRACKET_27, grammarAccess.getHotspotAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_27());
+            			newLeafNode(this_CLOSING_CURLY_BRACKET_20, grammarAccess.getHotspotAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_20());
             		
 
             }
@@ -950,7 +907,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCoordenada"
-    // InternalToursdsl.g:531:1: entryRuleCoordenada returns [EObject current=null] : iv_ruleCoordenada= ruleCoordenada EOF ;
+    // InternalToursdsl.g:493:1: entryRuleCoordenada returns [EObject current=null] : iv_ruleCoordenada= ruleCoordenada EOF ;
     public final EObject entryRuleCoordenada() throws RecognitionException {
         EObject current = null;
 
@@ -958,8 +915,8 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalToursdsl.g:531:51: (iv_ruleCoordenada= ruleCoordenada EOF )
-            // InternalToursdsl.g:532:2: iv_ruleCoordenada= ruleCoordenada EOF
+            // InternalToursdsl.g:493:51: (iv_ruleCoordenada= ruleCoordenada EOF )
+            // InternalToursdsl.g:494:2: iv_ruleCoordenada= ruleCoordenada EOF
             {
              newCompositeNode(grammarAccess.getCoordenadaRule()); 
             pushFollow(FOLLOW_1);
@@ -986,7 +943,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCoordenada"
-    // InternalToursdsl.g:538:1: ruleCoordenada returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET ) ;
+    // InternalToursdsl.g:500:1: ruleCoordenada returns [EObject current=null] : (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET ) ;
     public final EObject ruleCoordenada() throws RecognitionException {
         EObject current = null;
 
@@ -1017,13 +974,13 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalToursdsl.g:544:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET ) )
-            // InternalToursdsl.g:545:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:506:2: ( (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET ) )
+            // InternalToursdsl.g:507:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET )
             {
-            // InternalToursdsl.g:545:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET )
-            // InternalToursdsl.g:546:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET
+            // InternalToursdsl.g:507:2: (this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET )
+            // InternalToursdsl.g:508:3: this_OPENING_CURLY_BRACKET_0= RULE_OPENING_CURLY_BRACKET this_COORDINATE_X_1= RULE_COORDINATE_X this_COLON_2= RULE_COLON ( (lv_x_3_0= '-' ) )? this_INT_4= RULE_INT this_DOT_5= RULE_DOT this_INT_6= RULE_INT this_COMMA_7= RULE_COMMA this_COORDINATE_Y_8= RULE_COORDINATE_Y this_COLON_9= RULE_COLON ( (lv_y_10_0= '-' ) )? this_INT_11= RULE_INT this_DOT_12= RULE_DOT this_INT_13= RULE_INT this_COMMA_14= RULE_COMMA this_COORDINATE_Z_15= RULE_COORDINATE_Z this_COLON_16= RULE_COLON ( (lv_z_17_0= '-' ) )? this_INT_18= RULE_INT this_DOT_19= RULE_DOT this_INT_20= RULE_INT this_CLOSING_CURLY_BRACKET_21= RULE_CLOSING_CURLY_BRACKET
             {
-            this_OPENING_CURLY_BRACKET_0=(Token)match(input,RULE_OPENING_CURLY_BRACKET,FOLLOW_20); 
+            this_OPENING_CURLY_BRACKET_0=(Token)match(input,RULE_OPENING_CURLY_BRACKET,FOLLOW_19); 
 
             			newLeafNode(this_OPENING_CURLY_BRACKET_0, grammarAccess.getCoordenadaAccess().getOPENING_CURLY_BRACKETTerminalRuleCall_0());
             		
@@ -1031,25 +988,25 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COORDINATE_X_1, grammarAccess.getCoordenadaAccess().getCOORDINATE_XTerminalRuleCall_1());
             		
-            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_21); 
+            this_COLON_2=(Token)match(input,RULE_COLON,FOLLOW_20); 
 
             			newLeafNode(this_COLON_2, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_2());
             		
-            // InternalToursdsl.g:558:3: ( (lv_x_3_0= '-' ) )?
+            // InternalToursdsl.g:520:3: ( (lv_x_3_0= '-' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==29) ) {
+            if ( (LA3_0==30) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // InternalToursdsl.g:559:4: (lv_x_3_0= '-' )
+                    // InternalToursdsl.g:521:4: (lv_x_3_0= '-' )
                     {
-                    // InternalToursdsl.g:559:4: (lv_x_3_0= '-' )
-                    // InternalToursdsl.g:560:5: lv_x_3_0= '-'
+                    // InternalToursdsl.g:521:4: (lv_x_3_0= '-' )
+                    // InternalToursdsl.g:522:5: lv_x_3_0= '-'
                     {
-                    lv_x_3_0=(Token)match(input,29,FOLLOW_22); 
+                    lv_x_3_0=(Token)match(input,30,FOLLOW_21); 
 
                     					newLeafNode(lv_x_3_0, grammarAccess.getCoordenadaAccess().getXHyphenMinusKeyword_3_0());
                     				
@@ -1068,11 +1025,11 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_4=(Token)match(input,RULE_INT,FOLLOW_23); 
+            this_INT_4=(Token)match(input,RULE_INT,FOLLOW_22); 
 
             			newLeafNode(this_INT_4, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_4());
             		
-            this_DOT_5=(Token)match(input,RULE_DOT,FOLLOW_22); 
+            this_DOT_5=(Token)match(input,RULE_DOT,FOLLOW_21); 
 
             			newLeafNode(this_DOT_5, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_5());
             		
@@ -1080,7 +1037,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_INT_6, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_6());
             		
-            this_COMMA_7=(Token)match(input,RULE_COMMA,FOLLOW_24); 
+            this_COMMA_7=(Token)match(input,RULE_COMMA,FOLLOW_23); 
 
             			newLeafNode(this_COMMA_7, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_7());
             		
@@ -1088,25 +1045,25 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COORDINATE_Y_8, grammarAccess.getCoordenadaAccess().getCOORDINATE_YTerminalRuleCall_8());
             		
-            this_COLON_9=(Token)match(input,RULE_COLON,FOLLOW_21); 
+            this_COLON_9=(Token)match(input,RULE_COLON,FOLLOW_20); 
 
             			newLeafNode(this_COLON_9, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_9());
             		
-            // InternalToursdsl.g:596:3: ( (lv_y_10_0= '-' ) )?
+            // InternalToursdsl.g:558:3: ( (lv_y_10_0= '-' ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==29) ) {
+            if ( (LA4_0==30) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // InternalToursdsl.g:597:4: (lv_y_10_0= '-' )
+                    // InternalToursdsl.g:559:4: (lv_y_10_0= '-' )
                     {
-                    // InternalToursdsl.g:597:4: (lv_y_10_0= '-' )
-                    // InternalToursdsl.g:598:5: lv_y_10_0= '-'
+                    // InternalToursdsl.g:559:4: (lv_y_10_0= '-' )
+                    // InternalToursdsl.g:560:5: lv_y_10_0= '-'
                     {
-                    lv_y_10_0=(Token)match(input,29,FOLLOW_22); 
+                    lv_y_10_0=(Token)match(input,30,FOLLOW_21); 
 
                     					newLeafNode(lv_y_10_0, grammarAccess.getCoordenadaAccess().getYHyphenMinusKeyword_10_0());
                     				
@@ -1125,11 +1082,11 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_11=(Token)match(input,RULE_INT,FOLLOW_23); 
+            this_INT_11=(Token)match(input,RULE_INT,FOLLOW_22); 
 
             			newLeafNode(this_INT_11, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_11());
             		
-            this_DOT_12=(Token)match(input,RULE_DOT,FOLLOW_22); 
+            this_DOT_12=(Token)match(input,RULE_DOT,FOLLOW_21); 
 
             			newLeafNode(this_DOT_12, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_12());
             		
@@ -1137,7 +1094,7 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_INT_13, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_13());
             		
-            this_COMMA_14=(Token)match(input,RULE_COMMA,FOLLOW_25); 
+            this_COMMA_14=(Token)match(input,RULE_COMMA,FOLLOW_24); 
 
             			newLeafNode(this_COMMA_14, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_14());
             		
@@ -1145,25 +1102,25 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COORDINATE_Z_15, grammarAccess.getCoordenadaAccess().getCOORDINATE_ZTerminalRuleCall_15());
             		
-            this_COLON_16=(Token)match(input,RULE_COLON,FOLLOW_21); 
+            this_COLON_16=(Token)match(input,RULE_COLON,FOLLOW_20); 
 
             			newLeafNode(this_COLON_16, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_16());
             		
-            // InternalToursdsl.g:634:3: ( (lv_z_17_0= '-' ) )?
+            // InternalToursdsl.g:596:3: ( (lv_z_17_0= '-' ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==29) ) {
+            if ( (LA5_0==30) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalToursdsl.g:635:4: (lv_z_17_0= '-' )
+                    // InternalToursdsl.g:597:4: (lv_z_17_0= '-' )
                     {
-                    // InternalToursdsl.g:635:4: (lv_z_17_0= '-' )
-                    // InternalToursdsl.g:636:5: lv_z_17_0= '-'
+                    // InternalToursdsl.g:597:4: (lv_z_17_0= '-' )
+                    // InternalToursdsl.g:598:5: lv_z_17_0= '-'
                     {
-                    lv_z_17_0=(Token)match(input,29,FOLLOW_22); 
+                    lv_z_17_0=(Token)match(input,30,FOLLOW_21); 
 
                     					newLeafNode(lv_z_17_0, grammarAccess.getCoordenadaAccess().getZHyphenMinusKeyword_17_0());
                     				
@@ -1182,11 +1139,11 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_18=(Token)match(input,RULE_INT,FOLLOW_23); 
+            this_INT_18=(Token)match(input,RULE_INT,FOLLOW_22); 
 
             			newLeafNode(this_INT_18, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_18());
             		
-            this_DOT_19=(Token)match(input,RULE_DOT,FOLLOW_22); 
+            this_DOT_19=(Token)match(input,RULE_DOT,FOLLOW_21); 
 
             			newLeafNode(this_DOT_19, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_19());
             		
@@ -1233,21 +1190,20 @@ public class InternalToursdslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000400L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000810L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000900L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000900L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000020200000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000040200000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000001000000L});
 
 }
