@@ -34,12 +34,12 @@ public interface Coordenada extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>X</em>' attribute.
-   * @see #setX(int)
+   * @see #setX(String)
    * @see co.edu.uniandes.toursdsl.ToursdslPackage#getCoordenada_X()
    * @model
    * @generated
    */
-  int getX();
+  String getX();
 
   /**
    * Sets the value of the '{@link co.edu.uniandes.toursdsl.Coordenada#getX <em>X</em>}' attribute.
@@ -49,7 +49,7 @@ public interface Coordenada extends EObject
    * @see #getX()
    * @generated
    */
-  void setX(int value);
+  void setX(String value);
 
   /**
    * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -60,12 +60,12 @@ public interface Coordenada extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Y</em>' attribute.
-   * @see #setY(int)
+   * @see #setY(String)
    * @see co.edu.uniandes.toursdsl.ToursdslPackage#getCoordenada_Y()
    * @model
    * @generated
    */
-  int getY();
+  String getY();
 
   /**
    * Sets the value of the '{@link co.edu.uniandes.toursdsl.Coordenada#getY <em>Y</em>}' attribute.
@@ -75,7 +75,7 @@ public interface Coordenada extends EObject
    * @see #getY()
    * @generated
    */
-  void setY(int value);
+  void setY(String value);
 
   /**
    * Returns the value of the '<em><b>Z</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface Coordenada extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Z</em>' attribute.
-   * @see #setZ(int)
+   * @see #setZ(String)
    * @see co.edu.uniandes.toursdsl.ToursdslPackage#getCoordenada_Z()
    * @model
    * @generated
    */
-  int getZ();
+  String getZ();
 
   /**
    * Sets the value of the '{@link co.edu.uniandes.toursdsl.Coordenada#getZ <em>Z</em>}' attribute.
@@ -101,6 +101,6 @@ public interface Coordenada extends EObject
    * @see #getZ()
    * @generated
    */
-  void setZ(int value);
+  void setZ(String value);
 
 } // Coordenada

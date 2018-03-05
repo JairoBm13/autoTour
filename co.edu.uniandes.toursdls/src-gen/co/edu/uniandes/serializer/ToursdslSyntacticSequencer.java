@@ -254,12 +254,12 @@ public class ToursdslSyntacticSequencer extends AbstractSyntacticSequencer {
 	/**
 	 * terminal QUOTE:
 	 * 	
-	 * '"';
+	 * "'";
 	 */
 	protected String getQUOTEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "\"";
+		return "\'";
 	}
 	
 	/**

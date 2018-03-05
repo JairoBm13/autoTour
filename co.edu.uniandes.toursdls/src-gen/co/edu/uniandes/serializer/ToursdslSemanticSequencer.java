@@ -57,22 +57,10 @@ public class ToursdslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Coordenada returns Coordenada
 	 *
 	 * Constraint:
-	 *     (x=INT y=INT z=INT)
+	 *     (x='-'? y='-'? z='-'?)
 	 */
 	protected void sequence_Coordenada(ISerializationContext context, Coordenada semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ToursdslPackage.Literals.COORDENADA__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToursdslPackage.Literals.COORDENADA__X));
-			if (transientValues.isValueTransient(semanticObject, ToursdslPackage.Literals.COORDENADA__Y) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToursdslPackage.Literals.COORDENADA__Y));
-			if (transientValues.isValueTransient(semanticObject, ToursdslPackage.Literals.COORDENADA__Z) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToursdslPackage.Literals.COORDENADA__Z));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCoordenadaAccess().getXINTTerminalRuleCall_3_0(), semanticObject.getX());
-		feeder.accept(grammarAccess.getCoordenadaAccess().getYINTTerminalRuleCall_9_0(), semanticObject.getY());
-		feeder.accept(grammarAccess.getCoordenadaAccess().getZINTTerminalRuleCall_15_0(), semanticObject.getZ());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

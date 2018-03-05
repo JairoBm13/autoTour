@@ -4,26 +4,26 @@ generate toursdsl "http://www.edu.co/uniandes/Toursdsl"
 
 Tour:
 	OPENING_CURLY_BRACKET 
-		NAME COLON name = STRING COMMA
-		PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama(COMMA places+=Panorama)* CLOSING_SQUARE_BRACKET
+		NAME COLON name = ID COMMA
+		PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama(COMMAplaces+=Panorama)* CLOSING_SQUARE_BRACKET
 	CLOSING_CURLY_BRACKET
 ;
 
 Panorama:
 	OPENING_CURLY_BRACKET 
-		NAME COLON  name = STRING COMMA
-		DESCRIPTION COLON  description = STRING  COMMA
+		NAME COLON QUOTE name = ID QUOTE COMMA
+		DESCRIPTION COLON QUOTE description = STRING QUOTE COMMA
 		PATHS COLON OPENING_SQUARE_BRACKET places+=Hotspot(COMMA places+=Hotspot)* CLOSING_SQUARE_BRACKET
 	CLOSING_CURLY_BRACKET
 ;
 
 Hotspot:
 	OPENING_CURLY_BRACKET 
-		NAME COLON  name = STRING  COMMA
-		TO COLON   destino = [Panorama]   COMMA
-		FROM COLON   origen = [Panorama]   COMMA
+		NAME COLON QUOTE name = ID QUOTE COMMA
+		TO COLON QUOTE destino = [Panorama] QUOTE COMMA
+		FROM COLON QUOTE origen = [Panorama] QUOTE COMMA
 		POSITION COLON posicion = Coordenada COMMA
-		ROTATION COLON rotacion = Coordenada
+		POSITION COLON rotacion = Coordenada COMMA
 	CLOSING_CURLY_BRACKET
 ;
 
@@ -57,7 +57,7 @@ terminal COLON:
 
 terminal QUOTE:
 	
-'\"';
+"'";
 
 terminal COMMA:
 	
@@ -82,10 +82,6 @@ terminal TO:
 terminal POSITION:
 
 'position';
-
-terminal ROTATION:
-
-'rotation';
 
 terminal PLACES:
 

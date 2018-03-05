@@ -88,15 +88,11 @@ ruleTour returns [EObject current=null]
 		{
 			newLeafNode(this_COLON_2, grammarAccess.getTourAccess().getCOLONTerminalRuleCall_2());
 		}
-		this_QUOTE_3=RULE_QUOTE
-		{
-			newLeafNode(this_QUOTE_3, grammarAccess.getTourAccess().getQUOTETerminalRuleCall_3());
-		}
 		(
 			(
-				lv_name_4_0=RULE_ID
+				lv_name_3_0=RULE_ID
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getTourAccess().getNameIDTerminalRuleCall_4_0());
+					newLeafNode(lv_name_3_0, grammarAccess.getTourAccess().getNameIDTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -105,37 +101,33 @@ ruleTour returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_4_0,
+						lv_name_3_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		this_QUOTE_5=RULE_QUOTE
+		this_COMMA_4=RULE_COMMA
 		{
-			newLeafNode(this_QUOTE_5, grammarAccess.getTourAccess().getQUOTETerminalRuleCall_5());
+			newLeafNode(this_COMMA_4, grammarAccess.getTourAccess().getCOMMATerminalRuleCall_4());
 		}
-		this_COMMA_6=RULE_COMMA
+		this_PLACES_5=RULE_PLACES
 		{
-			newLeafNode(this_COMMA_6, grammarAccess.getTourAccess().getCOMMATerminalRuleCall_6());
+			newLeafNode(this_PLACES_5, grammarAccess.getTourAccess().getPLACESTerminalRuleCall_5());
 		}
-		this_PLACES_7=RULE_PLACES
+		this_COLON_6=RULE_COLON
 		{
-			newLeafNode(this_PLACES_7, grammarAccess.getTourAccess().getPLACESTerminalRuleCall_7());
+			newLeafNode(this_COLON_6, grammarAccess.getTourAccess().getCOLONTerminalRuleCall_6());
 		}
-		this_COLON_8=RULE_COLON
+		this_OPENING_SQUARE_BRACKET_7=RULE_OPENING_SQUARE_BRACKET
 		{
-			newLeafNode(this_COLON_8, grammarAccess.getTourAccess().getCOLONTerminalRuleCall_8());
-		}
-		this_OPENING_SQUARE_BRACKET_9=RULE_OPENING_SQUARE_BRACKET
-		{
-			newLeafNode(this_OPENING_SQUARE_BRACKET_9, grammarAccess.getTourAccess().getOPENING_SQUARE_BRACKETTerminalRuleCall_9());
+			newLeafNode(this_OPENING_SQUARE_BRACKET_7, grammarAccess.getTourAccess().getOPENING_SQUARE_BRACKETTerminalRuleCall_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTourAccess().getPlacesPanoramaParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getTourAccess().getPlacesPanoramaParserRuleCall_8_0());
 				}
-				lv_places_10_0=rulePanorama
+				lv_places_8_0=rulePanorama
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTourRule());
@@ -143,7 +135,7 @@ ruleTour returns [EObject current=null]
 					add(
 						$current,
 						"places",
-						lv_places_10_0,
+						lv_places_8_0,
 						"co.edu.uniandes.Toursdsl.Panorama");
 					afterParserOrEnumRuleCall();
 				}
@@ -152,9 +144,9 @@ ruleTour returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTourAccess().getCOMMAplacesPanoramaParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getTourAccess().getCOMMAplacesPanoramaParserRuleCall_9_0());
 				}
-				lv_COMMAplaces_11_0=rulePanorama
+				lv_COMMAplaces_9_0=rulePanorama
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTourRule());
@@ -162,19 +154,19 @@ ruleTour returns [EObject current=null]
 					add(
 						$current,
 						"COMMAplaces",
-						lv_COMMAplaces_11_0,
+						lv_COMMAplaces_9_0,
 						"co.edu.uniandes.Toursdsl.Panorama");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		this_CLOSING_SQUARE_BRACKET_12=RULE_CLOSING_SQUARE_BRACKET
+		this_CLOSING_SQUARE_BRACKET_10=RULE_CLOSING_SQUARE_BRACKET
 		{
-			newLeafNode(this_CLOSING_SQUARE_BRACKET_12, grammarAccess.getTourAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_12());
+			newLeafNode(this_CLOSING_SQUARE_BRACKET_10, grammarAccess.getTourAccess().getCLOSING_SQUARE_BRACKETTerminalRuleCall_10());
 		}
-		this_CLOSING_CURLY_BRACKET_13=RULE_CLOSING_CURLY_BRACKET
+		this_CLOSING_CURLY_BRACKET_11=RULE_CLOSING_CURLY_BRACKET
 		{
-			newLeafNode(this_CLOSING_CURLY_BRACKET_13, grammarAccess.getTourAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_13());
+			newLeafNode(this_CLOSING_CURLY_BRACKET_11, grammarAccess.getTourAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_11());
 		}
 	)
 ;
@@ -565,109 +557,109 @@ ruleCoordenada returns [EObject current=null]
 		}
 		(
 			(
-				lv_x_3_0=RULE_INT
+				lv_x_3_0='-'
 				{
-					newLeafNode(lv_x_3_0, grammarAccess.getCoordenadaAccess().getXINTTerminalRuleCall_3_0());
+					newLeafNode(lv_x_3_0, grammarAccess.getCoordenadaAccess().getXHyphenMinusKeyword_3_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getCoordenadaRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"x",
-						lv_x_3_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+					setWithLastConsumed($current, "x", lv_x_3_0, "-");
 				}
 			)
-		)
-		this_DOT_4=RULE_DOT
+		)?
+		this_INT_4=RULE_INT
 		{
-			newLeafNode(this_DOT_4, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_4());
+			newLeafNode(this_INT_4, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_4());
 		}
-		this_INT_5=RULE_INT
+		this_DOT_5=RULE_DOT
 		{
-			newLeafNode(this_INT_5, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_5());
+			newLeafNode(this_DOT_5, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_5());
 		}
-		this_COMMA_6=RULE_COMMA
+		this_INT_6=RULE_INT
 		{
-			newLeafNode(this_COMMA_6, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_6());
+			newLeafNode(this_INT_6, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_6());
 		}
-		this_COORDINATE_Y_7=RULE_COORDINATE_Y
+		this_COMMA_7=RULE_COMMA
 		{
-			newLeafNode(this_COORDINATE_Y_7, grammarAccess.getCoordenadaAccess().getCOORDINATE_YTerminalRuleCall_7());
+			newLeafNode(this_COMMA_7, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_7());
 		}
-		this_COLON_8=RULE_COLON
+		this_COORDINATE_Y_8=RULE_COORDINATE_Y
 		{
-			newLeafNode(this_COLON_8, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_8());
+			newLeafNode(this_COORDINATE_Y_8, grammarAccess.getCoordenadaAccess().getCOORDINATE_YTerminalRuleCall_8());
+		}
+		this_COLON_9=RULE_COLON
+		{
+			newLeafNode(this_COLON_9, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_9());
 		}
 		(
 			(
-				lv_y_9_0=RULE_INT
+				lv_y_10_0='-'
 				{
-					newLeafNode(lv_y_9_0, grammarAccess.getCoordenadaAccess().getYINTTerminalRuleCall_9_0());
+					newLeafNode(lv_y_10_0, grammarAccess.getCoordenadaAccess().getYHyphenMinusKeyword_10_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getCoordenadaRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"y",
-						lv_y_9_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+					setWithLastConsumed($current, "y", lv_y_10_0, "-");
 				}
 			)
-		)
-		this_DOT_10=RULE_DOT
-		{
-			newLeafNode(this_DOT_10, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_10());
-		}
+		)?
 		this_INT_11=RULE_INT
 		{
 			newLeafNode(this_INT_11, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_11());
 		}
-		this_COMMA_12=RULE_COMMA
+		this_DOT_12=RULE_DOT
 		{
-			newLeafNode(this_COMMA_12, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_12());
+			newLeafNode(this_DOT_12, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_12());
 		}
-		this_COORDINATE_Z_13=RULE_COORDINATE_Z
+		this_INT_13=RULE_INT
 		{
-			newLeafNode(this_COORDINATE_Z_13, grammarAccess.getCoordenadaAccess().getCOORDINATE_ZTerminalRuleCall_13());
+			newLeafNode(this_INT_13, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_13());
 		}
-		this_COLON_14=RULE_COLON
+		this_COMMA_14=RULE_COMMA
 		{
-			newLeafNode(this_COLON_14, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_14());
+			newLeafNode(this_COMMA_14, grammarAccess.getCoordenadaAccess().getCOMMATerminalRuleCall_14());
+		}
+		this_COORDINATE_Z_15=RULE_COORDINATE_Z
+		{
+			newLeafNode(this_COORDINATE_Z_15, grammarAccess.getCoordenadaAccess().getCOORDINATE_ZTerminalRuleCall_15());
+		}
+		this_COLON_16=RULE_COLON
+		{
+			newLeafNode(this_COLON_16, grammarAccess.getCoordenadaAccess().getCOLONTerminalRuleCall_16());
 		}
 		(
 			(
-				lv_z_15_0=RULE_INT
+				lv_z_17_0='-'
 				{
-					newLeafNode(lv_z_15_0, grammarAccess.getCoordenadaAccess().getZINTTerminalRuleCall_15_0());
+					newLeafNode(lv_z_17_0, grammarAccess.getCoordenadaAccess().getZHyphenMinusKeyword_17_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getCoordenadaRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"z",
-						lv_z_15_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+					setWithLastConsumed($current, "z", lv_z_17_0, "-");
 				}
 			)
-		)
-		this_DOT_16=RULE_DOT
+		)?
+		this_INT_18=RULE_INT
 		{
-			newLeafNode(this_DOT_16, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_16());
+			newLeafNode(this_INT_18, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_18());
 		}
-		this_INT_17=RULE_INT
+		this_DOT_19=RULE_DOT
 		{
-			newLeafNode(this_INT_17, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_17());
+			newLeafNode(this_DOT_19, grammarAccess.getCoordenadaAccess().getDOTTerminalRuleCall_19());
 		}
-		this_CLOSING_CURLY_BRACKET_18=RULE_CLOSING_CURLY_BRACKET
+		this_INT_20=RULE_INT
 		{
-			newLeafNode(this_CLOSING_CURLY_BRACKET_18, grammarAccess.getCoordenadaAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_18());
+			newLeafNode(this_INT_20, grammarAccess.getCoordenadaAccess().getINTTerminalRuleCall_20());
+		}
+		this_CLOSING_CURLY_BRACKET_21=RULE_CLOSING_CURLY_BRACKET
+		{
+			newLeafNode(this_CLOSING_CURLY_BRACKET_21, grammarAccess.getCoordenadaAccess().getCLOSING_CURLY_BRACKETTerminalRuleCall_21());
 		}
 	)
 ;
@@ -682,7 +674,7 @@ RULE_CLOSING_SQUARE_BRACKET : ']';
 
 RULE_COLON : ':';
 
-RULE_QUOTE : '"';
+RULE_QUOTE : '\'';
 
 RULE_COMMA : ',';
 

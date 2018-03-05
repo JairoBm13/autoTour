@@ -36,9 +36,9 @@ public class ToursdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPanoramaAccess().getGroup_17(), "rule__Panorama__Group_17__0");
 					put(grammarAccess.getHotspotAccess().getGroup(), "rule__Hotspot__Group__0");
 					put(grammarAccess.getCoordenadaAccess().getGroup(), "rule__Coordenada__Group__0");
-					put(grammarAccess.getTourAccess().getNameAssignment_4(), "rule__Tour__NameAssignment_4");
-					put(grammarAccess.getTourAccess().getPlacesAssignment_10(), "rule__Tour__PlacesAssignment_10");
-					put(grammarAccess.getTourAccess().getCOMMAplacesAssignment_11(), "rule__Tour__COMMAplacesAssignment_11");
+					put(grammarAccess.getTourAccess().getNameAssignment_3(), "rule__Tour__NameAssignment_3");
+					put(grammarAccess.getTourAccess().getPlacesAssignment_8(), "rule__Tour__PlacesAssignment_8");
+					put(grammarAccess.getTourAccess().getCOMMAplacesAssignment_9(), "rule__Tour__COMMAplacesAssignment_9");
 					put(grammarAccess.getPanoramaAccess().getNameAssignment_4(), "rule__Panorama__NameAssignment_4");
 					put(grammarAccess.getPanoramaAccess().getDescriptionAssignment_10(), "rule__Panorama__DescriptionAssignment_10");
 					put(grammarAccess.getPanoramaAccess().getPlacesAssignment_16(), "rule__Panorama__PlacesAssignment_16");
@@ -49,8 +49,8 @@ public class ToursdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHotspotAccess().getPosicionAssignment_21(), "rule__Hotspot__PosicionAssignment_21");
 					put(grammarAccess.getHotspotAccess().getRotacionAssignment_25(), "rule__Hotspot__RotacionAssignment_25");
 					put(grammarAccess.getCoordenadaAccess().getXAssignment_3(), "rule__Coordenada__XAssignment_3");
-					put(grammarAccess.getCoordenadaAccess().getYAssignment_9(), "rule__Coordenada__YAssignment_9");
-					put(grammarAccess.getCoordenadaAccess().getZAssignment_15(), "rule__Coordenada__ZAssignment_15");
+					put(grammarAccess.getCoordenadaAccess().getYAssignment_10(), "rule__Coordenada__YAssignment_10");
+					put(grammarAccess.getCoordenadaAccess().getZAssignment_17(), "rule__Coordenada__ZAssignment_17");
 				}
 			};
 		}
