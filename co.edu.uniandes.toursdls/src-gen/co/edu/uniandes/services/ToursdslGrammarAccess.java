@@ -11,6 +11,7 @@ import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
+import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
@@ -27,29 +28,27 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOPENING_CURLY_BRACKETTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final RuleCall cNAMETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final RuleCall cCOLONTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final RuleCall cQUOTETerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cNameIDTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
-		private final RuleCall cQUOTETerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final RuleCall cCOMMATerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
-		private final RuleCall cPLACESTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final RuleCall cCOLONTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
-		private final RuleCall cOPENING_SQUARE_BRACKETTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Assignment cPlacesAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cPlacesPanoramaParserRuleCall_10_0 = (RuleCall)cPlacesAssignment_10.eContents().get(0);
-		private final Assignment cCOMMAplacesAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cCOMMAplacesPanoramaParserRuleCall_11_0 = (RuleCall)cCOMMAplacesAssignment_11.eContents().get(0);
-		private final RuleCall cCLOSING_SQUARE_BRACKETTerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
-		private final RuleCall cCLOSING_CURLY_BRACKETTerminalRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final RuleCall cCOMMATerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final RuleCall cPLACESTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final RuleCall cCOLONTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final RuleCall cOPENING_SQUARE_BRACKETTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
+		private final Assignment cPlacesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cPlacesPanoramaParserRuleCall_8_0 = (RuleCall)cPlacesAssignment_8.eContents().get(0);
+		private final Assignment cCOMMAplacesAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cCOMMAplacesPanoramaParserRuleCall_9_0 = (RuleCall)cCOMMAplacesAssignment_9.eContents().get(0);
+		private final RuleCall cCLOSING_SQUARE_BRACKETTerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final RuleCall cCLOSING_CURLY_BRACKETTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
 		
 		//Tour:
 		//	OPENING_CURLY_BRACKET
-		//	NAME COLON QUOTE name=ID QUOTE COMMA
+		//	NAME COLON name=ID COMMA
 		//	PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama COMMAplaces+=Panorama* CLOSING_SQUARE_BRACKET
 		//	CLOSING_CURLY_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//OPENING_CURLY_BRACKET NAME COLON QUOTE name=ID QUOTE COMMA PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama
+		//OPENING_CURLY_BRACKET NAME COLON name=ID COMMA PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama
 		//COMMAplaces+=Panorama* CLOSING_SQUARE_BRACKET CLOSING_CURLY_BRACKET
 		public Group getGroup() { return cGroup; }
 		
@@ -62,47 +61,41 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_2() { return cCOLONTerminalRuleCall_2; }
 		
-		//QUOTE
-		public RuleCall getQUOTETerminalRuleCall_3() { return cQUOTETerminalRuleCall_3; }
-		
 		//name=ID
-		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_4_0() { return cNameIDTerminalRuleCall_4_0; }
-		
-		//QUOTE
-		public RuleCall getQUOTETerminalRuleCall_5() { return cQUOTETerminalRuleCall_5; }
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_6() { return cCOMMATerminalRuleCall_6; }
+		public RuleCall getCOMMATerminalRuleCall_4() { return cCOMMATerminalRuleCall_4; }
 		
 		//PLACES
-		public RuleCall getPLACESTerminalRuleCall_7() { return cPLACESTerminalRuleCall_7; }
+		public RuleCall getPLACESTerminalRuleCall_5() { return cPLACESTerminalRuleCall_5; }
 		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_8() { return cCOLONTerminalRuleCall_8; }
+		public RuleCall getCOLONTerminalRuleCall_6() { return cCOLONTerminalRuleCall_6; }
 		
 		//OPENING_SQUARE_BRACKET
-		public RuleCall getOPENING_SQUARE_BRACKETTerminalRuleCall_9() { return cOPENING_SQUARE_BRACKETTerminalRuleCall_9; }
+		public RuleCall getOPENING_SQUARE_BRACKETTerminalRuleCall_7() { return cOPENING_SQUARE_BRACKETTerminalRuleCall_7; }
 		
 		//places+=Panorama
-		public Assignment getPlacesAssignment_10() { return cPlacesAssignment_10; }
+		public Assignment getPlacesAssignment_8() { return cPlacesAssignment_8; }
 		
 		//Panorama
-		public RuleCall getPlacesPanoramaParserRuleCall_10_0() { return cPlacesPanoramaParserRuleCall_10_0; }
+		public RuleCall getPlacesPanoramaParserRuleCall_8_0() { return cPlacesPanoramaParserRuleCall_8_0; }
 		
 		//COMMAplaces+=Panorama*
-		public Assignment getCOMMAplacesAssignment_11() { return cCOMMAplacesAssignment_11; }
+		public Assignment getCOMMAplacesAssignment_9() { return cCOMMAplacesAssignment_9; }
 		
 		//Panorama
-		public RuleCall getCOMMAplacesPanoramaParserRuleCall_11_0() { return cCOMMAplacesPanoramaParserRuleCall_11_0; }
+		public RuleCall getCOMMAplacesPanoramaParserRuleCall_9_0() { return cCOMMAplacesPanoramaParserRuleCall_9_0; }
 		
 		//CLOSING_SQUARE_BRACKET
-		public RuleCall getCLOSING_SQUARE_BRACKETTerminalRuleCall_12() { return cCLOSING_SQUARE_BRACKETTerminalRuleCall_12; }
+		public RuleCall getCLOSING_SQUARE_BRACKETTerminalRuleCall_10() { return cCLOSING_SQUARE_BRACKETTerminalRuleCall_10; }
 		
 		//CLOSING_CURLY_BRACKET
-		public RuleCall getCLOSING_CURLY_BRACKETTerminalRuleCall_13() { return cCLOSING_CURLY_BRACKETTerminalRuleCall_13; }
+		public RuleCall getCLOSING_CURLY_BRACKETTerminalRuleCall_11() { return cCLOSING_CURLY_BRACKETTerminalRuleCall_11; }
 	}
 	public class PanoramaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Toursdsl.Panorama");
@@ -390,35 +383,38 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCOORDINATE_XTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final RuleCall cCOLONTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Assignment cXAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cXINTTerminalRuleCall_3_0 = (RuleCall)cXAssignment_3.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		private final RuleCall cINTTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final RuleCall cCOMMATerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
-		private final RuleCall cCOORDINATE_YTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final RuleCall cCOLONTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
-		private final Assignment cYAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cYINTTerminalRuleCall_9_0 = (RuleCall)cYAssignment_9.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final Keyword cXHyphenMinusKeyword_3_0 = (Keyword)cXAssignment_3.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final RuleCall cDOTTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final RuleCall cINTTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final RuleCall cCOMMATerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
+		private final RuleCall cCOORDINATE_YTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
+		private final RuleCall cCOLONTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
+		private final Assignment cYAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final Keyword cYHyphenMinusKeyword_10_0 = (Keyword)cYAssignment_10.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
-		private final RuleCall cCOMMATerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
-		private final RuleCall cCOORDINATE_ZTerminalRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
-		private final RuleCall cCOLONTerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
-		private final Assignment cZAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cZINTTerminalRuleCall_15_0 = (RuleCall)cZAssignment_15.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
-		private final RuleCall cINTTerminalRuleCall_17 = (RuleCall)cGroup.eContents().get(17);
-		private final RuleCall cCLOSING_CURLY_BRACKETTerminalRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
+		private final RuleCall cDOTTerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
+		private final RuleCall cINTTerminalRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
+		private final RuleCall cCOMMATerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
+		private final RuleCall cCOORDINATE_ZTerminalRuleCall_15 = (RuleCall)cGroup.eContents().get(15);
+		private final RuleCall cCOLONTerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
+		private final Assignment cZAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final Keyword cZHyphenMinusKeyword_17_0 = (Keyword)cZAssignment_17.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
+		private final RuleCall cDOTTerminalRuleCall_19 = (RuleCall)cGroup.eContents().get(19);
+		private final RuleCall cINTTerminalRuleCall_20 = (RuleCall)cGroup.eContents().get(20);
+		private final RuleCall cCLOSING_CURLY_BRACKETTerminalRuleCall_21 = (RuleCall)cGroup.eContents().get(21);
 		
 		//Coordenada:
 		//	OPENING_CURLY_BRACKET
-		//	COORDINATE_X COLON x=INT DOT INT COMMA
-		//	COORDINATE_Y COLON y=INT DOT INT COMMA
-		//	COORDINATE_Z COLON z=INT DOT INT
+		//	COORDINATE_X COLON x='-'? INT DOT INT COMMA
+		//	COORDINATE_Y COLON y='-'? INT DOT INT COMMA
+		//	COORDINATE_Z COLON z='-'? INT DOT INT
 		//	CLOSING_CURLY_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//OPENING_CURLY_BRACKET COORDINATE_X COLON x=INT DOT INT COMMA COORDINATE_Y COLON y=INT DOT INT COMMA COORDINATE_Z COLON
-		//z=INT DOT INT CLOSING_CURLY_BRACKET
+		//OPENING_CURLY_BRACKET COORDINATE_X COLON x='-'? INT DOT INT COMMA COORDINATE_Y COLON y='-'? INT DOT INT COMMA
+		//COORDINATE_Z COLON z='-'? INT DOT INT CLOSING_CURLY_BRACKET
 		public Group getGroup() { return cGroup; }
 		
 		//OPENING_CURLY_BRACKET
@@ -430,62 +426,71 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_2() { return cCOLONTerminalRuleCall_2; }
 		
-		//x=INT
+		//x='-'?
 		public Assignment getXAssignment_3() { return cXAssignment_3; }
 		
+		//'-'
+		public Keyword getXHyphenMinusKeyword_3_0() { return cXHyphenMinusKeyword_3_0; }
+		
 		//INT
-		public RuleCall getXINTTerminalRuleCall_3_0() { return cXINTTerminalRuleCall_3_0; }
+		public RuleCall getINTTerminalRuleCall_4() { return cINTTerminalRuleCall_4; }
 		
 		//DOT
-		public RuleCall getDOTTerminalRuleCall_4() { return cDOTTerminalRuleCall_4; }
+		public RuleCall getDOTTerminalRuleCall_5() { return cDOTTerminalRuleCall_5; }
 		
 		//INT
-		public RuleCall getINTTerminalRuleCall_5() { return cINTTerminalRuleCall_5; }
+		public RuleCall getINTTerminalRuleCall_6() { return cINTTerminalRuleCall_6; }
 		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_6() { return cCOMMATerminalRuleCall_6; }
+		public RuleCall getCOMMATerminalRuleCall_7() { return cCOMMATerminalRuleCall_7; }
 		
 		//COORDINATE_Y
-		public RuleCall getCOORDINATE_YTerminalRuleCall_7() { return cCOORDINATE_YTerminalRuleCall_7; }
+		public RuleCall getCOORDINATE_YTerminalRuleCall_8() { return cCOORDINATE_YTerminalRuleCall_8; }
 		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_8() { return cCOLONTerminalRuleCall_8; }
+		public RuleCall getCOLONTerminalRuleCall_9() { return cCOLONTerminalRuleCall_9; }
 		
-		//y=INT
-		public Assignment getYAssignment_9() { return cYAssignment_9; }
+		//y='-'?
+		public Assignment getYAssignment_10() { return cYAssignment_10; }
 		
-		//INT
-		public RuleCall getYINTTerminalRuleCall_9_0() { return cYINTTerminalRuleCall_9_0; }
-		
-		//DOT
-		public RuleCall getDOTTerminalRuleCall_10() { return cDOTTerminalRuleCall_10; }
+		//'-'
+		public Keyword getYHyphenMinusKeyword_10_0() { return cYHyphenMinusKeyword_10_0; }
 		
 		//INT
 		public RuleCall getINTTerminalRuleCall_11() { return cINTTerminalRuleCall_11; }
 		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_12() { return cDOTTerminalRuleCall_12; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_13() { return cINTTerminalRuleCall_13; }
+		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_12() { return cCOMMATerminalRuleCall_12; }
+		public RuleCall getCOMMATerminalRuleCall_14() { return cCOMMATerminalRuleCall_14; }
 		
 		//COORDINATE_Z
-		public RuleCall getCOORDINATE_ZTerminalRuleCall_13() { return cCOORDINATE_ZTerminalRuleCall_13; }
+		public RuleCall getCOORDINATE_ZTerminalRuleCall_15() { return cCOORDINATE_ZTerminalRuleCall_15; }
 		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_14() { return cCOLONTerminalRuleCall_14; }
+		public RuleCall getCOLONTerminalRuleCall_16() { return cCOLONTerminalRuleCall_16; }
 		
-		//z=INT
-		public Assignment getZAssignment_15() { return cZAssignment_15; }
+		//z='-'?
+		public Assignment getZAssignment_17() { return cZAssignment_17; }
+		
+		//'-'
+		public Keyword getZHyphenMinusKeyword_17_0() { return cZHyphenMinusKeyword_17_0; }
 		
 		//INT
-		public RuleCall getZINTTerminalRuleCall_15_0() { return cZINTTerminalRuleCall_15_0; }
+		public RuleCall getINTTerminalRuleCall_18() { return cINTTerminalRuleCall_18; }
 		
 		//DOT
-		public RuleCall getDOTTerminalRuleCall_16() { return cDOTTerminalRuleCall_16; }
+		public RuleCall getDOTTerminalRuleCall_19() { return cDOTTerminalRuleCall_19; }
 		
 		//INT
-		public RuleCall getINTTerminalRuleCall_17() { return cINTTerminalRuleCall_17; }
+		public RuleCall getINTTerminalRuleCall_20() { return cINTTerminalRuleCall_20; }
 		
 		//CLOSING_CURLY_BRACKET
-		public RuleCall getCLOSING_CURLY_BRACKETTerminalRuleCall_18() { return cCLOSING_CURLY_BRACKETTerminalRuleCall_18; }
+		public RuleCall getCLOSING_CURLY_BRACKETTerminalRuleCall_21() { return cCLOSING_CURLY_BRACKETTerminalRuleCall_21; }
 	}
 	
 	
@@ -574,7 +579,7 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Tour:
 	//	OPENING_CURLY_BRACKET
-	//	NAME COLON QUOTE name=ID QUOTE COMMA
+	//	NAME COLON name=ID COMMA
 	//	PLACES COLON OPENING_SQUARE_BRACKET places+=Panorama COMMAplaces+=Panorama* CLOSING_SQUARE_BRACKET
 	//	CLOSING_CURLY_BRACKET;
 	public TourElements getTourAccess() {
@@ -617,9 +622,9 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Coordenada:
 	//	OPENING_CURLY_BRACKET
-	//	COORDINATE_X COLON x=INT DOT INT COMMA
-	//	COORDINATE_Y COLON y=INT DOT INT COMMA
-	//	COORDINATE_Z COLON z=INT DOT INT
+	//	COORDINATE_X COLON x='-'? INT DOT INT COMMA
+	//	COORDINATE_Y COLON y='-'? INT DOT INT COMMA
+	//	COORDINATE_Z COLON z='-'? INT DOT INT
 	//	CLOSING_CURLY_BRACKET;
 	public CoordenadaElements getCoordenadaAccess() {
 		return pCoordenada;
@@ -660,7 +665,7 @@ public class ToursdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal QUOTE:
-	//	'"';
+	//	"'";
 	public TerminalRule getQUOTERule() {
 		return tQUOTE;
 	}

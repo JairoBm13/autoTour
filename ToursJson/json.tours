@@ -1,0 +1,41 @@
+{
+	name:"Tour",
+	places:[{
+		name:"A",
+		description:"",
+		paths:[{
+			name:"",
+			to: B,
+			from: A,
+			position: {
+				x:1.0,
+				y:2.8,
+				z:3.4
+			},
+			rotation:{
+				x:1.0,
+				y:2.8,
+				z:3.4
+			}
+		}]
+	},
+	{
+		name:"B",
+		description:"",
+		paths:[{
+			name:"",
+			to: A,
+			from: B,
+			position: {
+				x:1.0,
+				y:2.8,
+				z:3.4
+			},
+			rotation:{
+				x:1.0,
+				y:2.8,
+				z:3.4
+			}
+		}]
+	}]
+}
