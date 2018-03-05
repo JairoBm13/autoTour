@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tours -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Tours.presentation.ToursModelWizardID"
+            name="%_UI_ToursModelWizard_label"
+            class="Tours.presentation.ToursModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToursModelFile.gif">
+         <description>%_UI_ToursModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tours -->
+      <editor
+            id="Tours.presentation.ToursEditorID"
+            name="%_UI_ToursEditor_label"
+            icon="icons/full/obj16/ToursModelFile.gif"
+            extensions="tours"
+            class="Tours.presentation.ToursEditor"
+            contributorClass="Tours.presentation.ToursActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
