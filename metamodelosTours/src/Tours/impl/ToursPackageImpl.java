@@ -5,6 +5,8 @@ package Tours.impl;
 import Tours.Coordenada;
 import Tours.Hotspot;
 import Tours.Panorama;
+import Tours.Position;
+import Tours.Rotation;
 import Tours.Tour;
 import Tours.ToursFactory;
 import Tours.ToursPackage;
@@ -50,6 +52,20 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * @generated
 	 */
 	private EClass coordenadaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rotationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -135,26 +151,8 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTour_Hotspots() {
-		return (EReference)tourEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTour_Coordenada() {
-		return (EReference)tourEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTour_Nombre() {
-		return (EAttribute)tourEClass.getEStructuralFeatures().get(3);
+	public EAttribute getTour_Name() {
+		return (EAttribute)tourEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -171,8 +169,8 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPanorama_Hotspots() {
-		return (EReference)panoramaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPanorama_Name() {
+		return (EAttribute)panoramaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -180,8 +178,8 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPanorama_Nombre() {
-		return (EAttribute)panoramaEClass.getEStructuralFeatures().get(1);
+	public EReference getPanorama_Hotspots() {
+		return (EReference)panoramaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -198,7 +196,7 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotspot_Rotacion() {
+	public EReference getHotspot_To() {
 		return (EReference)hotspotEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -207,8 +205,8 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotspot_Posicion() {
-		return (EReference)hotspotEClass.getEStructuralFeatures().get(1);
+	public EAttribute getHotspot_Name() {
+		return (EAttribute)hotspotEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -216,7 +214,7 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotspot_Destino() {
+	public EReference getHotspot_Position() {
 		return (EReference)hotspotEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -225,17 +223,8 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotspot_Origen() {
+	public EReference getHotspot_Rotation() {
 		return (EReference)hotspotEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getHotspot_Nombre() {
-		return (EAttribute)hotspotEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -252,7 +241,7 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCoordenada_X() {
+	public EAttribute getCoordenada_Posx() {
 		return (EAttribute)coordenadaEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -261,7 +250,7 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCoordenada_Y() {
+	public EAttribute getCoordenada_Posy() {
 		return (EAttribute)coordenadaEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -270,8 +259,26 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCoordenada_Z() {
+	public EAttribute getCoordenada_Posz() {
 		return (EAttribute)coordenadaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPosition() {
+		return positionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRotation() {
+		return rotationEClass;
 	}
 
 	/**
@@ -304,25 +311,26 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 		// Create classes and their features
 		tourEClass = createEClass(TOUR);
 		createEReference(tourEClass, TOUR__PANORAMAS);
-		createEReference(tourEClass, TOUR__HOTSPOTS);
-		createEReference(tourEClass, TOUR__COORDENADA);
-		createEAttribute(tourEClass, TOUR__NOMBRE);
+		createEAttribute(tourEClass, TOUR__NAME);
 
 		panoramaEClass = createEClass(PANORAMA);
+		createEAttribute(panoramaEClass, PANORAMA__NAME);
 		createEReference(panoramaEClass, PANORAMA__HOTSPOTS);
-		createEAttribute(panoramaEClass, PANORAMA__NOMBRE);
 
 		hotspotEClass = createEClass(HOTSPOT);
-		createEReference(hotspotEClass, HOTSPOT__ROTACION);
-		createEReference(hotspotEClass, HOTSPOT__POSICION);
-		createEReference(hotspotEClass, HOTSPOT__DESTINO);
-		createEReference(hotspotEClass, HOTSPOT__ORIGEN);
-		createEAttribute(hotspotEClass, HOTSPOT__NOMBRE);
+		createEReference(hotspotEClass, HOTSPOT__TO);
+		createEAttribute(hotspotEClass, HOTSPOT__NAME);
+		createEReference(hotspotEClass, HOTSPOT__POSITION);
+		createEReference(hotspotEClass, HOTSPOT__ROTATION);
 
 		coordenadaEClass = createEClass(COORDENADA);
-		createEAttribute(coordenadaEClass, COORDENADA__X);
-		createEAttribute(coordenadaEClass, COORDENADA__Y);
-		createEAttribute(coordenadaEClass, COORDENADA__Z);
+		createEAttribute(coordenadaEClass, COORDENADA__POSX);
+		createEAttribute(coordenadaEClass, COORDENADA__POSY);
+		createEAttribute(coordenadaEClass, COORDENADA__POSZ);
+
+		positionEClass = createEClass(POSITION);
+
+		rotationEClass = createEClass(ROTATION);
 	}
 
 	/**
@@ -353,29 +361,32 @@ public class ToursPackageImpl extends EPackageImpl implements ToursPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		positionEClass.getESuperTypes().add(this.getCoordenada());
+		rotationEClass.getESuperTypes().add(this.getCoordenada());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(tourEClass, Tour.class, "Tour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTour_Panoramas(), this.getPanorama(), null, "panoramas", null, 2, -1, Tour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTour_Hotspots(), this.getHotspot(), null, "hotspots", null, 2, -1, Tour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTour_Coordenada(), this.getCoordenada(), null, "coordenada", null, 1, -1, Tour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTour_Nombre(), ecorePackage.getEString(), "nombre", "\"\"", 0, 1, Tour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTour_Name(), ecorePackage.getEString(), "name", "\"\"", 0, 1, Tour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(panoramaEClass, Panorama.class, "Panorama", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPanorama_Hotspots(), this.getHotspot(), null, "hotspots", null, 1, -1, Panorama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPanorama_Nombre(), ecorePackage.getEString(), "nombre", "\"\"", 0, 1, Panorama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPanorama_Name(), ecorePackage.getEString(), "name", "\"\"", 0, 1, Panorama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPanorama_Hotspots(), this.getHotspot(), null, "hotspots", null, 1, -1, Panorama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hotspotEClass, Hotspot.class, "Hotspot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHotspot_Rotacion(), this.getCoordenada(), null, "rotacion", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHotspot_Posicion(), this.getCoordenada(), null, "posicion", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHotspot_Destino(), this.getPanorama(), null, "destino", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHotspot_Origen(), this.getPanorama(), null, "origen", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHotspot_Nombre(), ecorePackage.getEString(), "nombre", "\"\"", 0, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHotspot_To(), this.getPanorama(), null, "to", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHotspot_Name(), ecorePackage.getEString(), "name", "\"\"", 0, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHotspot_Position(), this.getPosition(), null, "position", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHotspot_Rotation(), this.getRotation(), null, "rotation", null, 1, 1, Hotspot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(coordenadaEClass, Coordenada.class, "Coordenada", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCoordenada_X(), ecorePackage.getEDouble(), "x", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoordenada_Y(), ecorePackage.getEDouble(), "y", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoordenada_Z(), ecorePackage.getEDouble(), "z", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(coordenadaEClass, Coordenada.class, "Coordenada", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCoordenada_Posx(), ecorePackage.getEDouble(), "posx", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoordenada_Posy(), ecorePackage.getEDouble(), "posy", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoordenada_Posz(), ecorePackage.getEDouble(), "posz", null, 0, 1, Coordenada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(positionEClass, Position.class, "Position", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(rotationEClass, Rotation.class, "Rotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

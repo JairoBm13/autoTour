@@ -2,8 +2,6 @@
  */
 package Tours.impl;
 
-import Tours.Coordenada;
-import Tours.Hotspot;
 import Tours.Panorama;
 import Tours.Tour;
 import Tours.ToursPackage;
@@ -30,13 +28,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link Tours.impl.TourImpl#getPanoramas <em>Panoramas</em>}</li>
- *   <li>{@link Tours.impl.TourImpl#getHotspots <em>Hotspots</em>}</li>
- *   <li>{@link Tours.impl.TourImpl#getCoordenada <em>Coordenada</em>}</li>
- *   <li>{@link Tours.impl.TourImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link Tours.impl.TourImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -52,44 +48,24 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 	protected EList<Panorama> panoramas;
 
 	/**
-	 * The cached value of the '{@link #getHotspots() <em>Hotspots</em>}' containment reference list.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHotspots()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Hotspot> hotspots;
+	protected static final String NAME_EDEFAULT = "\"\"";
 
 	/**
-	 * The cached value of the '{@link #getCoordenada() <em>Coordenada</em>}' containment reference list.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCoordenada()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Coordenada> coordenada;
-
-	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNombre()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NOMBRE_EDEFAULT = "\"\"";
-
-	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNombre()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,11 +103,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Hotspot> getHotspots() {
-		if (hotspots == null) {
-			hotspots = new EObjectContainmentEList<Hotspot>(Hotspot.class, this, ToursPackage.TOUR__HOTSPOTS);
-		}
-		return hotspots;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -139,32 +112,11 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Coordenada> getCoordenada() {
-		if (coordenada == null) {
-			coordenada = new EObjectContainmentEList<Coordenada>(Coordenada.class, this, ToursPackage.TOUR__COORDENADA);
-		}
-		return coordenada;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getNombre() {
-		return nombre;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.TOUR__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.TOUR__NAME, oldName, name));
 	}
 
 	/**
@@ -177,10 +129,6 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 		switch (featureID) {
 			case ToursPackage.TOUR__PANORAMAS:
 				return ((InternalEList<?>)getPanoramas()).basicRemove(otherEnd, msgs);
-			case ToursPackage.TOUR__HOTSPOTS:
-				return ((InternalEList<?>)getHotspots()).basicRemove(otherEnd, msgs);
-			case ToursPackage.TOUR__COORDENADA:
-				return ((InternalEList<?>)getCoordenada()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -195,12 +143,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 		switch (featureID) {
 			case ToursPackage.TOUR__PANORAMAS:
 				return getPanoramas();
-			case ToursPackage.TOUR__HOTSPOTS:
-				return getHotspots();
-			case ToursPackage.TOUR__COORDENADA:
-				return getCoordenada();
-			case ToursPackage.TOUR__NOMBRE:
-				return getNombre();
+			case ToursPackage.TOUR__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,16 +162,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 				getPanoramas().clear();
 				getPanoramas().addAll((Collection<? extends Panorama>)newValue);
 				return;
-			case ToursPackage.TOUR__HOTSPOTS:
-				getHotspots().clear();
-				getHotspots().addAll((Collection<? extends Hotspot>)newValue);
-				return;
-			case ToursPackage.TOUR__COORDENADA:
-				getCoordenada().clear();
-				getCoordenada().addAll((Collection<? extends Coordenada>)newValue);
-				return;
-			case ToursPackage.TOUR__NOMBRE:
-				setNombre((String)newValue);
+			case ToursPackage.TOUR__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,14 +180,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 			case ToursPackage.TOUR__PANORAMAS:
 				getPanoramas().clear();
 				return;
-			case ToursPackage.TOUR__HOTSPOTS:
-				getHotspots().clear();
-				return;
-			case ToursPackage.TOUR__COORDENADA:
-				getCoordenada().clear();
-				return;
-			case ToursPackage.TOUR__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case ToursPackage.TOUR__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -267,12 +197,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 		switch (featureID) {
 			case ToursPackage.TOUR__PANORAMAS:
 				return panoramas != null && !panoramas.isEmpty();
-			case ToursPackage.TOUR__HOTSPOTS:
-				return hotspots != null && !hotspots.isEmpty();
-			case ToursPackage.TOUR__COORDENADA:
-				return coordenada != null && !coordenada.isEmpty();
-			case ToursPackage.TOUR__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ToursPackage.TOUR__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -287,8 +213,8 @@ public class TourImpl extends MinimalEObjectImpl.Container implements Tour {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

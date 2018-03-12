@@ -18,75 +18,75 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link Tours.impl.CoordenadaImpl#getX <em>X</em>}</li>
- *   <li>{@link Tours.impl.CoordenadaImpl#getY <em>Y</em>}</li>
- *   <li>{@link Tours.impl.CoordenadaImpl#getZ <em>Z</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Tours.impl.CoordenadaImpl#getPosx <em>Posx</em>}</li>
+ *   <li>{@link Tours.impl.CoordenadaImpl#getPosy <em>Posy</em>}</li>
+ *   <li>{@link Tours.impl.CoordenadaImpl#getPosz <em>Posz</em>}</li>
+ * </ul>
  *
  * @generated
  */
-public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coordenada {
+public abstract class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coordenada {
 	/**
-	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
+	 * The default value of the '{@link #getPosx() <em>Posx</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getX()
+	 * @see #getPosx()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double X_EDEFAULT = 0.0;
+	protected static final double POSX_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
+	 * The cached value of the '{@link #getPosx() <em>Posx</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getX()
+	 * @see #getPosx()
 	 * @generated
 	 * @ordered
 	 */
-	protected double x = X_EDEFAULT;
+	protected double posx = POSX_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * The default value of the '{@link #getPosy() <em>Posy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getY()
+	 * @see #getPosy()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double Y_EDEFAULT = 0.0;
+	protected static final double POSY_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * The cached value of the '{@link #getPosy() <em>Posy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getY()
+	 * @see #getPosy()
 	 * @generated
 	 * @ordered
 	 */
-	protected double y = Y_EDEFAULT;
+	protected double posy = POSY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getZ() <em>Z</em>}' attribute.
+	 * The default value of the '{@link #getPosz() <em>Posz</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZ()
+	 * @see #getPosz()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double Z_EDEFAULT = 0.0;
+	protected static final double POSZ_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getZ() <em>Z</em>}' attribute.
+	 * The cached value of the '{@link #getPosz() <em>Posz</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZ()
+	 * @see #getPosz()
 	 * @generated
 	 * @ordered
 	 */
-	protected double z = Z_EDEFAULT;
+	protected double posz = POSZ_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,8 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getX() {
-		return x;
+	public double getPosx() {
+		return posx;
 	}
 
 	/**
@@ -121,11 +121,11 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(double newX) {
-		double oldX = x;
-		x = newX;
+	public void setPosx(double newPosx) {
+		double oldPosx = posx;
+		posx = newPosx;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__POSX, oldPosx, posx));
 	}
 
 	/**
@@ -133,8 +133,8 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getY() {
-		return y;
+	public double getPosy() {
+		return posy;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(double newY) {
-		double oldY = y;
-		y = newY;
+	public void setPosy(double newPosy) {
+		double oldPosy = posy;
+		posy = newPosy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__POSY, oldPosy, posy));
 	}
 
 	/**
@@ -154,8 +154,8 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getZ() {
-		return z;
+	public double getPosz() {
+		return posz;
 	}
 
 	/**
@@ -163,11 +163,11 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setZ(double newZ) {
-		double oldZ = z;
-		z = newZ;
+	public void setPosz(double newPosz) {
+		double oldPosz = posz;
+		posz = newPosz;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__Z, oldZ, z));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.COORDENADA__POSZ, oldPosz, posz));
 	}
 
 	/**
@@ -178,12 +178,12 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToursPackage.COORDENADA__X:
-				return getX();
-			case ToursPackage.COORDENADA__Y:
-				return getY();
-			case ToursPackage.COORDENADA__Z:
-				return getZ();
+			case ToursPackage.COORDENADA__POSX:
+				return getPosx();
+			case ToursPackage.COORDENADA__POSY:
+				return getPosy();
+			case ToursPackage.COORDENADA__POSZ:
+				return getPosz();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,14 +196,14 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToursPackage.COORDENADA__X:
-				setX((Double)newValue);
+			case ToursPackage.COORDENADA__POSX:
+				setPosx((Double)newValue);
 				return;
-			case ToursPackage.COORDENADA__Y:
-				setY((Double)newValue);
+			case ToursPackage.COORDENADA__POSY:
+				setPosy((Double)newValue);
 				return;
-			case ToursPackage.COORDENADA__Z:
-				setZ((Double)newValue);
+			case ToursPackage.COORDENADA__POSZ:
+				setPosz((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,14 +217,14 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToursPackage.COORDENADA__X:
-				setX(X_EDEFAULT);
+			case ToursPackage.COORDENADA__POSX:
+				setPosx(POSX_EDEFAULT);
 				return;
-			case ToursPackage.COORDENADA__Y:
-				setY(Y_EDEFAULT);
+			case ToursPackage.COORDENADA__POSY:
+				setPosy(POSY_EDEFAULT);
 				return;
-			case ToursPackage.COORDENADA__Z:
-				setZ(Z_EDEFAULT);
+			case ToursPackage.COORDENADA__POSZ:
+				setPosz(POSZ_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -238,12 +238,12 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToursPackage.COORDENADA__X:
-				return x != X_EDEFAULT;
-			case ToursPackage.COORDENADA__Y:
-				return y != Y_EDEFAULT;
-			case ToursPackage.COORDENADA__Z:
-				return z != Z_EDEFAULT;
+			case ToursPackage.COORDENADA__POSX:
+				return posx != POSX_EDEFAULT;
+			case ToursPackage.COORDENADA__POSY:
+				return posy != POSY_EDEFAULT;
+			case ToursPackage.COORDENADA__POSZ:
+				return posz != POSZ_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -258,12 +258,12 @@ public class CoordenadaImpl extends MinimalEObjectImpl.Container implements Coor
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (x: ");
-		result.append(x);
-		result.append(", y: ");
-		result.append(y);
-		result.append(", z: ");
-		result.append(z);
+		result.append(" (posx: ");
+		result.append(posx);
+		result.append(", posy: ");
+		result.append(posy);
+		result.append(", posz: ");
+		result.append(posz);
 		result.append(')');
 		return result.toString();
 	}

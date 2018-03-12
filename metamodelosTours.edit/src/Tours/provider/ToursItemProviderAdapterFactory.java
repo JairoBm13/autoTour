@@ -141,26 +141,49 @@ public class ToursItemProviderAdapterFactory extends ToursAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link Tours.Coordenada} instances.
+	 * This keeps track of the one adapter used for all {@link Tours.Position} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CoordenadaItemProvider coordenadaItemProvider;
+	protected PositionItemProvider positionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link Tours.Coordenada}.
+	 * This creates an adapter for a {@link Tours.Position}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCoordenadaAdapter() {
-		if (coordenadaItemProvider == null) {
-			coordenadaItemProvider = new CoordenadaItemProvider(this);
+	public Adapter createPositionAdapter() {
+		if (positionItemProvider == null) {
+			positionItemProvider = new PositionItemProvider(this);
 		}
 
-		return coordenadaItemProvider;
+		return positionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link Tours.Rotation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RotationItemProvider rotationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link Tours.Rotation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRotationAdapter() {
+		if (rotationItemProvider == null) {
+			rotationItemProvider = new RotationItemProvider(this);
+		}
+
+		return rotationItemProvider;
 	}
 
 	/**
@@ -265,7 +288,8 @@ public class ToursItemProviderAdapterFactory extends ToursAdapterFactory impleme
 		if (tourItemProvider != null) tourItemProvider.dispose();
 		if (panoramaItemProvider != null) panoramaItemProvider.dispose();
 		if (hotspotItemProvider != null) hotspotItemProvider.dispose();
-		if (coordenadaItemProvider != null) coordenadaItemProvider.dispose();
+		if (positionItemProvider != null) positionItemProvider.dispose();
+		if (rotationItemProvider != null) rotationItemProvider.dispose();
 	}
 
 }

@@ -2,12 +2,14 @@
  */
 package Tours.impl;
 
-import Tours.Coordenada;
 import Tours.Hotspot;
 import Tours.Panorama;
+import Tours.Position;
+import Tours.Rotation;
 import Tours.ToursPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -21,77 +23,66 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link Tours.impl.HotspotImpl#getRotacion <em>Rotacion</em>}</li>
- *   <li>{@link Tours.impl.HotspotImpl#getPosicion <em>Posicion</em>}</li>
- *   <li>{@link Tours.impl.HotspotImpl#getDestino <em>Destino</em>}</li>
- *   <li>{@link Tours.impl.HotspotImpl#getOrigen <em>Origen</em>}</li>
- *   <li>{@link Tours.impl.HotspotImpl#getNombre <em>Nombre</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Tours.impl.HotspotImpl#getTo <em>To</em>}</li>
+ *   <li>{@link Tours.impl.HotspotImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Tours.impl.HotspotImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link Tours.impl.HotspotImpl#getRotation <em>Rotation</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot {
 	/**
-	 * The cached value of the '{@link #getRotacion() <em>Rotacion</em>}' reference.
+	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRotacion()
+	 * @see #getTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected Coordenada rotacion;
+	protected Panorama to;
 
 	/**
-	 * The cached value of the '{@link #getPosicion() <em>Posicion</em>}' reference.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPosicion()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected Coordenada posicion;
+	protected static final String NAME_EDEFAULT = "\"\"";
 
 	/**
-	 * The cached value of the '{@link #getDestino() <em>Destino</em>}' reference.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDestino()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected Panorama destino;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOrigen() <em>Origen</em>}' reference.
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOrigen()
+	 * @see #getPosition()
 	 * @generated
 	 * @ordered
 	 */
-	protected Panorama origen;
+	protected Position position;
 
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getRotation() <em>Rotation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getRotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = "\"\"";
-
-	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNombre()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected Rotation rotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,16 +108,16 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Coordenada getRotacion() {
-		if (rotacion != null && rotacion.eIsProxy()) {
-			InternalEObject oldRotacion = (InternalEObject)rotacion;
-			rotacion = (Coordenada)eResolveProxy(oldRotacion);
-			if (rotacion != oldRotacion) {
+	public Panorama getTo() {
+		if (to != null && to.eIsProxy()) {
+			InternalEObject oldTo = (InternalEObject)to;
+			to = (Panorama)eResolveProxy(oldTo);
+			if (to != oldTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToursPackage.HOTSPOT__ROTACION, oldRotacion, rotacion));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToursPackage.HOTSPOT__TO, oldTo, to));
 			}
 		}
-		return rotacion;
+		return to;
 	}
 
 	/**
@@ -134,8 +125,8 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Coordenada basicGetRotacion() {
-		return rotacion;
+	public Panorama basicGetTo() {
+		return to;
 	}
 
 	/**
@@ -143,11 +134,11 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRotacion(Coordenada newRotacion) {
-		Coordenada oldRotacion = rotacion;
-		rotacion = newRotacion;
+	public void setTo(Panorama newTo) {
+		Panorama oldTo = to;
+		to = newTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__ROTACION, oldRotacion, rotacion));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__TO, oldTo, to));
 	}
 
 	/**
@@ -155,16 +146,44 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Coordenada getPosicion() {
-		if (posicion != null && posicion.eIsProxy()) {
-			InternalEObject oldPosicion = (InternalEObject)posicion;
-			posicion = (Coordenada)eResolveProxy(oldPosicion);
-			if (posicion != oldPosicion) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToursPackage.HOTSPOT__POSICION, oldPosicion, posicion));
-			}
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Position getPosition() {
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPosition(Position newPosition, NotificationChain msgs) {
+		Position oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__POSITION, oldPosition, newPosition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return posicion;
+		return msgs;
 	}
 
 	/**
@@ -172,37 +191,18 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Coordenada basicGetPosicion() {
-		return posicion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosicion(Coordenada newPosicion) {
-		Coordenada oldPosicion = posicion;
-		posicion = newPosicion;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__POSICION, oldPosicion, posicion));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Panorama getDestino() {
-		if (destino != null && destino.eIsProxy()) {
-			InternalEObject oldDestino = (InternalEObject)destino;
-			destino = (Panorama)eResolveProxy(oldDestino);
-			if (destino != oldDestino) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToursPackage.HOTSPOT__DESTINO, oldDestino, destino));
-			}
+	public void setPosition(Position newPosition) {
+		if (newPosition != position) {
+			NotificationChain msgs = null;
+			if (position != null)
+				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToursPackage.HOTSPOT__POSITION, null, msgs);
+			if (newPosition != null)
+				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToursPackage.HOTSPOT__POSITION, null, msgs);
+			msgs = basicSetPosition(newPosition, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return destino;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__POSITION, newPosition, newPosition));
 	}
 
 	/**
@@ -210,8 +210,8 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Panorama basicGetDestino() {
-		return destino;
+	public Rotation getRotation() {
+		return rotation;
 	}
 
 	/**
@@ -219,28 +219,14 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDestino(Panorama newDestino) {
-		Panorama oldDestino = destino;
-		destino = newDestino;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__DESTINO, oldDestino, destino));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Panorama getOrigen() {
-		if (origen != null && origen.eIsProxy()) {
-			InternalEObject oldOrigen = (InternalEObject)origen;
-			origen = (Panorama)eResolveProxy(oldOrigen);
-			if (origen != oldOrigen) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToursPackage.HOTSPOT__ORIGEN, oldOrigen, origen));
-			}
+	public NotificationChain basicSetRotation(Rotation newRotation, NotificationChain msgs) {
+		Rotation oldRotation = rotation;
+		rotation = newRotation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__ROTATION, oldRotation, newRotation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return origen;
+		return msgs;
 	}
 
 	/**
@@ -248,8 +234,18 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Panorama basicGetOrigen() {
-		return origen;
+	public void setRotation(Rotation newRotation) {
+		if (newRotation != rotation) {
+			NotificationChain msgs = null;
+			if (rotation != null)
+				msgs = ((InternalEObject)rotation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToursPackage.HOTSPOT__ROTATION, null, msgs);
+			if (newRotation != null)
+				msgs = ((InternalEObject)newRotation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToursPackage.HOTSPOT__ROTATION, null, msgs);
+			msgs = basicSetRotation(newRotation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__ROTATION, newRotation, newRotation));
 	}
 
 	/**
@@ -257,32 +253,15 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrigen(Panorama newOrigen) {
-		Panorama oldOrigen = origen;
-		origen = newOrigen;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__ORIGEN, oldOrigen, origen));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getNombre() {
-		return nombre;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToursPackage.HOTSPOT__NOMBRE, oldNombre, nombre));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ToursPackage.HOTSPOT__POSITION:
+				return basicSetPosition(null, msgs);
+			case ToursPackage.HOTSPOT__ROTATION:
+				return basicSetRotation(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -293,20 +272,15 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToursPackage.HOTSPOT__ROTACION:
-				if (resolve) return getRotacion();
-				return basicGetRotacion();
-			case ToursPackage.HOTSPOT__POSICION:
-				if (resolve) return getPosicion();
-				return basicGetPosicion();
-			case ToursPackage.HOTSPOT__DESTINO:
-				if (resolve) return getDestino();
-				return basicGetDestino();
-			case ToursPackage.HOTSPOT__ORIGEN:
-				if (resolve) return getOrigen();
-				return basicGetOrigen();
-			case ToursPackage.HOTSPOT__NOMBRE:
-				return getNombre();
+			case ToursPackage.HOTSPOT__TO:
+				if (resolve) return getTo();
+				return basicGetTo();
+			case ToursPackage.HOTSPOT__NAME:
+				return getName();
+			case ToursPackage.HOTSPOT__POSITION:
+				return getPosition();
+			case ToursPackage.HOTSPOT__ROTATION:
+				return getRotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,20 +293,17 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToursPackage.HOTSPOT__ROTACION:
-				setRotacion((Coordenada)newValue);
+			case ToursPackage.HOTSPOT__TO:
+				setTo((Panorama)newValue);
 				return;
-			case ToursPackage.HOTSPOT__POSICION:
-				setPosicion((Coordenada)newValue);
+			case ToursPackage.HOTSPOT__NAME:
+				setName((String)newValue);
 				return;
-			case ToursPackage.HOTSPOT__DESTINO:
-				setDestino((Panorama)newValue);
+			case ToursPackage.HOTSPOT__POSITION:
+				setPosition((Position)newValue);
 				return;
-			case ToursPackage.HOTSPOT__ORIGEN:
-				setOrigen((Panorama)newValue);
-				return;
-			case ToursPackage.HOTSPOT__NOMBRE:
-				setNombre((String)newValue);
+			case ToursPackage.HOTSPOT__ROTATION:
+				setRotation((Rotation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -346,20 +317,17 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToursPackage.HOTSPOT__ROTACION:
-				setRotacion((Coordenada)null);
+			case ToursPackage.HOTSPOT__TO:
+				setTo((Panorama)null);
 				return;
-			case ToursPackage.HOTSPOT__POSICION:
-				setPosicion((Coordenada)null);
+			case ToursPackage.HOTSPOT__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case ToursPackage.HOTSPOT__DESTINO:
-				setDestino((Panorama)null);
+			case ToursPackage.HOTSPOT__POSITION:
+				setPosition((Position)null);
 				return;
-			case ToursPackage.HOTSPOT__ORIGEN:
-				setOrigen((Panorama)null);
-				return;
-			case ToursPackage.HOTSPOT__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case ToursPackage.HOTSPOT__ROTATION:
+				setRotation((Rotation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -373,16 +341,14 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToursPackage.HOTSPOT__ROTACION:
-				return rotacion != null;
-			case ToursPackage.HOTSPOT__POSICION:
-				return posicion != null;
-			case ToursPackage.HOTSPOT__DESTINO:
-				return destino != null;
-			case ToursPackage.HOTSPOT__ORIGEN:
-				return origen != null;
-			case ToursPackage.HOTSPOT__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ToursPackage.HOTSPOT__TO:
+				return to != null;
+			case ToursPackage.HOTSPOT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ToursPackage.HOTSPOT__POSITION:
+				return position != null;
+			case ToursPackage.HOTSPOT__ROTATION:
+				return rotation != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -397,8 +363,8 @@ public class HotspotImpl extends MinimalEObjectImpl.Container implements Hotspot
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

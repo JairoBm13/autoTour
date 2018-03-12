@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated modelo -->
+      <!-- @generated tours -->
       <factory
             uri="http://www.uniandes.edu.co/Tours"
             class="Tours.provider.ToursItemProviderAdapterFactory"

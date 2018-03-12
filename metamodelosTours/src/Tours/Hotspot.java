@@ -11,14 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link Tours.Hotspot#getRotacion <em>Rotacion</em>}</li>
- *   <li>{@link Tours.Hotspot#getPosicion <em>Posicion</em>}</li>
- *   <li>{@link Tours.Hotspot#getDestino <em>Destino</em>}</li>
- *   <li>{@link Tours.Hotspot#getOrigen <em>Origen</em>}</li>
- *   <li>{@link Tours.Hotspot#getNombre <em>Nombre</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Tours.Hotspot#getTo <em>To</em>}</li>
+ *   <li>{@link Tours.Hotspot#getName <em>Name</em>}</li>
+ *   <li>{@link Tours.Hotspot#getPosition <em>Position</em>}</li>
+ *   <li>{@link Tours.Hotspot#getRotation <em>Rotation</em>}</li>
+ * </ul>
  *
  * @see Tours.ToursPackage#getHotspot()
  * @model
@@ -26,134 +25,108 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Hotspot extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Rotacion</b></em>' reference.
+	 * Returns the value of the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Rotacion</em>' reference isn't clear,
+	 * If the meaning of the '<em>To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotacion</em>' reference.
-	 * @see #setRotacion(Coordenada)
-	 * @see Tours.ToursPackage#getHotspot_Rotacion()
+	 * @return the value of the '<em>To</em>' reference.
+	 * @see #setTo(Panorama)
+	 * @see Tours.ToursPackage#getHotspot_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	Coordenada getRotacion();
+	Panorama getTo();
 
 	/**
-	 * Sets the value of the '{@link Tours.Hotspot#getRotacion <em>Rotacion</em>}' reference.
+	 * Sets the value of the '{@link Tours.Hotspot#getTo <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotacion</em>' reference.
-	 * @see #getRotacion()
+	 * @param value the new value of the '<em>To</em>' reference.
+	 * @see #getTo()
 	 * @generated
 	 */
-	void setRotacion(Coordenada value);
+	void setTo(Panorama value);
 
 	/**
-	 * Returns the value of the '<em><b>Posicion</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Posicion</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Posicion</em>' reference.
-	 * @see #setPosicion(Coordenada)
-	 * @see Tours.ToursPackage#getHotspot_Posicion()
-	 * @model required="true"
-	 * @generated
-	 */
-	Coordenada getPosicion();
-
-	/**
-	 * Sets the value of the '{@link Tours.Hotspot#getPosicion <em>Posicion</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Posicion</em>' reference.
-	 * @see #getPosicion()
-	 * @generated
-	 */
-	void setPosicion(Coordenada value);
-
-	/**
-	 * Returns the value of the '<em><b>Destino</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Destino</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Destino</em>' reference.
-	 * @see #setDestino(Panorama)
-	 * @see Tours.ToursPackage#getHotspot_Destino()
-	 * @model required="true"
-	 * @generated
-	 */
-	Panorama getDestino();
-
-	/**
-	 * Sets the value of the '{@link Tours.Hotspot#getDestino <em>Destino</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Destino</em>' reference.
-	 * @see #getDestino()
-	 * @generated
-	 */
-	void setDestino(Panorama value);
-
-	/**
-	 * Returns the value of the '<em><b>Origen</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Origen</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Origen</em>' reference.
-	 * @see #setOrigen(Panorama)
-	 * @see Tours.ToursPackage#getHotspot_Origen()
-	 * @model required="true"
-	 * @generated
-	 */
-	Panorama getOrigen();
-
-	/**
-	 * Sets the value of the '{@link Tours.Hotspot#getOrigen <em>Origen</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Origen</em>' reference.
-	 * @see #getOrigen()
-	 * @generated
-	 */
-	void setOrigen(Panorama value);
-
-	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>"\"\""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see Tours.ToursPackage#getHotspot_Nombre()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see Tours.ToursPackage#getHotspot_Name()
 	 * @model default="\"\""
 	 * @generated
 	 */
-	String getNombre();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link Tours.Hotspot#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link Tours.Hotspot#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Position</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' containment reference.
+	 * @see #setPosition(Position)
+	 * @see Tours.ToursPackage#getHotspot_Position()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Position getPosition();
+
+	/**
+	 * Sets the value of the '{@link Tours.Hotspot#getPosition <em>Position</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' containment reference.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(Position value);
+
+	/**
+	 * Returns the value of the '<em><b>Rotation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Rotation</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Rotation</em>' containment reference.
+	 * @see #setRotation(Rotation)
+	 * @see Tours.ToursPackage#getHotspot_Rotation()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Rotation getRotation();
+
+	/**
+	 * Sets the value of the '{@link Tours.Hotspot#getRotation <em>Rotation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Rotation</em>' containment reference.
+	 * @see #getRotation()
+	 * @generated
+	 */
+	void setRotation(Rotation value);
 
 } // Hotspot

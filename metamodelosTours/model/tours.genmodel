@@ -8,25 +8,24 @@
   <genPackages prefix="Tours" disposableProviderFactory="true" ecorePackage="tours.ecore#/">
     <genClasses ecoreClass="tours.ecore#//Tour">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Tour/panoramas"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Tour/hotspots"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Tour/coordenada"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Tour/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Tour/name"/>
     </genClasses>
     <genClasses ecoreClass="tours.ecore#//Panorama">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Panorama/hotspots"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Panorama/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Panorama/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Panorama/hotspots"/>
     </genClasses>
     <genClasses ecoreClass="tours.ecore#//Hotspot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/rotacion"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/posicion"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/destino"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/origen"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Hotspot/nombre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Hotspot/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/position"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tours.ecore#//Hotspot/rotation"/>
     </genClasses>
-    <genClasses ecoreClass="tours.ecore#//Coordenada">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/x"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/y"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/z"/>
+    <genClasses image="false" ecoreClass="tours.ecore#//Coordenada">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/posx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/posy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tours.ecore#//Coordenada/posz"/>
     </genClasses>
+    <genClasses ecoreClass="tours.ecore#//Position"/>
+    <genClasses ecoreClass="tours.ecore#//Rotation"/>
   </genPackages>
 </genmodel:GenModel>

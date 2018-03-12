@@ -63,25 +63,25 @@ public class TourItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNombrePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nombre feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNombrePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tour_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tour_nombre_feature", "_UI_Tour_type"),
-				 ToursPackage.Literals.TOUR__NOMBRE,
+				 getString("_UI_Tour_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tour_name_feature", "_UI_Tour_type"),
+				 ToursPackage.Literals.TOUR__NAME,
 				 true,
 				 false,
 				 false,
@@ -103,8 +103,6 @@ public class TourItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToursPackage.Literals.TOUR__PANORAMAS);
-			childrenFeatures.add(ToursPackage.Literals.TOUR__HOTSPOTS);
-			childrenFeatures.add(ToursPackage.Literals.TOUR__COORDENADA);
 		}
 		return childrenFeatures;
 	}
@@ -141,7 +139,7 @@ public class TourItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tour)object).getNombre();
+		String label = ((Tour)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tour_type") :
 			getString("_UI_Tour_type") + " " + label;
@@ -160,12 +158,10 @@ public class TourItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Tour.class)) {
-			case ToursPackage.TOUR__NOMBRE:
+			case ToursPackage.TOUR__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToursPackage.TOUR__PANORAMAS:
-			case ToursPackage.TOUR__HOTSPOTS:
-			case ToursPackage.TOUR__COORDENADA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -187,16 +183,6 @@ public class TourItemProvider
 			(createChildParameter
 				(ToursPackage.Literals.TOUR__PANORAMAS,
 				 ToursFactory.eINSTANCE.createPanorama()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToursPackage.Literals.TOUR__HOTSPOTS,
-				 ToursFactory.eINSTANCE.createHotspot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToursPackage.Literals.TOUR__COORDENADA,
-				 ToursFactory.eINSTANCE.createCoordenada()));
 	}
 
 	/**
@@ -207,7 +193,7 @@ public class TourItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModeloEditPlugin.INSTANCE;
+		return ToursEditPlugin.INSTANCE;
 	}
 
 }

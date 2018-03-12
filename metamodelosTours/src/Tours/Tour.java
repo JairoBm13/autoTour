@@ -13,13 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link Tours.Tour#getPanoramas <em>Panoramas</em>}</li>
- *   <li>{@link Tours.Tour#getHotspots <em>Hotspots</em>}</li>
- *   <li>{@link Tours.Tour#getCoordenada <em>Coordenada</em>}</li>
- *   <li>{@link Tours.Tour#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link Tours.Tour#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see Tours.ToursPackage#getTour()
  * @model
@@ -43,62 +41,30 @@ public interface Tour extends EObject {
 	EList<Panorama> getPanoramas();
 
 	/**
-	 * Returns the value of the '<em><b>Hotspots</b></em>' containment reference list.
-	 * The list contents are of type {@link Tours.Hotspot}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Hotspots</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hotspots</em>' containment reference list.
-	 * @see Tours.ToursPackage#getTour_Hotspots()
-	 * @model containment="true" lower="2"
-	 * @generated
-	 */
-	EList<Hotspot> getHotspots();
-
-	/**
-	 * Returns the value of the '<em><b>Coordenada</b></em>' containment reference list.
-	 * The list contents are of type {@link Tours.Coordenada}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Coordenada</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coordenada</em>' containment reference list.
-	 * @see Tours.ToursPackage#getTour_Coordenada()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<Coordenada> getCoordenada();
-
-	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>"\"\""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see Tours.ToursPackage#getTour_Nombre()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see Tours.ToursPackage#getTour_Name()
 	 * @model default="\"\""
 	 * @generated
 	 */
-	String getNombre();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link Tours.Tour#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link Tours.Tour#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setName(String value);
 
 } // Tour

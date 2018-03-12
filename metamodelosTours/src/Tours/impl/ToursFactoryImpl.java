@@ -59,7 +59,8 @@ public class ToursFactoryImpl extends EFactoryImpl implements ToursFactory {
 			case ToursPackage.TOUR: return createTour();
 			case ToursPackage.PANORAMA: return createPanorama();
 			case ToursPackage.HOTSPOT: return createHotspot();
-			case ToursPackage.COORDENADA: return createCoordenada();
+			case ToursPackage.POSITION: return createPosition();
+			case ToursPackage.ROTATION: return createRotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -100,9 +101,19 @@ public class ToursFactoryImpl extends EFactoryImpl implements ToursFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Coordenada createCoordenada() {
-		CoordenadaImpl coordenada = new CoordenadaImpl();
-		return coordenada;
+	public Position createPosition() {
+		PositionImpl position = new PositionImpl();
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Rotation createRotation() {
+		RotationImpl rotation = new RotationImpl();
+		return rotation;
 	}
 
 	/**

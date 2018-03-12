@@ -22,11 +22,15 @@ context kdm!Panorama {
 operation Panorama revisarCaminoAPanoramas(): Boolean {
 
 	var panoramas = Panorama.allInstances().excluding(self);
-	
+	var cantidad = 0;
 	for (panorama in panoramas) { 
 		if(self.llegaAPanorama(panorama.nombre)) {
-			return true;
+			cantidad = cantidad + 1;
 		}
+	}
+	
+	if(cantidad == panoramas.size()){
+		return true;
 	}
 	
 	return false;
@@ -41,6 +45,8 @@ operation Panorama llegaAPanorama(name:String): Boolean {
 			return true;
 		}
 	}
+	
+	return false;
 }
 
 context kdm!Hotspot {

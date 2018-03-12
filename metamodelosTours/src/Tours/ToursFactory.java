@@ -49,13 +49,22 @@ public interface ToursFactory extends EFactory {
 	Hotspot createHotspot();
 
 	/**
-	 * Returns a new object of class '<em>Coordenada</em>'.
+	 * Returns a new object of class '<em>Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Coordenada</em>'.
+	 * @return a new object of class '<em>Position</em>'.
 	 * @generated
 	 */
-	Coordenada createCoordenada();
+	Position createPosition();
+
+	/**
+	 * Returns a new object of class '<em>Rotation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rotation</em>'.
+	 * @generated
+	 */
+	Rotation createRotation();
 
 	/**
 	 * Returns the package supported by this factory.

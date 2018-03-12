@@ -4,6 +4,7 @@ package Tours.provider;
 
 
 import Tours.Hotspot;
+import Tours.ToursFactory;
 import Tours.ToursPackage;
 
 import java.util.Collection;
@@ -13,6 +14,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -60,29 +63,26 @@ public class HotspotItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRotacionPropertyDescriptor(object);
-			addPosicionPropertyDescriptor(object);
-			addDestinoPropertyDescriptor(object);
-			addOrigenPropertyDescriptor(object);
-			addNombrePropertyDescriptor(object);
+			addToPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Rotacion feature.
+	 * This adds a property descriptor for the To feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRotacionPropertyDescriptor(Object object) {
+	protected void addToPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Hotspot_rotacion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_rotacion_feature", "_UI_Hotspot_type"),
-				 ToursPackage.Literals.HOTSPOT__ROTACION,
+				 getString("_UI_Hotspot_to_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_to_feature", "_UI_Hotspot_type"),
+				 ToursPackage.Literals.HOTSPOT__TO,
 				 true,
 				 false,
 				 true,
@@ -92,91 +92,56 @@ public class HotspotItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Posicion feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPosicionPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Hotspot_posicion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_posicion_feature", "_UI_Hotspot_type"),
-				 ToursPackage.Literals.HOTSPOT__POSICION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Destino feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDestinoPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Hotspot_destino_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_destino_feature", "_UI_Hotspot_type"),
-				 ToursPackage.Literals.HOTSPOT__DESTINO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Origen feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrigenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Hotspot_origen_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_origen_feature", "_UI_Hotspot_type"),
-				 ToursPackage.Literals.HOTSPOT__ORIGEN,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Nombre feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNombrePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Hotspot_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_nombre_feature", "_UI_Hotspot_type"),
-				 ToursPackage.Literals.HOTSPOT__NOMBRE,
+				 getString("_UI_Hotspot_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Hotspot_name_feature", "_UI_Hotspot_type"),
+				 ToursPackage.Literals.HOTSPOT__NAME,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ToursPackage.Literals.HOTSPOT__POSITION);
+			childrenFeatures.add(ToursPackage.Literals.HOTSPOT__ROTATION);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -198,7 +163,7 @@ public class HotspotItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Hotspot)object).getNombre();
+		String label = ((Hotspot)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Hotspot_type") :
 			getString("_UI_Hotspot_type") + " " + label;
@@ -217,8 +182,12 @@ public class HotspotItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Hotspot.class)) {
-			case ToursPackage.HOTSPOT__NOMBRE:
+			case ToursPackage.HOTSPOT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ToursPackage.HOTSPOT__POSITION:
+			case ToursPackage.HOTSPOT__ROTATION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -234,6 +203,16 @@ public class HotspotItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToursPackage.Literals.HOTSPOT__POSITION,
+				 ToursFactory.eINSTANCE.createPosition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToursPackage.Literals.HOTSPOT__ROTATION,
+				 ToursFactory.eINSTANCE.createRotation()));
 	}
 
 	/**
@@ -244,7 +223,7 @@ public class HotspotItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModeloEditPlugin.INSTANCE;
+		return ToursEditPlugin.INSTANCE;
 	}
 
 }

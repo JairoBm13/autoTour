@@ -76,31 +76,13 @@ public interface ToursPackage extends EPackage {
 	int TOUR__PANORAMAS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Hotspots</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOUR__HOTSPOTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Coordenada</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOUR__COORDENADA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOUR__NOMBRE = 3;
+	int TOUR__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Tour</em>' class.
@@ -109,7 +91,7 @@ public interface ToursPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOUR_FEATURE_COUNT = 4;
+	int TOUR_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Tour</em>' class.
@@ -131,22 +113,22 @@ public interface ToursPackage extends EPackage {
 	int PANORAMA = 1;
 
 	/**
-	 * The feature id for the '<em><b>Hotspots</b></em>' reference list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PANORAMA__HOTSPOTS = 0;
+	int PANORAMA__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * The feature id for the '<em><b>Hotspots</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PANORAMA__NOMBRE = 1;
+	int PANORAMA__HOTSPOTS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Panorama</em>' class.
@@ -177,49 +159,40 @@ public interface ToursPackage extends EPackage {
 	int HOTSPOT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Rotacion</b></em>' reference.
+	 * The feature id for the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTSPOT__ROTACION = 0;
+	int HOTSPOT__TO = 0;
 
 	/**
-	 * The feature id for the '<em><b>Posicion</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTSPOT__POSICION = 1;
+	int HOTSPOT__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Destino</b></em>' reference.
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTSPOT__DESTINO = 2;
+	int HOTSPOT__POSITION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Origen</b></em>' reference.
+	 * The feature id for the '<em><b>Rotation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTSPOT__ORIGEN = 3;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTSPOT__NOMBRE = 4;
+	int HOTSPOT__ROTATION = 3;
 
 	/**
 	 * The number of structural features of the '<em>Hotspot</em>' class.
@@ -228,7 +201,7 @@ public interface ToursPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTSPOT_FEATURE_COUNT = 5;
+	int HOTSPOT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Hotspot</em>' class.
@@ -250,31 +223,31 @@ public interface ToursPackage extends EPackage {
 	int COORDENADA = 3;
 
 	/**
-	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * The feature id for the '<em><b>Posx</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COORDENADA__X = 0;
+	int COORDENADA__POSX = 0;
 
 	/**
-	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * The feature id for the '<em><b>Posy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COORDENADA__Y = 1;
+	int COORDENADA__POSY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Z</b></em>' attribute.
+	 * The feature id for the '<em><b>Posz</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COORDENADA__Z = 2;
+	int COORDENADA__POSZ = 2;
 
 	/**
 	 * The number of structural features of the '<em>Coordenada</em>' class.
@@ -293,6 +266,116 @@ public interface ToursPackage extends EPackage {
 	 * @ordered
 	 */
 	int COORDENADA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Tours.impl.PositionImpl <em>Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Tours.impl.PositionImpl
+	 * @see Tours.impl.ToursPackageImpl#getPosition()
+	 * @generated
+	 */
+	int POSITION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Posx</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__POSX = COORDENADA__POSX;
+
+	/**
+	 * The feature id for the '<em><b>Posy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__POSY = COORDENADA__POSY;
+
+	/**
+	 * The feature id for the '<em><b>Posz</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__POSZ = COORDENADA__POSZ;
+
+	/**
+	 * The number of structural features of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_FEATURE_COUNT = COORDENADA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_COUNT = COORDENADA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Tours.impl.RotationImpl <em>Rotation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Tours.impl.RotationImpl
+	 * @see Tours.impl.ToursPackageImpl#getRotation()
+	 * @generated
+	 */
+	int ROTATION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Posx</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATION__POSX = COORDENADA__POSX;
+
+	/**
+	 * The feature id for the '<em><b>Posy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATION__POSY = COORDENADA__POSY;
+
+	/**
+	 * The feature id for the '<em><b>Posz</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATION__POSZ = COORDENADA__POSZ;
+
+	/**
+	 * The number of structural features of the '<em>Rotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATION_FEATURE_COUNT = COORDENADA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Rotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATION_OPERATION_COUNT = COORDENADA_OPERATION_COUNT + 0;
 
 
 	/**
@@ -317,37 +400,15 @@ public interface ToursPackage extends EPackage {
 	EReference getTour_Panoramas();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link Tours.Tour#getHotspots <em>Hotspots</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Tour#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hotspots</em>'.
-	 * @see Tours.Tour#getHotspots()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Tours.Tour#getName()
 	 * @see #getTour()
 	 * @generated
 	 */
-	EReference getTour_Hotspots();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link Tours.Tour#getCoordenada <em>Coordenada</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Coordenada</em>'.
-	 * @see Tours.Tour#getCoordenada()
-	 * @see #getTour()
-	 * @generated
-	 */
-	EReference getTour_Coordenada();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Tours.Tour#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see Tours.Tour#getNombre()
-	 * @see #getTour()
-	 * @generated
-	 */
-	EAttribute getTour_Nombre();
+	EAttribute getTour_Name();
 
 	/**
 	 * Returns the meta object for class '{@link Tours.Panorama <em>Panorama</em>}'.
@@ -360,26 +421,26 @@ public interface ToursPackage extends EPackage {
 	EClass getPanorama();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Tours.Panorama#getHotspots <em>Hotspots</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Panorama#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Hotspots</em>'.
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Tours.Panorama#getName()
+	 * @see #getPanorama()
+	 * @generated
+	 */
+	EAttribute getPanorama_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Tours.Panorama#getHotspots <em>Hotspots</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hotspots</em>'.
 	 * @see Tours.Panorama#getHotspots()
 	 * @see #getPanorama()
 	 * @generated
 	 */
 	EReference getPanorama_Hotspots();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Tours.Panorama#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see Tours.Panorama#getNombre()
-	 * @see #getPanorama()
-	 * @generated
-	 */
-	EAttribute getPanorama_Nombre();
 
 	/**
 	 * Returns the meta object for class '{@link Tours.Hotspot <em>Hotspot</em>}'.
@@ -392,59 +453,48 @@ public interface ToursPackage extends EPackage {
 	EClass getHotspot();
 
 	/**
-	 * Returns the meta object for the reference '{@link Tours.Hotspot#getRotacion <em>Rotacion</em>}'.
+	 * Returns the meta object for the reference '{@link Tours.Hotspot#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rotacion</em>'.
-	 * @see Tours.Hotspot#getRotacion()
+	 * @return the meta object for the reference '<em>To</em>'.
+	 * @see Tours.Hotspot#getTo()
 	 * @see #getHotspot()
 	 * @generated
 	 */
-	EReference getHotspot_Rotacion();
+	EReference getHotspot_To();
 
 	/**
-	 * Returns the meta object for the reference '{@link Tours.Hotspot#getPosicion <em>Posicion</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Hotspot#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Posicion</em>'.
-	 * @see Tours.Hotspot#getPosicion()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Tours.Hotspot#getName()
 	 * @see #getHotspot()
 	 * @generated
 	 */
-	EReference getHotspot_Posicion();
+	EAttribute getHotspot_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link Tours.Hotspot#getDestino <em>Destino</em>}'.
+	 * Returns the meta object for the containment reference '{@link Tours.Hotspot#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Destino</em>'.
-	 * @see Tours.Hotspot#getDestino()
+	 * @return the meta object for the containment reference '<em>Position</em>'.
+	 * @see Tours.Hotspot#getPosition()
 	 * @see #getHotspot()
 	 * @generated
 	 */
-	EReference getHotspot_Destino();
+	EReference getHotspot_Position();
 
 	/**
-	 * Returns the meta object for the reference '{@link Tours.Hotspot#getOrigen <em>Origen</em>}'.
+	 * Returns the meta object for the containment reference '{@link Tours.Hotspot#getRotation <em>Rotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Origen</em>'.
-	 * @see Tours.Hotspot#getOrigen()
+	 * @return the meta object for the containment reference '<em>Rotation</em>'.
+	 * @see Tours.Hotspot#getRotation()
 	 * @see #getHotspot()
 	 * @generated
 	 */
-	EReference getHotspot_Origen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Tours.Hotspot#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see Tours.Hotspot#getNombre()
-	 * @see #getHotspot()
-	 * @generated
-	 */
-	EAttribute getHotspot_Nombre();
+	EReference getHotspot_Rotation();
 
 	/**
 	 * Returns the meta object for class '{@link Tours.Coordenada <em>Coordenada</em>}'.
@@ -457,37 +507,57 @@ public interface ToursPackage extends EPackage {
 	EClass getCoordenada();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getPosx <em>Posx</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see Tours.Coordenada#getX()
+	 * @return the meta object for the attribute '<em>Posx</em>'.
+	 * @see Tours.Coordenada#getPosx()
 	 * @see #getCoordenada()
 	 * @generated
 	 */
-	EAttribute getCoordenada_X();
+	EAttribute getCoordenada_Posx();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getPosy <em>Posy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see Tours.Coordenada#getY()
+	 * @return the meta object for the attribute '<em>Posy</em>'.
+	 * @see Tours.Coordenada#getPosy()
 	 * @see #getCoordenada()
 	 * @generated
 	 */
-	EAttribute getCoordenada_Y();
+	EAttribute getCoordenada_Posy();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getZ <em>Z</em>}'.
+	 * Returns the meta object for the attribute '{@link Tours.Coordenada#getPosz <em>Posz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Z</em>'.
-	 * @see Tours.Coordenada#getZ()
+	 * @return the meta object for the attribute '<em>Posz</em>'.
+	 * @see Tours.Coordenada#getPosz()
 	 * @see #getCoordenada()
 	 * @generated
 	 */
-	EAttribute getCoordenada_Z();
+	EAttribute getCoordenada_Posz();
+
+	/**
+	 * Returns the meta object for class '{@link Tours.Position <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position</em>'.
+	 * @see Tours.Position
+	 * @generated
+	 */
+	EClass getPosition();
+
+	/**
+	 * Returns the meta object for class '{@link Tours.Rotation <em>Rotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rotation</em>'.
+	 * @see Tours.Rotation
+	 * @generated
+	 */
+	EClass getRotation();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -531,28 +601,12 @@ public interface ToursPackage extends EPackage {
 		EReference TOUR__PANORAMAS = eINSTANCE.getTour_Panoramas();
 
 		/**
-		 * The meta object literal for the '<em><b>Hotspots</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TOUR__HOTSPOTS = eINSTANCE.getTour_Hotspots();
-
-		/**
-		 * The meta object literal for the '<em><b>Coordenada</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TOUR__COORDENADA = eINSTANCE.getTour_Coordenada();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOUR__NOMBRE = eINSTANCE.getTour_Nombre();
+		EAttribute TOUR__NAME = eINSTANCE.getTour_Name();
 
 		/**
 		 * The meta object literal for the '{@link Tours.impl.PanoramaImpl <em>Panorama</em>}' class.
@@ -565,20 +619,20 @@ public interface ToursPackage extends EPackage {
 		EClass PANORAMA = eINSTANCE.getPanorama();
 
 		/**
-		 * The meta object literal for the '<em><b>Hotspots</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PANORAMA__NAME = eINSTANCE.getPanorama_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Hotspots</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PANORAMA__HOTSPOTS = eINSTANCE.getPanorama_Hotspots();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PANORAMA__NOMBRE = eINSTANCE.getPanorama_Nombre();
 
 		/**
 		 * The meta object literal for the '{@link Tours.impl.HotspotImpl <em>Hotspot</em>}' class.
@@ -591,44 +645,36 @@ public interface ToursPackage extends EPackage {
 		EClass HOTSPOT = eINSTANCE.getHotspot();
 
 		/**
-		 * The meta object literal for the '<em><b>Rotacion</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTSPOT__ROTACION = eINSTANCE.getHotspot_Rotacion();
+		EReference HOTSPOT__TO = eINSTANCE.getHotspot_To();
 
 		/**
-		 * The meta object literal for the '<em><b>Posicion</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTSPOT__POSICION = eINSTANCE.getHotspot_Posicion();
+		EAttribute HOTSPOT__NAME = eINSTANCE.getHotspot_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Destino</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTSPOT__DESTINO = eINSTANCE.getHotspot_Destino();
+		EReference HOTSPOT__POSITION = eINSTANCE.getHotspot_Position();
 
 		/**
-		 * The meta object literal for the '<em><b>Origen</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Rotation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTSPOT__ORIGEN = eINSTANCE.getHotspot_Origen();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HOTSPOT__NOMBRE = eINSTANCE.getHotspot_Nombre();
+		EReference HOTSPOT__ROTATION = eINSTANCE.getHotspot_Rotation();
 
 		/**
 		 * The meta object literal for the '{@link Tours.impl.CoordenadaImpl <em>Coordenada</em>}' class.
@@ -641,28 +687,48 @@ public interface ToursPackage extends EPackage {
 		EClass COORDENADA = eINSTANCE.getCoordenada();
 
 		/**
-		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Posx</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COORDENADA__X = eINSTANCE.getCoordenada_X();
+		EAttribute COORDENADA__POSX = eINSTANCE.getCoordenada_Posx();
 
 		/**
-		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Posy</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COORDENADA__Y = eINSTANCE.getCoordenada_Y();
+		EAttribute COORDENADA__POSY = eINSTANCE.getCoordenada_Posy();
 
 		/**
-		 * The meta object literal for the '<em><b>Z</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Posz</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COORDENADA__Z = eINSTANCE.getCoordenada_Z();
+		EAttribute COORDENADA__POSZ = eINSTANCE.getCoordenada_Posz();
+
+		/**
+		 * The meta object literal for the '{@link Tours.impl.PositionImpl <em>Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Tours.impl.PositionImpl
+		 * @see Tours.impl.ToursPackageImpl#getPosition()
+		 * @generated
+		 */
+		EClass POSITION = eINSTANCE.getPosition();
+
+		/**
+		 * The meta object literal for the '{@link Tours.impl.RotationImpl <em>Rotation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Tours.impl.RotationImpl
+		 * @see Tours.impl.ToursPackageImpl#getRotation()
+		 * @generated
+		 */
+		EClass ROTATION = eINSTANCE.getRotation();
 
 	}
 

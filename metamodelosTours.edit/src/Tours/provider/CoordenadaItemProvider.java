@@ -60,27 +60,27 @@ public class CoordenadaItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addXPropertyDescriptor(object);
-			addYPropertyDescriptor(object);
-			addZPropertyDescriptor(object);
+			addPosxPropertyDescriptor(object);
+			addPosyPropertyDescriptor(object);
+			addPoszPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the X feature.
+	 * This adds a property descriptor for the Posx feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addXPropertyDescriptor(Object object) {
+	protected void addPosxPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Coordenada_x_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_x_feature", "_UI_Coordenada_type"),
-				 ToursPackage.Literals.COORDENADA__X,
+				 getString("_UI_Coordenada_posx_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_posx_feature", "_UI_Coordenada_type"),
+				 ToursPackage.Literals.COORDENADA__POSX,
 				 true,
 				 false,
 				 false,
@@ -90,19 +90,19 @@ public class CoordenadaItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Y feature.
+	 * This adds a property descriptor for the Posy feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addYPropertyDescriptor(Object object) {
+	protected void addPosyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Coordenada_y_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_y_feature", "_UI_Coordenada_type"),
-				 ToursPackage.Literals.COORDENADA__Y,
+				 getString("_UI_Coordenada_posy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_posy_feature", "_UI_Coordenada_type"),
+				 ToursPackage.Literals.COORDENADA__POSY,
 				 true,
 				 false,
 				 false,
@@ -112,36 +112,25 @@ public class CoordenadaItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Z feature.
+	 * This adds a property descriptor for the Posz feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addZPropertyDescriptor(Object object) {
+	protected void addPoszPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Coordenada_z_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_z_feature", "_UI_Coordenada_type"),
-				 ToursPackage.Literals.COORDENADA__Z,
+				 getString("_UI_Coordenada_posz_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Coordenada_posz_feature", "_UI_Coordenada_type"),
+				 ToursPackage.Literals.COORDENADA__POSZ,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This returns Coordenada.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Coordenada"));
 	}
 
 	/**
@@ -153,7 +142,7 @@ public class CoordenadaItemProvider
 	@Override
 	public String getText(Object object) {
 		Coordenada coordenada = (Coordenada)object;
-		return getString("_UI_Coordenada_type") + " " + coordenada.getX();
+		return getString("_UI_Coordenada_type") + " " + coordenada.getPosx();
 	}
 	
 
@@ -169,9 +158,9 @@ public class CoordenadaItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Coordenada.class)) {
-			case ToursPackage.COORDENADA__X:
-			case ToursPackage.COORDENADA__Y:
-			case ToursPackage.COORDENADA__Z:
+			case ToursPackage.COORDENADA__POSX:
+			case ToursPackage.COORDENADA__POSY:
+			case ToursPackage.COORDENADA__POSZ:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -198,7 +187,7 @@ public class CoordenadaItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModeloEditPlugin.INSTANCE;
+		return ToursEditPlugin.INSTANCE;
 	}
 
 }

@@ -11,94 +11,94 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link Tours.Coordenada#getX <em>X</em>}</li>
- *   <li>{@link Tours.Coordenada#getY <em>Y</em>}</li>
- *   <li>{@link Tours.Coordenada#getZ <em>Z</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Tours.Coordenada#getPosx <em>Posx</em>}</li>
+ *   <li>{@link Tours.Coordenada#getPosy <em>Posy</em>}</li>
+ *   <li>{@link Tours.Coordenada#getPosz <em>Posz</em>}</li>
+ * </ul>
  *
  * @see Tours.ToursPackage#getCoordenada()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Coordenada extends EObject {
 	/**
-	 * Returns the value of the '<em><b>X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Posx</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>X</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Posx</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(double)
-	 * @see Tours.ToursPackage#getCoordenada_X()
+	 * @return the value of the '<em>Posx</em>' attribute.
+	 * @see #setPosx(double)
+	 * @see Tours.ToursPackage#getCoordenada_Posx()
 	 * @model
 	 * @generated
 	 */
-	double getX();
+	double getPosx();
 
 	/**
-	 * Sets the value of the '{@link Tours.Coordenada#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link Tours.Coordenada#getPosx <em>Posx</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>X</em>' attribute.
-	 * @see #getX()
+	 * @param value the new value of the '<em>Posx</em>' attribute.
+	 * @see #getPosx()
 	 * @generated
 	 */
-	void setX(double value);
+	void setPosx(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Posy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Y</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Posy</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(double)
-	 * @see Tours.ToursPackage#getCoordenada_Y()
+	 * @return the value of the '<em>Posy</em>' attribute.
+	 * @see #setPosy(double)
+	 * @see Tours.ToursPackage#getCoordenada_Posy()
 	 * @model
 	 * @generated
 	 */
-	double getY();
+	double getPosy();
 
 	/**
-	 * Sets the value of the '{@link Tours.Coordenada#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link Tours.Coordenada#getPosy <em>Posy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Y</em>' attribute.
-	 * @see #getY()
+	 * @param value the new value of the '<em>Posy</em>' attribute.
+	 * @see #getPosy()
 	 * @generated
 	 */
-	void setY(double value);
+	void setPosy(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Posz</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Z</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Posz</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Z</em>' attribute.
-	 * @see #setZ(double)
-	 * @see Tours.ToursPackage#getCoordenada_Z()
+	 * @return the value of the '<em>Posz</em>' attribute.
+	 * @see #setPosz(double)
+	 * @see Tours.ToursPackage#getCoordenada_Posz()
 	 * @model
 	 * @generated
 	 */
-	double getZ();
+	double getPosz();
 
 	/**
-	 * Sets the value of the '{@link Tours.Coordenada#getZ <em>Z</em>}' attribute.
+	 * Sets the value of the '{@link Tours.Coordenada#getPosz <em>Posz</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Z</em>' attribute.
-	 * @see #getZ()
+	 * @param value the new value of the '<em>Posz</em>' attribute.
+	 * @see #getPosz()
 	 * @generated
 	 */
-	void setZ(double value);
+	void setPosz(double value);
 
 } // Coordenada

@@ -4,34 +4,31 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tour">
     <eStructuralFeatures xsi:type="ecore:EReference" name="panoramas" lowerBound="2"
         upperBound="-1" eType="#//Panorama" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="2"
-        upperBound="-1" eType="#//Hotspot" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="coordenada" lowerBound="1"
-        upperBound="-1" eType="#//Coordenada" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="&quot;&quot;"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Panorama">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;&quot;"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotspots" lowerBound="1"
-        upperBound="-1" eType="#//Hotspot"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        upperBound="-1" eType="#//Hotspot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="&quot;&quot;"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hotspot">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rotacion" lowerBound="1"
-        eType="#//Coordenada"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="posicion" lowerBound="1"
-        eType="#//Coordenada"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="destino" lowerBound="1"
-        eType="#//Panorama"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="origen" lowerBound="1"
-        eType="#//Panorama"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Panorama"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="&quot;&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//Position" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rotation" lowerBound="1"
+        eType="#//Rotation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Coordenada">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Coordenada" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position" eSuperTypes="#//Coordenada"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rotation" eSuperTypes="#//Coordenada"/>
 </ecore:EPackage>

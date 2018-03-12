@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: co.edu.uniandes.tours.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: co.edu.uniandes.tours.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: co.edu.uniandes.tours,
+ co.edu.uniandes.tours.ide,
+ metamodelosTours,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtend.lib;resolution:=optional,
+ org.eclipse.xtext.xbase.lib
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: co.edu.uniandes.tours.ui.quickfix,
+ co.edu.uniandes.tours.ui.contentassist,
+ co.edu.uniandes.tours.ui.internal
+Bundle-Activator: co.edu.uniandes.tours.ui.internal.ToursActivator
