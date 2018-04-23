@@ -837,11 +837,11 @@ RULE_DESCRIPTION : 'description';
 
 RULE_PATHS : 'paths';
 
-RULE_COORDINATE_X : 'x';
+RULE_COORDINATE_X : 'posx';
 
-RULE_COORDINATE_Y : 'y';
+RULE_COORDINATE_Y : 'posy';
 
-RULE_COORDINATE_Z : 'z';
+RULE_COORDINATE_Z : 'posz';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

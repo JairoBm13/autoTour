@@ -781,19 +781,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal COORDINATE_X:
-	//	'x';
+	//	'posx';
 	public TerminalRule getCOORDINATE_XRule() {
 		return tCOORDINATE_X;
 	}
 	
 	//terminal COORDINATE_Y:
-	//	'y';
+	//	'posy';
 	public TerminalRule getCOORDINATE_YRule() {
 		return tCOORDINATE_Y;
 	}
 	
 	//terminal COORDINATE_Z:
-	//	'z';
+	//	'posz';
 	public TerminalRule getCOORDINATE_ZRule() {
 		return tCOORDINATE_Z;
 	}

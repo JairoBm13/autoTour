@@ -104,34 +104,34 @@ public class DslSyntacticSequencer extends AbstractSyntacticSequencer {
 	/**
 	 * terminal COORDINATE_X:
 	 * 
-	 * 'x';
+	 * 'posx';
 	 */
 	protected String getCOORDINATE_XToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "x";
+		return "posx";
 	}
 	
 	/**
 	 * terminal COORDINATE_Y:
 	 * 
-	 * 'y';
+	 * 'posy';
 	 */
 	protected String getCOORDINATE_YToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "y";
+		return "posy";
 	}
 	
 	/**
 	 * terminal COORDINATE_Z:
 	 * 
-	 * 'z';
+	 * 'posz';
 	 */
 	protected String getCOORDINATE_ZToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "z";
+		return "posz";
 	}
 	
 	/**

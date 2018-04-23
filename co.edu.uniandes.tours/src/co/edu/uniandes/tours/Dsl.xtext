@@ -96,15 +96,15 @@ terminal PATHS:
 
 terminal COORDINATE_X:
 
-'x';
+'posx';
 
 terminal COORDINATE_Y:
 
-'y';
+'posy';
 
 terminal COORDINATE_Z:
 
-'z';
+'posz';
 
 EString returns ecore::EString:
 	STRING | ID;
