@@ -1,15 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tours:Tour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Tours="http://www.uniandes.edu.co/Tours" name="Prueba">
-  <panoramas name="Entrada">
-    <hotspots to="//@panoramas.1" name="AHall">
-      <position/>
-      <rotation/>
+  <panoramas name="entrada" description="Entrada">
+    <hotspots to="//@panoramas.1" name="entrada-hallentrada">
+      <position posx="-5.0" posy="-0.09" posz="0.03"/>
+      <rotation posx="-1.03" posy="90.34"/>
     </hotspots>
   </panoramas>
-  <panoramas name="HallEntrada">
-    <hotspots to="//@panoramas.0" name="AEntrada">
-      <position/>
-      <rotation/>
+  <panoramas name="hallentrada" description="Hall Entrada">
+    <hotspots to="//@panoramas.0" name="hallentrada-entrada">
+      <position posx="3.98" posy="-0.36" posz="0.03"/>
+      <rotation posx="-5.16" posy="-86.6"/>
+    </hotspots>
+    <hotspots to="//@panoramas.2" name="hallentrada-hallcuarto">
+      <position posx="-0.24" posy="-0.52" posz="4.21"/>
+      <rotation posx="-6.99" posy="176.7"/>
+    </hotspots>
+    <hotspots to="//@panoramas.4" name="hallentrada-sala">
+      <position posx="-1.67" posy="-0.23" posz="-2.48"/>
+      <rotation posx="-4.35" posy="34.03"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="hallcuarto" description="Hall Cuarto">
+    <hotspots to="//@panoramas.1" name="hallcuarto-hallentrada">
+      <position posx="-3.32" posy="-0.6" posz="3.69"/>
+      <rotation posx="-6.88" posy="138.01"/>
+    </hotspots>
+    <hotspots to="//@panoramas.3" name="hallcuarto-cuartoprincipal">
+      <position posx="-4.44" posy="-0.45" posz="-0.58"/>
+      <rotation posx="-5.73" posy="82.51"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="cuartoprincipal" description="Cuarto Principal">
+    <hotspots to="//@panoramas.1" name="cuartoprincipal-hallentrada">
+      <position posx="3.59" posy="-0.7" posz="-4.44"/>
+      <rotation posx="-6.99" posy="-38.96"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="sala" description="Sala">
+    <hotspots to="//@panoramas.1" name="sala-hallentrada">
+      <position posx="4.98" posy="-0.36" posz="0.3"/>
+      <rotation posx="-4.13" posy="-93.46"/>
+    </hotspots>
+    <hotspots to="//@panoramas.5" name="sala-piscina">
+      <position posx="4.11" posy="-0.4" posz="4.35"/>
+      <rotation posx="-3.78" posy="-136.66"/>
+    </hotspots>
+    <hotspots to="//@panoramas.6" name="sala-corredor">
+      <position posx="-4.58" posy="-0.24" posz="-1.99"/>
+      <rotation posx="-2.75" posy="66.58"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="piscina" description="Piscina">
+    <hotspots to="//@panoramas.4" name="piscina-sala">
+      <position posx="4.98" posy="-0.36" posz="0.3"/>
+      <rotation posx="-3.44" posy="-110.01"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="corredor" description="Corredor">
+    <hotspots to="//@panoramas.4" name="corredor-sala">
+      <position posx="5.86" posy="-0.18" posz="-1.25"/>
+      <rotation posx="-1.72" posy="-77.92"/>
+    </hotspots>
+    <hotspots to="//@panoramas.7" name="corredor-cuartoderechaarriba">
+      <position posx="-4.73" posy="-0.57" posz="1.5"/>
+      <rotation posx="-6.53" posy="107.6"/>
+    </hotspots>
+    <hotspots to="//@panoramas.8" name="corredor-cuartoderechaabajo">
+      <position posx="-4.39" posy="-0.5" posz="-2.34"/>
+      <rotation posx="-5.73" posy="61.99"/>
+    </hotspots>
+    <hotspots to="//@panoramas.9" name="corredor-banoizquierda">
+      <position posx="-0.19" posy="-0.33" posz="3.73"/>
+      <rotation posx="-5.04" posy="177.04"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="cuartoderechaarriba" description="Cuarto 1">
+    <hotspots to="//@panoramas.6" name="cuartoderechaarriba-corredor">
+      <position posx="4.87" posy="-0.71" posz="0.87"/>
+      <rotation posx="-8.14" posy="-100.11"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="cuartoderechaabajo" description="Cuarto 2">
+    <hotspots to="//@panoramas.6" name="cuartoderechaabajo-corredor">
+      <position posx="1.31" posy="-0.65" posz="-4.78"/>
+      <rotation posx="-7.45" posy="-15.36"/>
+    </hotspots>
+  </panoramas>
+  <panoramas name="banoizquierda" description="WC">
+    <hotspots to="//@panoramas.6" name="banoizquierda-corredor">
+      <position posx="6.49" posy="-0.27" posz="0.24"/>
+      <rotation posx="-2.41" posy="-92.13"/>
     </hotspots>
   </panoramas>
 </Tours:Tour>

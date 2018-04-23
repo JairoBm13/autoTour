@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.epsilon.egl.eclipse.dt.launching.EglLaunchConfigurationDelegate">
-<booleanAttribute key="appendToFile" value="true"/>
+<booleanAttribute key="appendToFile" value="false"/>
 <listAttribute key="defaultFormatters"/>
 <booleanAttribute key="fine_grained_profiling" value="false"/>
 <intAttribute key="generateTo" value="2"/>
 <listAttribute key="models">
-<listEntry value="#Sun Apr 22 21:27:24 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=mp&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=true&#13;&#10;aliases=mp&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.uniandes.edu.co/Tours&#13;&#10;modelUri=platform\:/resource/metamodelosTours/model/Tourprueba.xmi&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/metamodelosTours/model/Tourprueba.xmi&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
+<listEntry value="#Sun Apr 22 21:56:26 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=mp&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=true&#13;&#10;aliases=mp&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.uniandes.edu.co/Tours&#13;&#10;modelUri=platform\:/resource/TourEGL/portugal.xmi&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/TourEGL/portugal.xmi&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
 </listAttribute>
 <stringAttribute key="outputFilePath" value="/TourEGL/index.html"/>
 <listAttribute key="parameters"/>

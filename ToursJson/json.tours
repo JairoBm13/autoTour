@@ -121,32 +121,45 @@
 			},
 			rotation:{
 				posx:-4.13,
-				posy:2.8,
-				posz:3.4
+				posy:-93.46,
+				posz:0.00
+			}
+		},{
+			name:"APiscina",
+			to: piscina,
+			position: {
+				posx:4.11,
+				posy:-0.40,
+				posz:4.35
+			},
+			rotation:{
+				posx:-3.78,
+				posy:-136.66,
+				posz:0.00
 			}
 		}]
 	},{
 		name:"piscina",
-		description:"Hall de Entrada",
+		description:"Piscina",
 		paths:[{
-			name:"AEntrada",
-			to: entrada,
+			name:"ASala",
+			to: sala,
 			position: {
-				posx:1.0,
-				posy:2.8,
-				posz:3.4
+				posx:6.57,
+				posy:-0.42,
+				posz:2.39
 			},
 			rotation:{
-				posx:1.0,
-				posy:2.8,
-				posz:3.4
+				posx:-3.44,
+				posy:-110.01,
+				posz:0.00
 			}
 		}]
 	},{
 		name:"corredor",
-		description:"Hall de Entrada",
+		description:"Corredor",
 		paths:[{
-			name:"AEntrada",
+			name:"ASala",
 			to: entrada,
 			position: {
 				posx:1.0,
