@@ -174,3 +174,47 @@ null
     </a-scene>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>360&deg; Tour</title>
+    <link rel="stylesheet" href="css/bundle.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/bundle.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-mixin id="hotspot-text" text="font: exo2bold; width: 5" geometry="primitive: plane; width: 1.6; height: 0.4" material="color: black;" position="0 -0.6 0"></a-mixin>
+        <a-mixin id="hotspot-target" geometry="width: 0.4; height: 0.4" material="src:images/tools/hotspot.png; side: front"></a-mixin>
+
+      </a-assets>
+
+      <a-tour>
+			<a-panorama id="Entrada" src="images/Entrada.jpg" rotation="0 0 0"></a-panorama>
+    			<a-hotspot id="AHall" for="Entrada" to="HallEntrada" mixin="hotspot-target" position="0.0 0.0 0.0" rotation="0.0 "0.0 "0.0">
+      				<a-text value="""" align="center" mixin="hotspot-text"></a-text>
+    			</a-hotspot>
+			<a-panorama id="HallEntrada" src="images/HallEntrada.jpg" rotation="0 0 0"></a-panorama>
+    			<a-hotspot id="AEntrada" for="HallEntrada" to="Entrada" mixin="hotspot-target" position="0.0 0.0 0.0" rotation="0.0 "0.0 "0.0">
+      				<a-text value="""" align="center" mixin="hotspot-text"></a-text>
+    			</a-hotspot>
+      </a-tour>
+
+      <a-entity camera look-controls>
+        <a-entity cursor="fuse: true; fuse-timeout: 2000" position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: black; shader: flat">
+          <a-animation begin="fusing" end="mouseleave" easing="ease-out" attribute="scale"
+                           fill="backwards" from="1 1 1" to="0.2 0.2 0.2"
+                           dur="2000"></a-animation>
+        </a-entity>
+      </a-entity>
+      
+      
+    </a-scene>
+  </body>
+</html>
