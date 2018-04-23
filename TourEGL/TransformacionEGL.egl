@@ -24,7 +24,7 @@ var root : mp!Tour:= mp!Tour.all.get(0);
 			<a-panorama id="[%=panorama.name%]" src="images/[%=panorama.name%].jpg" rotation="0 0 0"></a-panorama>
 			[%for (hotspot in panorama.hotspots){%]
     			<a-hotspot id="[%=hotspot.name%]" for="[%=panorama.name%]" to="[%=hotspot.to.name%]" mixin="hotspot-target" position="[%=hotspot.position.posx%] [%=hotspot.position.posy%] [%=hotspot.position.posz%]" rotation="[%=hotspot.rotation.posx%] "[%=hotspot.rotation.posy%] "[%=hotspot.rotation.posz%]">
-      				<a-text value="[%=hotspot.name%]" align="center" mixin="hotspot-text"></a-text>
+      				<a-text value="[%=hotspot.to.description%]" align="center" mixin="hotspot-text"></a-text>
     			</a-hotspot>
     		[%}%]
         [%}%]

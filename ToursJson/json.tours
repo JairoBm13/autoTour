@@ -1,39 +1,215 @@
 {
 	name:"Tour",
 	places:[{
-		name:"A",
-		description:"Pico",
+		name:"entrada",
+		description:"Entrada",
 		paths:[{
-			name:"AMirador",
-			to: B,
+			name:"AHallEntrada",
+			to: hallentrada,
 			position: {
-				x:1.0,
-				y:2.8,
-				z:3.4
+				posx:-5.0,
+				posy:-0.09,
+				posz:0.03
 			},
 			rotation:{
-				x:1.0,
-				y:2.8,
-				z:3.4
+				posx:-1.03,
+				posy:90.34,
+				posz:0.00
 			}
 		}]
 	},
 	{
-		name:"B",
-		description:"Mirador",
+		name:"hallentrada",
+		description:"Hall de Entrada",
 		paths:[{
-			name:"APico",
-			to: A,
+			name:"AEntrada",
+			to: entrada,
 			position: {
-				x:1.0,
-				y:2.8,
-				z:3.4
+				posx:3.98,
+				posy:-0.36,
+				posz:-0.03
 			},
 			rotation:{
-				x:1.0,
-				y:2.8,
-				z:3.4
+				posx:-5.16,
+				posy:-89.56,
+				posz:0.00
+			}
+		},{
+			name:"AHallCuarto",
+			to: hallcuarto,
+			position: {
+				posx:-0.24,
+				posy:-0.52,
+				posz:4.21
+			},
+			rotation:{
+				posx:-6.99,
+				posy:176.0,
+				posz:0.00
+			}
+		},{
+			name:"ASala",
+			to: sala,
+			position: {
+				posx:-1.67,
+				posy:-0.23,
+				posz:2.48
+			},
+			rotation:{
+				posx:-4.35,
+				posy:34.03,
+				posz:0.00
 			}
 		}]
-	}]
+	},{
+		name:"hallcuarto",
+		description:"Hall Cuarto",
+		paths:[{
+			name:"AHallEntrada",
+			to: hallentrada,
+			position: {
+				posx:-3.32,
+				posy:-0.60,
+				posz:3.69
+			},
+			rotation:{
+				posx:-6.88,
+				posy:138.01,
+				posz:0.00
+			}
+		},{
+			name:"ACuartoPrincipal",
+			to: cuartoprincipal,
+			position: {
+				posx:-4.44,
+				posy:-0.45,
+				posz:0.58
+			},
+			rotation:{
+				posx:-5.73,
+				posy:82.51,
+				posz:0.00
+			}
+		}]
+	},{
+		name:"cuartoprincipal",
+		description:"Cuarto Principal",
+		paths:[{
+			name:"AHallCuarto",
+			to: hallcuarto,
+			position: {
+				posx:3.59,
+				posy:-0.70,
+				posz:4.44
+			},
+			rotation:{
+				posx:-6.99,
+				posy:-38.96,
+				posz:0.00
+			}
+		}]
+	},{
+		name:"sala",
+		description:"Sala",
+		paths:[{
+			name:"AHallEntrada",
+			to: hallentrada,
+			position: {
+				posx:4.98,
+				posy:-0.36,
+				posz:-0.30
+			},
+			rotation:{
+				posx:-4.13,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	},{
+		name:"piscina",
+		description:"Hall de Entrada",
+		paths:[{
+			name:"AEntrada",
+			to: entrada,
+			position: {
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			},
+			rotation:{
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	},{
+		name:"corredor",
+		description:"Hall de Entrada",
+		paths:[{
+			name:"AEntrada",
+			to: entrada,
+			position: {
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			},
+			rotation:{
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	},{
+		name:"cuartoderechaarriba",
+		description:"Hall de Entrada",
+		paths:[{
+			name:"AEntrada",
+			to: entrada,
+			position: {
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			},
+			rotation:{
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	},{
+		name:"cuartoderechaabajo",
+		description:"Hall de Entrada",
+		paths:[{
+			name:"AEntrada",
+			to: entrada,
+			position: {
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			},
+			rotation:{
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	},{
+		name:"banoizquierda",
+		description:"Hall de Entrada",
+		paths:[{
+			name:"AEntrada",
+			to: entrada,
+			position: {
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			},
+			rotation:{
+				posx:1.0,
+				posy:2.8,
+				posz:3.4
+			}
+		}]
+	}
+	]
 }

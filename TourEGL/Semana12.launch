@@ -5,7 +5,7 @@
 <booleanAttribute key="fine_grained_profiling" value="false"/>
 <intAttribute key="generateTo" value="2"/>
 <listAttribute key="models">
-<listEntry value="#Sun Apr 22 14:45:27 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=mp&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=true&#13;&#10;aliases=mp&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.uniandes.edu.co/Tours&#13;&#10;modelUri=platform\:/resource/metamodelosTours/model/Tourprueba.xmi&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/metamodelosTours/model/Tourprueba.xmi&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
+<listEntry value="#Sun Apr 22 21:27:24 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=mp&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=true&#13;&#10;aliases=mp&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.uniandes.edu.co/Tours&#13;&#10;modelUri=platform\:/resource/metamodelosTours/model/Tourprueba.xmi&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/metamodelosTours/model/Tourprueba.xmi&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
 </listAttribute>
 <stringAttribute key="outputFilePath" value="/TourEGL/index.html"/>
 <listAttribute key="parameters"/>
